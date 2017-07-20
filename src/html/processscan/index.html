@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../../css/bomc.css">
+    <style>
+    #container {
+        position: relative;
+        display: inline-block;
+        *display: inline;
+        zoom: 1;
+        vertical-align: middle;
+    }
+    
+    #content {
+        position: relative;
+    }
+    
+    .item {
+        padding: 4px 5px;
+        cursor: pointer;
+    }
+    
+    .addbg {
+        background: #ddd;
+    }
+    
+    #append {
+        background-color: #fff;
+        border: solid #ddd 1px;
+        border-top: 0;
+        display: none;
+        text-align: left;
+        position: absolute;
+        z-index: 9;
+        left: 0;
+        right: 1px;
+    }
+    
+    .sel-tag {
+        display: none;
+    }
+    </style>
+</head>
+
+<body class="mainpage">
+    <div class="box">
+        <div class="box-h  box-h-theme">
+            <div class="h-right ">
+                <a class="btn-text scan-toggle" attrid="scan">扫描</a>
+                <a class="btn-text hide search-toggle" attrid="search">查询</a>
+            </div>
+            <i class="icon icon-list"></i><span class="box-h-title">进程检索</span>
+        </div>
+        <div class="box-c " id="search">
+            <div class="row ">
+                <div class="form-group col-xs-0">
+                    <label class="from-label">进程信息:</label>
+                    <div class="form-value">
+                        <input type="text" placeholder="ASas">
+                    </div>
+                </div>
+                <div class="form-group col-xs-0">
+                    <label class="from-label">主机:</label>
+                    <div class="form-value  ">
+                        <div class="input-group file-group">
+                          <!--   <div id="content">
+                                <div class="first input">
+                                    <input type="text" style="width: 250px;" name="searchVo.host" id="host" value="" autocomplete="off" placeholder="主机名/ip" onclick="getContent(this);" onkeyup="getContent(this);">
+                                </div>
+                                <div id="append" style=" ">
+                                    <div class="item" onmouseenter="getFocus(this)" onclick="getCon(this);">ht--10.1.4.148</div>
+                                    <div class="item" onmouseenter="getFocus(this)" onclick="getCon(this);">log--10.1.4.77</div>
+                                    <div class="item" onmouseenter="getFocus(this)" onclick="getCon(this);">test220--10.1.0.220</div>
+                                    <div class="item addbg" onmouseenter="getFocus(this)" onclick="getCon(this);">test217--10.1.0.217</div>
+                                </div>
+                            </div> -->
+                            <!-- <div class="input-group-btn"><a class="btn-gray">更多</a></div> -->
+                            <input type="text" class="file-input" >
+                            <div class="input-group-btn">
+                                <div class="file-btn">
+                                    <a class="btn ">浏览</a>
+                                    <input type="file" class="file">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-block  col-xs-0">
+                    <a class="btn">查询</a>
+                    <a class="btn-gray">重置</a>
+                </div>
+            </div>
+        </div>
+        <div class="box-c   hide" id="scan">
+            <div class="row tc">
+                <div class="form-group  col-xs-0 ">
+                    <label class="from-label">主机:</label>
+                    <div class="form-value  ">
+                        <div class="input-group">
+                            <div id="content">
+                                <div class="first input">
+                                    <input type="text" style="width: 250px;" name="searchVo.host" id="host" value="" autocomplete="off" placeholder="主机名/ip" onclick="getContent(this);" onkeyup="getContent(this);">
+                                </div>
+                                <div id="append">
+                                    <div class="item" onmouseenter="getFocus(this)" onclick="getCon(this);">ht--10.1.4.148</div>
+                                    <div class="item" onmouseenter="getFocus(this)" onclick="getCon(this);">log--10.1.4.77</div>
+                                    <div class="item" onmouseenter="getFocus(this)" onclick="getCon(this);">test220--10.1.0.220</div>
+                                    <div class="item addbg" onmouseenter="getFocus(this)" onclick="getCon(this);">test217--10.1.0.217</div>
+                                </div>
+                            </div>
+                            <div class="input-group-btn"><a class="btn-gray">更多</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-block col-xs-0">
+                    <a class="btn" id="btn-scan">扫描</a>
+                    <a class="btn-gray">重置</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-bar innerlinebox" id="pro-tab">
+        <div class="tab-main"><a class="tab-item sel">自动</a><a class="tab-item">host<i class="icon icon-close"></i></a></div>
+    </div>
+    <div class="tab-cons tab-cons-border" id="pro-tab-con">
+        <div class="tab-con show">
+            <iframe src="tab-con.html" frameborder="0" scrolling="auto"></iframe>
+        </div>
+        <div class="tab-con">
+        </div>
+    </div>
+    <script src="../../js/jquery/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../js/bomc.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        var h = $(window).height() - $(".tab-cons").offset().top;
+        $(".tab-cons").css("height", h + "px");
+        $(".filter-more").on("click", function() {
+            if (!$(this).hasClass("expend")) {
+                $(this).parents(".filter-c").find(".filter-items").addClass("hide")
+                $(this).parents(".filter-c").find(".filter-items-more").addClass("show");
+                $(this).text("收起").addClass("expend");
+            } else {
+                $(this).parents(".filter-c").find(".filter-items").removeClass("hide")
+                $(this).parents(".filter-c").find(".filter-items-more").removeClass("show");
+                $(this).text("更多").removeClass("expend");
+            }
+        });
+        $(".scan-toggle ,.search-toggle").on("click", function() {
+            $("#" + $(this).attr("attrid")).show().siblings(".box-c").hide();
+            $(this).hide().siblings().show();
+        })
+
+        function addTab(id, text, src) {
+            if ($("#tab-" + id).length > 0) return;
+            var $last = $("#pro-tab .tab-item").last(),
+                l = $last.offset().left,
+                w = $last.outerWidth();
+            if (l + w > $("#pro-tab").width() || (l + w * 2) > $("#pro-tab").width()) {
+                showMess.alert("选项卡过多请先删除");
+                return;
+            }
+            $("#pro-tab .tab-item").removeClass("sel");
+            $("#pro-tab-con .tab-con").removeClass("show");
+            $("#pro-tab  .tab-main").append("<a class='tab-item sel' id='tab-" + id + "'>" + text + "<i class='icon icon-close'></i></a>");
+            $("#pro-tab-con.tab-cons").append(" <div class='tab-con show' id='tab-con-" + id + "'> <iframe src='" + src + "' frameborder='0' scrolling='auto'></iframe>  </div>");
+        }
+        $("#pro-tab").on("click", ".tab-item", function() {
+            $("#pro-tab .tab-item").removeClass("sel");
+            $("#pro-tab-con .tab-con").removeClass("show");
+            var id = $(this).addClass("sel").attr("id");
+            var $con = id ? $("#" + id.replace(/^tab/, "tab-con")) : $("#pro-tab-con .tab-con").eq($(this).index());
+            $con.addClass("show");
+        }).on("click", ".icon-close", function() {
+            var $tab = $(this).parent(".tab-item"),
+                id = $tab.attr("id"),
+                index = $tab.index(),
+                isSel = $tab.hasClass("sel");
+            if (index !== 0) {
+                var $con = id ? $("#" + id.replace(/^tab/, "tab-con")) : $("#pro-tab-con .tab-con").eq(index);
+                $tab.remove();
+                $con.remove();
+                if (isSel) {
+                    index === $("#pro-tab .tab-item").length - 1 ? index++ : index--;
+                    $("#pro-tab .tab-item").eq(index).click();
+                }
+                return false;
+            }
+
+        });
+
+        $("#btn-scan").on("click", function() {
+            //  addTab("asdda"+parseInt(Math.random()*100), "host123", "tab-con.html");
+        });
+
+    })
+    </script>
+</body>
+
+</html>

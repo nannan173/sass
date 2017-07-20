@@ -1,0 +1,429 @@
+@import "../base/reset";
+@import "../helpers/mixin";
+$nx-url:"../../images/index";
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    font: 12px/1.5 Microsoft Yahei, tahoma, sans-serif;
+    color: #333;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.top-h {
+    position: relative;
+    background: url($nx-url+"/h-bg.png") #3786b4 right center;
+    height: 40px;
+}
+
+.logo {
+    float: left;
+    width: 213px;
+    height: 100%;
+    margin-left: 10px;
+    background: url($nx-url+"/logo.png") no-repeat center left;
+}
+
+.top-menu-item {
+    float: left;
+    line-height: 40px;
+    padding: 0 15px;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    &:hover {
+        color: #84c9f0;
+    }
+}
+
+.top-right {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    color: #fff;
+    line-height: 16px;
+    font-size: 12px;
+    cursor: default;
+    height: 16px;
+    margin: 12px 0;
+}
+
+%index-icon {
+    background: url($nx-url+"/index.png") no-repeat;
+    @include inline-block;
+}
+
+.i-user {
+    @extend %index-icon;
+    background-position: 0 0;
+    width: 16px;
+    height: 16px;
+    vertical-align: top;
+    margin-right: 2px;
+}
+
+.user-inf {
+    margin-right: 10px;
+}
+
+.i-exit {
+    @extend %index-icon;
+    background-position: 0 -21px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    vertical-align: top;
+    &:hover {
+        background-position: -21px -21px;
+    }
+}
+
+.nav-left {
+    width: 200px;
+    position: absolute;
+    transition: all .5s ease-out 0s;
+    &.hide {
+        margin-left: -200px;
+        .i-left {
+            display: none;
+        }
+        .nav-h {
+            background: #f1f1f1;
+        }
+    }
+}
+
+.nav-left-show {
+    position: absolute;
+    visibility: hidden;
+    left: 200px;
+    transition: all .5s ease-out 0s;
+    &.show {
+        visibility: visible;
+        background: #f1f1f1;
+        left: 0;
+    }
+}
+
+.nav-h {
+    position: relative;
+    background: #d2d2d2;
+    line-height: 30px;
+    font-size: 14px;
+    padding-left: 10px;
+}
+
+%i-ltoggle {
+    @extend %index-icon;
+    width: 9px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.i-left {
+    @extend %i-ltoggle;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    margin-top: -8px;
+    background-position: 0 -64px;
+    &:hover {
+        background-position: -14px -64px;
+    }
+}
+
+.i-right {
+    @extend %i-ltoggle;
+    margin: 10px 8px 0 5px;
+    background-position: 0 -85px;
+    &:hover {
+        background-position: -14px -85px;
+    }
+}
+
+.nav-con-s {
+    background: #f1f1f1;
+}
+
+.nav-right {
+    margin-left: 200px;
+    transition: all .5s ease-out 0s;
+}
+
+.nav-tab {
+    position: relative;
+}
+
+.nav-tab-h {
+    border-bottom: 1px solid #e6e6e6;
+    padding-top: 5px;
+    height: 24px;
+    padding-left: 5px;
+    background: #f2f2f2;
+    &>li {
+        position: relative;
+        padding: 0 20px;
+        line-height: 23px;
+        float: left;
+        cursor: pointer;
+        border: 1px solid #f2f2f2;
+        border-color: #f2f2f2 #f2f2f2 #e6e6e6 #f2f2f2;
+        max-width: 100px;
+        @include nowrap();
+        &.sel {
+            border-color: #e6e6e6 #e6e6e6 #fff #e6e6e6;
+            background: #fff;
+        }
+        &:hover {
+            color: #3786b4;
+            .i-close {
+                display: inline-block;
+            }
+        }
+    }
+    .i-close {
+        @extend %index-icon;
+        position: absolute;
+        right: 7px;
+        top: 9px;
+        width: 7px;
+        height: 7px;
+        background-position: -27px -64px;
+        display: none;
+    }
+}
+
+.nav-right-right {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    padding: 7px 0;
+}
+
+.menu-pin {
+    vertical-align: top;
+    color: #599ec6;
+    line-height: 16px;
+    margin-right: 10px;
+    .i-pin {
+        @extend %index-icon;
+        width: 16px;
+        height: 16px;
+        background-position: 0 -139px;
+    }
+    &:hover {
+        color: #62a9d1;
+        .i-pin {
+            background-position: -17px -139px;
+        }
+    }
+}
+
+.nav-collect {
+    line-height: 16px;
+    cursor: pointer;
+    @include inline-block;
+    .nav-collect-title {
+        vertical-align: top;
+        color: #599ec6;
+    }
+    &:hover {
+        .dropdown-menu {
+            display: block;
+        }
+        .i-collect {
+            background-position: -21px -42px;
+        }
+        .nav-collect-title {
+            color: #62a9d1;
+        }
+    }
+    .dropdown-menu {
+        display: none;
+    }
+    .display-none {
+        display: none;
+    }
+    .i-collect {
+        @extend %index-icon;
+        width: 16px;
+        height: 16px;
+        background-position: 0 -42px;
+    }
+}
+
+//copy
+%nav-collect-pseudo {
+    content: " ";
+    position: absolute;
+    border-style: solid;
+    border-color: transparent transparent #e6e6e6 transparent;
+    border-width: 0 10px 10px;
+    right: 15px;
+    top: -10px;
+}
+
+.nav-collect .dropdown-menu {
+    position: absolute;
+    z-index: 1000;
+    right: 0;
+    left: auto;
+    width: 400px;
+    margin: 7px 0 0;
+    padding: 10px;
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
+    background-color: #f2f2f2;
+    //background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .175);
+    &:after {
+        @extend %nav-collect-pseudo;
+        border-color: transparent transparent #f2f2f2 transparent;
+        top: -9px;
+    }
+    &:before {
+        @extend %nav-collect-pseudo;
+    }
+}
+
+.filter-title {
+    color: #555;
+    line-height: 30px;
+    &:before {
+        border-left: 6px solid #5097bf;
+        height: 6px;
+        margin: 8px 5px 9px 0;
+        vertical-align: middle;
+        content: "";
+        @include inline-block;
+    }
+}
+
+.nav-collect-d {
+    padding: 5px;
+}
+
+.dropdown-menu li {
+    position: relative;
+    @include inline-block;
+    text-align: center;
+    margin: 5px 5px 0 0;
+    a {
+        font-size: 12px;
+        display: block;
+        white-space: nowrap;
+        line-height: 24px;
+        padding: 0 10px;
+        max-width: 100px;
+        text-overflow: ellipsis;
+        word-break: break-word;
+        overflow: hidden;
+        border: 1px solid #ccc;
+    }
+    &:hover {
+        a {
+            color: #277cac;
+            border-color: #5097bf;
+        }
+        .i-close-l {
+            display: inline-block;
+        }
+    }
+    .i-close-l {
+        @extend %index-icon;
+        display: none;
+        position: absolute;
+        right: -6px;
+        top: -6px;
+        width: 12px;
+        height: 12px;
+        background-position: -25px -84px;
+    }
+}
+
+.dropdown-menu .external {
+    text-align: center;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+    line-height: 0;
+    margin: 10px -10px 0;
+    cursor: pointer;
+    span {
+        margin-left: 5px;
+    }
+    &:hover {
+        span {
+            color: #5097bf;
+        }
+        .i-swaptop {
+            background-position: -17px -106px;
+        }
+        .i-swapbottom {
+            background-position: -17px -123px;
+        }
+    }
+}
+
+.i-swapicon {
+    @extend %index-icon;
+    width: 12px;
+    height: 12px;
+}
+
+.i-swaptop {
+    background-position: 0 -106px;
+}
+
+.i-swapbottom {
+    background-position: 0 -123px;
+    &:hover {
+        background-position: -17px -123px;
+    }
+}
+
+.iframe-wap {
+    overflow: hidden;
+    &.display-none {
+        height: 0 !important;
+    }
+    &.display-block {
+        display: block;
+    }
+    &.removeiframe {
+        display: none;
+    }
+}
+
+.contextmenu {
+    display: inline-block;
+    width: 100px;
+    background: #fff;
+    border: 1px solid #e6e6e6;
+    font-size: 12px;
+    position: absolute;
+    top: 10px;
+    left: 50px;
+    z-index: 1;
+    padding: 3px 0;
+}
+
+.contextmenu li {
+    padding: 0 15px 0 20px;
+    margin: 0;
+    cursor: pointer;
+    vertical-align: middle;
+    line-height: 28px;
+    display: block;
+}
+
+.contextmenu li:hover {
+    background: #9bbb52;
+    color: #fff;
+}
+
+.contextmenu li:last-child {
+    border-bottom: none;
+}

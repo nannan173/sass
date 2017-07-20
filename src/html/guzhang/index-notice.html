@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>故障公告</title>
+    <link rel="stylesheet" type="text/css" href="../../css/bomc.css">
+</head>
+
+<body class="mainpage">
+    <div class="leftmain leftmenu-sm  ">
+        <i class="lr-icon-toggle icon "></i>
+        <div class="leftcontain">
+            <div class="scrollcontain">
+                <div class="listmenu">
+                    <li class="menu-item sel"><a href="javascript:;"><i class="icon icon-center"></i><span class="menu-item-title">故障处理中心</span></a></li>
+                    <li class="menu-item  "><a href="javascript:;"><i class="icon icon-order"></i><span   class="menu-item-title">工单处理中心</span></a></li>
+                    <li class="menu-item  "><a href="javascript:;"><i class="icon icon-tag"></i><span   class="menu-item-title">标签处理中心</span></a></li>
+                    <li class="menu-item  "><a href="javascript:;"><i class="icon icon-voice"></i><span   class="menu-item-title">公告管理中心</span></a></li>
+                    <li class="selbg  "> </li>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="rightmain">
+        <div class="box">
+            <div class="box-h box-h-lgray">
+                <div class="h-right">
+                    <a class="btn-text t" href="javascript:;"> 公告历史
+                    </a>
+                </div>
+                <i class="icon icon-list"></i>
+                <span class="box-h-title">故障方案检索</span>
+            </div>
+        </div>
+        <div class="card-p-list-wap">
+            <ul class="card-p-list">
+                <li class="card-p-item add notice-card-add">
+                    <i class="icon icon-add"></i>
+                </li>
+                <li class="card-p-item">
+                    <div class="card-p-h"><i class="icon icon-circle h-icon"><i class="icon icon-voice"></i></i><span class="h-title">bssp网关故障1bssp网关故障1bssp网关故障1bssp网关故障</span>
+                   <span class="h-icon-right"><i class="btn-text icon icon-del"></i></span>
+                    </div>
+                    <div class="sub-title">
+                        2017-01-10 12:24:00 - 2017-01-19 12:23:00
+                    </div>
+                    <div class="card-p-c c-abstract">
+                        <p> 省公司bssp网关故障，目前163鉴权，业务办理，缴费，详单查询，发票打印的功能出现异常，省公司已加强处理，请各单位耐心等待，预计10个小时后恢复，造成不便，敬请谅解...</p>
+                    </div>
+                </li>
+                <li class="card-p-item">
+                    <div class="card-p-h"><i class="icon icon-circle h-icon"><i class="icon icon-voice"></i></i><span class="h-title">bssp网关故障2</span><span class="h-icon-right"><i class=" btn-text icon icon-del"></i></span></div>
+                    <div class="sub-title">
+                        2017-01-10 12:24:00 - 2017-01-19 12:23:00
+                    </div>
+                    <div class="card-p-c c-abstract">
+                        <p> 省公司bssp网关故障，目前163鉴权，业务办理，缴费，详单查询，发票打印的功能出现异常，省公司已加强处理，请各单位耐心等待，预计10个小时后恢复，造成不便，敬请谅解...</p>
+                    </div>
+                </li>
+                <li class="card-p-item">
+                    <div class="card-p-h"><i class="icon icon-circle h-icon"><i class="icon icon-voice"></i></i><span class="h-title">bssp网关故障3</span><span class="h-icon-right"><i class=" btn-text icon icon-del"></i></span></div>
+                    <div class="sub-title">
+                        2017-01-10 12:24:00 - 2017-01-19 12:23:00
+                    </div>
+                    <div class="card-p-c c-abstract">
+                        <p> 省公司bssp网关故障，目前163鉴权，业务办理，缴费，详单查询，发票打印的功能出现异常，省公司已加强处理，请各单位耐心等待，预计10个小时后恢复，造成不便，敬请谅解...</p>
+                    </div>
+                </li>
+                <li class="card-p-item">
+                    <div class="card-p-h"><i class="icon icon-circle h-icon"><i class="icon icon-voice"></i></i><span class="h-title">bssp网关故障4</span><span class="h-icon-right"><i class=" btn-text icon icon-del"></i></span></div>
+                    <div class="sub-title">
+                        2017-01-10 12:24:00 - 2017-01-19 12:23:00
+                    </div>
+                    <div class="card-p-c c-abstract">
+                        <p> 省公司bssp网关故障，目前163鉴权，业务办理，缴费，详单查询，发票打印的功能出现异常，省公司已加强处理，请各单位耐心等待，预计10个小时后恢复，造成不便，敬请谅解...</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script type="text/javascript" src="../../js/jquery/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../js/bomc.js"></script>
+    <script type="text/javascript" src="../../js/My97DatePicker/WdatePicker.js"></script>
+    <script type="text/javascript">
+    $(function() {
+
+        WdatePicker({
+            el: "start-input",
+            vel: "start-input",
+            eCont: 'start',
+            dateFmt: 'yyyy-MM-dd HH:mm:ss',
+            skin: "simple",
+            autoUpdateOnChanged: true
+        });
+        WdatePicker({
+            el: "end-input",
+            vel: "end-input",
+            eCont: 'end',
+            dateFmt: 'yyyy-MM-dd HH:mm:ss',
+            skin: "simple",
+            autoUpdateOnChanged: true
+        });
+        //菜单动画
+        $(".menu-item").on("click", function() {
+            $(".menu-item").removeClass("sel");
+            $(this).addClass("sel");
+            $(".selbg").css("top", $(this).position().top);
+        })
+        $(".solute-l").on("click", function() {
+            $(this).parents(".solute-list").toggleClass("show");
+        })
+        // var iw = $(".card-p-item").outerWidth();
+        // var i = Math.floor($(".card-p-list-wap").outerWidth() / $(".card-p-item").outerWidth(true));
+        // $(".card-p-list").css({
+        //     "width": iw * i + 1
+        // });
+        // $(window).resize(function() {
+        //     var iw = $(".card-p-item").outerWidth(true);
+        //     var i = Math.floor($(".card-p-list-wap").outerWidth() / $(".card-p-item").outerWidth(true));
+        //     $(".card-p-list").css({
+        //         "width": iw * i + 1
+        //     });
+        // });
+    });
+    </script>
+</body>
+
+</html>

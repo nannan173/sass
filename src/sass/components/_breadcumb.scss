@@ -1,0 +1,27 @@
+
+ $breadcumb-color:#424242;
+.c-breadcumb{
+	padding-bottom:8*$px;
+	font-size:13*$px;
+	color:$breadcumb-color;
+	word-spacing: -4px;
+	.icon{ 
+		margin-right: 5*$px;
+	}
+	.breadcumb-link-t,.breadcumb-link{
+		font-size:inherit;
+		margin-right: 5*$px;
+		cursor: pointer;
+		&:hover{ 
+			color: $theme;
+		}
+	}
+	.breadcumb-link-t{
+		color: $theme;
+	}
+	.breadcumb-text{
+		margin-right:5*$px; 
+		cursor: default;
+		color:lighten($breadcumb-color,.5);
+	}
+}

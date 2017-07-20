@@ -1,0 +1,13 @@
+body {
+	background-color: #FFFFFF;
+}
+
+body, html { 
+	font-size:12px;
+	color: #333333;
+} 
+.info {
+	font-style:italic;
+	font-size: 0.9em;
+	color: #FFFFFF;
+}

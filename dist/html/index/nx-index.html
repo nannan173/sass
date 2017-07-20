@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html> 
+<head>
+ <meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../../css/pages/nx-index.css">
+</head> 
+<body class="indexpage">
+
+    <div class="top-h" id="header">
+        <a class="logo"></a>
+        <div class=" top-menu">
+       <!-- 个人视图 可视化运维系统 需求管理平台 -->
+            <a class="top-menu-item">
+                <span>业务管理平台</span>
+            </a>
+            <a  class="top-menu-item">
+                <span>综合资源展现</span>
+            </a>
+            <a  class="top-menu-item">
+                <span>运营管理指标</span>
+            </a>
+            <a  class="top-menu-item">
+                <span>综合信息展现</span>
+            </a>
+            <a  class="top-menu-item">
+                <span>系统管理</span>
+            </a>
+            <a  class="top-menu-item">
+                <span>监控管理中心</span>
+            </a>
+            <a  class="top-menu-item">
+                <span>运营分析中心</span>
+            </a> 
+            <a  class="top-menu-item">
+                <span>运维管理中心</span>
+            </a>
+        </div>
+        <div class="top-right">
+            <a class="user-inf"><i class="i-user"></i>
+				<span>您好,超级管理员</span></a>
+            <a href="javascript:logout()" class=" i-exit  " title="退出登录"> </a>
+        </div>
+    </div>
+    <div class="nav-left" >
+        <div class="nav-h"> 
+            <span>综合运营</span>
+            <i class="  i-left"></i>
+        </div>
+        <div class="nav-con-s scrollwap"  > 
+        </div>
+    </div>
+    <div class="nav-left-show">
+        <i class="   i-right "  ></i>
+    </div>
+    <div class="nav-right"  >
+        <div class="nav-tab" id="nav-tab">
+            <ul class="nav-tab-h ">
+                <li class=""><a url="" tid="0" >首页</a></li>
+                <li class="sel" ><a url="/ngnmc/portal/home.action" tid="8019" pid="100000">个人综合门户<i class="i-close "></i></a></li>
+            </ul>
+            <div class="nav-collect">
+                <a id="collect" >
+                    <i class="  i-collect"></i>
+                    <span class=" nav-collect-title">收藏夹</span>
+                </a>
+                <div class="dropdown-menu" >
+                    <div class="filter-title">常用链接</div>
+                    <ul class="nav-collect-d">
+                        <li>
+                            <a href="javascript:addFunctionTab('流程总待办','/ServiceManageDeskFlowNX/fmoa/workflow/todotasklist.jsp?OPER_ENV_INFO','683','4714');">流程总待办</a>
+                        </li>
+                        <li>
+                            <a href="javascript:addFunctionTab('新增配置项工单新建','/ServiceManageDeskFlowNX/fmoa/workflow/flow_bill_new_config.jsp?optionType=1&amp;flow_definition_code=CONS_CONFIG_CHANGE','3956','2605');">新增配置项工单新建</a>
+                        </li>
+                        <li>
+                            <a href="javascript:addFunctionTab('用户角色分配','/SystemManage/role.do?function=forUserRoleConfig','4737','8022');">用户角色分配</a>
+                        </li>
+                        <li>
+                            <a href="javascript:addFunctionTab('功能菜单管理','/SystemManage/function/function_manage_frame.jsp','8021','8022');">功能菜单管理</a>
+                        </li>
+                        <li>
+                            <a href="javascript:addFunctionTab('新增合约变更流程','/ServiceManageDeskFlowNX/fmoa/workflow/flow_bill_new.jsp?flow_definition_code=CONS_CONTRACT_CHANGE','100203','100202');">新增合约变更流程</a>
+                        </li>
+                        <li>
+                            <a href="javascript:addFunctionTab('合同台帐审核流程待办','/ServiceManageDeskFlowNX/fmoa/workflow/todotasklist.jsp?flow_definition_code=CONS_CONTRACT_CHECK','100261','100259');">合同台帐审核流程待办</a>
+                        </li>
+                    </ul>
+                    <div class="filter-title">收藏夹 </div>
+                    <ul id="favorite" class="nav-collect-d dropdown-collect">
+                        <li class="collect_top">
+                            <a href="javascript:addFunctionTab('视图模板管理','/ngnmc/portal/template.action' ,'4717','4708');" fid="625" title="视图模板管理">视图模板管理</a><i class="i-close-l "></i>
+                        </li>
+                        <li class="collect_top">
+                            <a href="javascript:addFunctionTab('用户信息管理','/SystemManage/usermanage/user_manage_frame.jsp' ,'4736','8022');" fid="626" title="用户信息管理">用户信息管理</a><i class="i-close-l "></i>
+                        </li>
+                        <li class="collect_top">
+                            <a href="javascript:addFunctionTab('全部工单查询','/ServiceManageDeskFlowNX/fmoa/billsearchflow/allsearchquery.jsp' ,'1382','4712');" fid="633" title="全部工单查询">全部工单查询</a><i class="i-close-l "></i>
+                        </li>
+                        <li class="collect_top">
+                            <a href="javascript:addFunctionTab('员工工单查询','/ServiceManageDeskFlowNX/fmoa/billsearchflow/usersearchquery.jsp' ,'1383','4712');" fid="634" title="员工工单查询">员工工单查询</a><i class="i-close-l "></i>
+                        </li>
+                        <li class="collect_top">
+                            <a href="javascript:addFunctionTab('新增主账号变更申请','/ServiceManageDeskFlowNX/fmoa/workflow/flow_bill_new.jsp?flow_definition_code=CONS_4A_MAINACCOUNT' ,'1968','1967');" fid="636" title="新增主账号变更申请">新增主账号变更申请</a><i class="i-close-l "></i>
+                        </li>
+                        <li class="collect_top">
+                            <a href="javascript:addFunctionTab('过期公告管理','/NoticeManage/notice.do?mark=expireList' ,'8000','4742');" fid="664" title="过期公告管理">过期公告管理</a><i class="i-close-l "></i>
+                        </li>
+                        <li class="collect_top">
+                            <a href="javascript:addFunctionTab('有效公告查询','/NoticeManage/notice.do?mark=validList' ,'4745','4742');" fid="665" title="有效公告查询">有效公告查询</a><i class="i-close-l "></i>
+                        </li>
+                        <li class="collect_top">
+                            <a href="javascript:addFunctionTab('流程总待阅','/ServiceManageDeskFlowNX/fmoa/workflow/toreadtotaltasklist.jsp?OPER_ENV_INFO' ,'684','4714');" fid="666" title="流程总待阅">流程总待阅</a><i class="i-close-l "></i>
+                        </li>
+                        <li class="collect_top">
+                            <a href="javascript:addFunctionTab('流程总已办','/ServiceManageDeskFlowNX/fmoa/workflow/handledtasklist.jsp' ,'1561','4714');" fid="667" title="流程总已办">流程总已办</a><i class="i-close-l "></i>
+                        </li>
+                        <li class="collect_more display-none">
+                            <a href="javascript:addFunctionTab('流程总待办','/ServiceManageDeskFlowNX/fmoa/workflow/todotasklist.jsp?OPER_ENV_INFO' ,'683','4714');" fid="668" title="流程总待办">流程总待办</a><i class="i-close-l "></i>
+                        </li>
+                        <li class="collect_more display-none">
+                            <a href="javascript:addFunctionTab('公告干预','/NoticeManage/notice.do?mark=operateList' ,'4744','4742');" fid="669" title="公告干预">公告干预</a><i class="i-close-l "></i>
+                        </li>
+                        <li class="collect_more display-none">
+                            <a href="javascript:addFunctionTab('所有公告查询','/NoticeManage/notice.do?mark=allList' ,'4743','4742');" fid="670" title="所有公告查询">所有公告查询</a><i class="i-close-l "></i>
+                        </li>
+                        <li class="collect_more display-none">
+                            <a href="javascript:addFunctionTab('推送规则配置','/GenericBusinessTools//publishmanage/publishmanage!listRule.action' ,'6392','6390');" fid="671" title="推送规则配置">推送规则配置</a><i class="i-close-l "></i>
+                        </li>
+                        <li class="collect_more display-none">
+                            <a href="javascript:addFunctionTab('推送策略配置','/GenericBusinessTools//publishmanage/publishmanage!listStrategy.action' ,'6391','6390');" fid="672" title="推送策略配置">推送策略配置</a><i class="i-close-l "></i>
+                        </li>
+                        <li class="collect_more display-none">
+                            <a href="javascript:addFunctionTab('功能菜单管理','/SystemManage/function/function_manage_frame.jsp' ,'8021','8022');" fid="673" title="功能菜单管理">功能菜单管理</a><i class="i-close-l "></i>
+                        </li>
+                        <li class="collect_more display-none">
+                            <a href="javascript:addFunctionTab('文档采编','http://10.223.16.149/nxfms/nxfms/edit/index.jsp?OPER_ENV_INFO' ,'7096','7095');" fid="695" title="文档采编">文档采编</a><i class="i-close-l "></i>
+                        </li>
+                    </ul>
+                    <div class="external"><a onclick="colect_more()"><i class="i-swapbottom i-swapicon"></i><span>精简显示书签</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-content" id="main-content">
+            
+        </div>
+    </div>
+  
+    </body>
+    <script src="../../js/jquery/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript">
+        $(function(){
+            $(".main-content,.nav-con-s").css("height",$(window).height()-$(".main-content").offset().top);
+            $(".nav-left-show").css("height",$(window).height()-$(".nav-left-show").offset().top);
+            $(".i-left").on("click",function(){
+                    $(".nav-left").addClass("hide");
+                    $(".nav-left-show").addClass("show");
+                    $(".nav-right").css("margin-left","26px"); 
+            })
+             $(".i-right").on("click",function(){
+                    $(".nav-left").removeClass("hide");
+                    $(".nav-left-show").removeClass("show");
+                    $(".nav-right").css("margin-left","200px"); 
+            })
+
+        })
+        </script>
+</html>

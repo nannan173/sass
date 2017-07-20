@@ -1,0 +1,17 @@
+%extendcol-xs{
+	box-sizing:border-box;
+		float: left;
+}
+@for $i from 1 through 12{
+	.col-xs-#{$i}{
+		width:percentage($i / 12);
+		@extend %extendcol-xs;
+	}
+}
+
+.col-xs-0{
+	@include inline-block;
+		box-sizing:border-box;
+		vertical-align: top;
+}
+ 

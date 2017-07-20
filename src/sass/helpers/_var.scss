@@ -1,0 +1,151 @@
+ 
+$theme:#6eaef6 !default;
+$px:1px !default;
+$theme-light:20%;
+//** Background color for `<body>`.
+$body-bg:               #fff !default;
+//** Global text color on `<body>`.
+$text-color:            #333 !default; 
+$link-hover-color:$theme !default;  
+
+//## Font, line-height, and color for body text, headings, and more.
+$font-size-base:          14*$px !default;  
+
+//** Load fonts from this directory. 
+@import "iconvar";  
+
+//** File name for all font files.
+$icon-font-name:          "iconfont" !default;
+// //** Element ID within SVG icon file.
+$icon-font-svg-id:        "iconfont" !default; 
+
+$image-src:"../images" !default;
+
+//leftbox
+$lef-tbg:#eaeaea !default;
+$left-width:240*$px;
+ 
+ //right pop
+$pop-h-bg:$theme !default;
+$right-pop-width:320*$px;
+$right-pop-width-lg:800*$px;
+$right-pop-width-middle:570*$px;
+
+ //nav
+$treemenu-item-lineheight:35*$px  !default;
+$treemenu-item-sub-lineheight:35*$px  !default;
+$treemenu-item-sel-bg:$theme  !default;
+$treemenu-item-sel-fcolor:#fff  !default;
+$treemenu-font-size:15*$px;
+
+
+
+//card
+$card-sel-color:$theme !default;
+$card-item-width:220*$px !default;
+$card-item-margin:15*$px 15*$px 0 0;
+$card-item-height:195*$px !default; 
+$card-hove-shadow:0 0 20px rgba(110, 174, 246, 0.5); 
+$card-h-icon-size:18*$px;
+$card-h-font-size:16*$px;
+$inf-row-inline-icon-size:14*$px;
+$inf-row-inline-font-size:12*$px;
+$inf-row-inline-label-width:55*$px;
+$card-f-font-size:15*$px;
+$sub-box-theme: $theme !default;
+
+$box-h-font-size:15*$px;
+$box-h-icon-size:16*$px;
+$box-h-line-height:40*$px;
+$box-h-icon-margin-right:8*$px;
+$box-font-size:13*$px;
+
+
+// fixbox 
+$filter-item-sel-bg:$theme !default;
+$filter-boder:  1px solid #e1e1e1;
+$filter-font-size:13*$px;
+$filter-line-height:30*$px;
+$filter-title-color:#212121;
+$filter-item-margin:0 10*$px 5*$px  0 ;
+$filter-title-width:70*$px;
+$filter-wap-min-height:80*$px;
+$filter-contain-max-height:105*$px;
+$filter-c-margin:0 0 -5px 0;
+
+//input btn height
+$input-btn-height:32*$px !default;
+//button
+$btn-bg:$theme;
+$btn-hover-bg:darken($theme,5%);
+$btn-color:#fff;
+$btn-default-width:55*$px ;
+$btn-default-padding:0 10*$px ;
+$btn-default-margin:0 0 0 30*$px ;
+$btn-font-size:13*$px; 
+$btn-line-height:$input-btn-height ;
+$btn-border-radius:2px;
+$btn-gray-bg:#d7d7d7; 
+$btn-gray-hover-bg:darken($theme,5%);
+$btn-gray-color:#4c4848;
+
+//form input
+$input-font-size:14*$px;
+$input-padding:5*$px;
+$input-line-height:$input-btn-height - ($input-padding *2 )-2*$px;
+$input-border:1px solid #ddd;
+$input-default-width:196*$px;
+$input-radius:2*$px;
+$input-disabled-bg:#eee;
+$placeholder-color:#999;
+
+$checkbox-size:13*$px;
+$checkbox-sel-bg:$theme;
+$checkbox-margin-right:5*$px;
+
+
+// 进程状态
+$s-new:#8bc34A; 
+$s-restart:#fc7a8c;
+$s-disappear:#607d8b;
+$s-exist:#00bcd4;
+
+//故障状
+$s-wtcheck:#f19149;//待确认
+$s-wtaudit:#fc7a8c;//待审核
+$s-wtmark:#b555d1;//待标识
+$s-marked:#83b11e;//已标识
+$s-dealing:#10d9cb;//处理中
+$s-dealed:#0bb9e5;//已处理
+$s-replied:#2ed345;//已回复
+$s-mark-failed:#e85959;//标识失败
+// 任务管理
+$s-unusual:#ff98ea;//异常
+$s-normal:#82e0a4;//正常
+$s-null:#6eaef6;//空跑
+$s-nondeployed:#999;//未部署
+
+$s-chulizhong:#0ea89d;//处理中
+$s-yiqueren:#94b64b;//已确认
+$s-weiqueren:#df9730;//未确认
+$s-yanz2:#ec91fb;//重要
+
+//告警
+$s-alevel1:#fc7a8c;//严重
+$s-alevel2:#ec91fb;//重要
+$s-alevel3:#f0d366;//
+$s-alevel4:#10d9cb;
+$s-alevel5:#f6a22a;
+$s-alevel6:#82e0a4;
+$s-alevel7:#53a5f1;
+
+// .alarm-lever-0{background:#eee;}
+// .alarm-lever-1{background:#fc7a8c;}
+// .alarm-lever-2{background:#ec91fb;}
+// .alarm-lever-3{background:#f0d366;}
+// .alarm-lever-4{background:#5de7ed;}
+// .alarm-lever-5{background:#f6a22a;}
+// .alarm-lever-6{background:#82e0a4;}
+// .alarm-lever-7{background:#53a5f1;} 
+
+$table-theme-hover-bg:  lighten($theme,25%) !default; 

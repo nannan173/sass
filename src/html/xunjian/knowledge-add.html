@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../../css/bomc.css">
+</head>
+
+<body class="mainpage">
+    <div class="box">
+        <div class="box-h box-h-theme">
+            <i class="icon icon-list"></i><span class="box-h-title">知识库创建</span>
+        </div>
+        <div class="box-c">
+            <div class=" inner-box">
+                <div class="box-h">
+                    <i class="box-h-line"></i><span class="box-h-title">基本信息</span>
+                </div>
+                <div class="box-c">
+                    <div class="row">
+                        <div class="form-group col-xs-6">
+                            <label class="from-label">知识库名:</label>
+                            <div class="form-value">
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="form-group col-xs-6">
+                            <label class="from-label">生效标识:</label>
+                            <div class="form-value">
+                                <i class="checkbox"><input type="checkbox"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <div class="form-group">
+                            <label class="from-label">巡检项类型:</label>
+                            <div class="form-value filter-c">
+                                <div class="filter-items">
+                                    <span class="filter-item sel">kpi </span>
+                                    <span class="filter-item">平台</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <div class="form-group">
+                            <label class="from-label">巡检项:</label>
+                            <div class="form-value filter-c ">
+                                <div class="filter-items">
+                                    <span class="filter-item">全部</span>
+                                    <span class="filter-item">mytest</span>
+                                    <span class="filter-item">mytest</span>
+                                    <span class="filter-item">mytest</span>
+                                    <span class="filter-item">mytest</span>
+                                    <span class="filter-item">mytest</span>
+                                </div>
+                                <div class="filter-items-more">
+                                    <div class="filter-seach-box">
+                                        <input type="text"> <i class="icon icon-search"></i>
+                                    </div>
+                                    <div class="filter-items-contain">
+                                        <span class="filter-item">全部</span>
+                                        <span class="filter-item">as-jf2/10.46.100.167</span>
+                                        <span class="filter-item">as-jf2/10.46.100.167</span>
+                                        <span class="filter-item">as-jf2/10.46.100.167</span>
+                                        <span class="filter-item">as-jf2/10.46.100.167</span>
+                                        <span class="filter-item">as-jf2/10.46.100.167</span>
+                                        <span class="filter-item">as-jf2/10.46.100.167</span>
+                                        <span class="filter-item">as-jf2/10.46.100.167</span>
+                                        <span class="filter-item">as-jf2/10.46.100.167</span>
+                                        <span class="filter-item">as-jf2/10.46.100.167</span>
+                                        <span class="filter-item">as-jf2/10.46.100.167</span>
+                                        <span class="filter-item">as-jf2/10.46.100.167</span>
+                                        <span class="filter-item">as-jf2/10.46.100.167</span>
+                                        <span class="filter-item">as-jf2/10.46.100.167</span>
+                                        <span class="filter-item">as-jf2/10.46.100.167</span>
+                                        <span class="filter-item">as-jf2/10.46.100.167</span>
+                                        <span class="filter-item">as-jf2/10.46.100.167</span>
+                                    </div>
+                                </div>
+                                <div class="filter-items-tail">
+                                    <a href="javascript:void(0)" class="filter-more">更多</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class=" inner-box">
+                <div class="box-h">
+                    <i class="box-h-line"></i><span class="box-h-title">基线配置</span>
+                </div>
+                <div class="box-c">
+                    <div class="row">
+                        <div class="form-group">
+                            <label class="from-label">基线:</label>
+                            <div class="form-value zone-list">
+                                <div class="zone-list-inner">
+                                    <div class="zone-item sel ">
+                                        <span class="bracket">[</span>
+                                        <div class="pseudo-input-wap">
+                                            <span class="zone-input pseudo-input" contenteditable placeholder="下限" type="number">123123123123</span>
+                                            <input type="text">
+                                        </div>,
+                                        <div class="pseudo-input-wap">
+                                            <span class="zone-input pseudo-input" contenteditable placeholder="上限" type="number">123123123</span>
+                                            <input type="text">
+                                        </div><span class="bracket">]</span>
+                                        <div class="zone-item-right">
+                                            <i class="icon icon-del"></i>
+                                            <i class="icon icon-code"></i>
+                                        </div>
+                                    </div>
+                                    <div class="zone-item  ">
+                                        <span class="bracket">[</span>
+                                        <div class="pseudo-input-wap"><span class="zone-input pseudo-input" contenteditable placeholder="上限">123123123</span>
+                                            <input type="text"> </div>,
+                                        <div class="pseudo-input-wap"><span class="zone-input pseudo-input" contenteditable placeholder="下限">1231231231</span>
+                                            <input type="text"> </div><span class="bracket">]</span>
+                                        <div class="zone-item-right">
+                                            <i class="icon icon-del"></i>
+                                            <i class="icon icon-code"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="zone-item add">
+                                    <!--  [<div  class="pseudo-input-wap"><span class="zone-input pseudo-input placeholder" contenteditable placeholder="上限">上限</span><input type="text"> </div>,<div  class="pseudo-input-wap"><span class="zone-input pseudo-input placeholder" contenteditable placeholder="下限">下限</span></span><input type="text"> </div>] -->
+                                    <a href="javascript:void(0)" class="add-btn">[<i class="icon icon-add"></i>]</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class=" inner-box" id="script">
+                <div class="box-h">
+                    <i class="box-h-line"></i><span class="box-h-title">脚本配置</span><span class="box-h-zone-title"></span>
+                </div>
+                <div class="box-c">
+                    <div class="script seq-list">
+                        <div class="add">
+                            <i class="icon icon-circle "><i class="icon-add"></i> </i>
+                        </div>
+                        <div class="seq-inner">
+                            <div class="seq-item  ">
+                                <span class="seq-index"><i class="icon icon-circle"></i><input type="text"></span>
+                                <span class="seq-corner-right"> <i class="icon icon-del"> </i></span>
+                                <div class='row  '>
+                                    <div class="form-group col-xs-0">
+                                        <input type="text" placeholder="请输入脚本名称">
+                                        <input type="text" placeholder="请输入脚本编号">
+                                    </div>
+                                    <div class="form-group col-xs-0">
+                                        <label class="from-label">
+                                            执行顺序:
+                                        </label>
+                                        <div class="form-value">
+                                            <div class="input-num">
+                                                <input type="text" value="0" min="1">
+                                                <div class="num-action">
+                                                    <span class="num-up"></span>
+                                                    <span class="num-down"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class='row'>
+                                    <div class="form-group  ">
+                                        <label class="from-label">
+                                            脚本参数:
+                                        </label>
+                                        <div class="form-value">
+                                            <div class="arg-list"> (
+                                                <div class="arg-item">
+                                                    <span>参数名:</span>
+                                                    <div class="select placeholder" placeholder='0'>
+                                                        <select name="" id="">
+                                                            <option>参数一</option>
+                                                            <option>参数一</option>
+                                                        </select>
+                                                    </div>
+                                                </div>,
+                                                <div class="arg-item">
+                                                    <span>参数名:</span>
+                                                    <input type="text" placeholder="参数一">
+                                                </div>,
+                                                <div class="arg-item">
+                                                    <span>参数名:</span>
+                                                    <input type="text" placeholder="参数一">
+                                                </div>,
+                                                <div class="arg-item">
+                                                    <span>参数名:</span>
+                                                    <input type="text" placeholder="参数一">
+                                                </div>)</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group">
+                                        <textarea class="form-control-full"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="btn-block">
+        <a href="" class="btn">保存</a><a href="" class="btn-gray">取消</a>
+    </div>
+    <script type="text/javascript" src="../../js/jquery/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../js/bomc.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        $(".filter-more").on("click", function() {
+            if (!$(this).hasClass("expend")) {
+                $(this).parents(".filter-c").find(".filter-items").addClass("hide")
+                $(this).parents(".filter-c").find(".filter-items-more").addClass("show");
+                $(this).text("收起").addClass("expend");
+            } else {
+                $(this).parents(".filter-c").find(".filter-items").removeClass("hide")
+                $(this).parents(".filter-c").find(".filter-items-more").removeClass("show");
+                $(this).text("更多").removeClass("expend");
+            }
+        });
+        $(".zone-list").on("click", ".zone-item.add .add-btn ", function() {
+            var htm = "<div class='zone-item'>" +
+                "[<div  class='pseudo-input-wap'><span class='zone-input pseudo-input placeholder' contenteditable  placeholder='上限'>上限</span><input type='text'></div>,<div  class='pseudo-input-wap'><span  class='zone-input pseudo-input placeholder' contenteditable   placeholder='下限'>下限</span><input type='text'></div>] <div class='zone-item-right'> <i class='icon icon-del'></i> <i class='icon icon-code'></i> </div>" +
+                "</div>"
+            $(this).parents(".zone-list").find(".zone-list-inner").append(htm);
+            $(".zone-list-inner .zone-item:last ").find(".zone-input").eq(0).click().focus();
+        });
+        $(".zone-list").on("click", " .icon-del", function() {
+            $(this).parents(".zone-item").remove();
+        });
+        $(".zone-list").on("click", " .icon-code", function() {
+            $item = $(this).parents(".zone-item");
+            $("#script").find(".box-h-zone-title").html(" - [ 12312321 , 1231231 ]").show();
+        });
+        $(".seq-list ").on("click", ".icon-del", function() {
+            $item = $(this).parents(".seq-item");
+            $item.addClass("remove");
+            setTimeout(function() {
+                $item.remove();
+            }, 600);
+        });
+        $(".seq-list .add .icon-circle").on("click", function() {
+            var html = "<div class='seq-item add-edit init'  >" +
+                "<span class='seq-index'><i class='icon icon-circle'></i><input type='text'></span>" +
+                "<span class='seq-corner-right'> <i class='icon icon-del'> </i></span>" +
+                "<div class='row  '>" +
+                "<div class='form-group col-xs-0'>" +
+                "<input type='text' placeholder='请输入脚本名称'>" +
+                "<input type='text' placeholder='请输入脚本编号'>" +
+                "</div>" +
+                "<div class='form-group col-xs-0'>" +
+                "<label class='from-label'>" +
+                "执行顺序:" +
+                "</label>" +
+                "<div class='form-value'>" +
+                "<div class='input-num'>" +
+                "<input type='text' value='0'>" +
+                "<div class='num-action'>" +
+                "<span class='num-up'></span>" +
+                "<span class='num-down'></span>" +
+                "</div>" +
+                "</div>" +
+                "</div>" +
+                "</div>" +
+                "</div>" +
+                "<div class='row'>" +
+                "<div class='form-group  '>" +
+                "<label class='from-label'>" +
+                "脚本参数:" +
+                "</label>" +
+                "<div class='form-value'>" +
+                "<div class='arg-list'> (" +
+                "<div class='arg-item'>" +
+                "<span>" + "参数名" + ":</span>" +
+                "<input type='text' placeholder='参数一'> " +
+                "</div>, " +
+                "<div class='arg-item'> " +
+                "<span>" + "参数名" + ":</span> " +
+                "<input type='text' placeholder='参数一'>" +
+                "</div>," +
+                "<div class='arg-item'>" +
+                "<span>" + "参数名:" + "</span>" +
+                "<input type='text' placeholder='参数一'>" +
+                "</div>," +
+                "<div class='arg-item'>" +
+                "<span>" + "参数名" + ":</span>" +
+                "<input type='text' placeholder='参数一'>" +
+                "</div>)</div>" +
+                "</div>" +
+                "</div>" +
+                "</div>" +
+                "<div class='row'>" +
+                "<div class='form-group'>" +
+                "<textarea class='form-control-full'></textarea>" +
+                "</div>" +
+                "</div>" +
+                "</div>";
+            $(".seq-inner ").prepend(html);
+            var $item = $(".add-edit").first();
+            setTimeout(function() {
+                $item.removeClass("init");
+            }, 400);
+        });
+        $("#script .box-h-title").on("click", function() {
+            if ($(".box-h-zone-title").css("display") !== "none") {
+                $(".box-h-zone-title").hide();
+                //加载全部的脚本
+            }
+        });
+        $(document).on("keyup", ".pseudo-input[type='number']", function() {
+            $(this).text($(this).text().replace(/\D/g, ""));
+            po_Last_Div(this);
+        });
+
+        function po_Last_Div(obj) {
+            if (window.getSelection) { //ie11 10 9 ff safari
+                obj.focus(); //解决ff不获取焦点无法定位问题
+                var range = window.getSelection(); //创建range
+                range.selectAllChildren(obj); //range 选择obj下所有子内容
+                range.collapseToEnd(); //光标移至最后
+            } else if (document.selection) { //ie10 9 8 7 6 5
+                var range = document.selection.createRange(); //创建选择对象
+                //var range = document.body.createTextRange();
+                range.moveToElementText(obj); //range定位到obj
+                range.collapse(false); //光标移至最后
+                range.select();
+            }
+        }
+    });
+    </script>
+</body>
+
+</html>

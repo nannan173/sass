@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../../css/bomc.css">
+</head>
+
+<body class="mainpage">
+    <div class="form-box">
+        <div class=" row ">
+            <div class="form-group col-xs-6">
+                <label class="from-label"><i class="icon icon-tasklist"></i>任务名称:</label>
+                <div class="form-value">
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+            <div class="form-group col-xs-6">
+                <label class="from-label"><i class="icon icon-tasklist"></i>运行主机:</label>
+                <div class="form-value">
+                    <div class="filter-input dropdown-wap">
+                        <input type="text" class="form-control dropdown-toggle input-view"> 
+                        <input type="text" class="input-result"> 
+                        <ul class="dropdown-menu">
+                            <li>1231233333333333333333333333333333333333333333331</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                            <li>6</li>
+                            <li>7</li>
+                            <li>9</li>
+                            <li>10</li>
+                            <li>12</li>
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li> 
+                            <li>4</li>
+                            <li>6</li>
+                            <li>7</li>
+                            <li>9</li>
+                            <li>10</li>
+                            <li>12</li>
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                            <li>6</li>
+                            <li>7</li>
+                            <li>9</li>
+                            <li>10</li>
+                            <li>12</li>
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                            <li>6</li>
+                            <li>7</li>
+                            <li>9</li>
+                            <li>10</li>
+                            <li>12</li> 
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-box">
+        <div class=" row ">
+            <div class="form-group col-xs-6">
+                <label class="from-label"><i class="icon icon-tasklist"></i>模板名称:</label>
+                <div class="form-value">
+                    <p class="form-control-static">oracle表空间监控</p>
+                </div>
+            </div>
+            <div class="form-group col-xs-6">
+                <label class="from-label"><i class="icon  icon-time"></i>运行周期:</label>
+                <div class="form-value">
+                    <p class="form-control-static">0 0/1***</p>
+                </div>
+            </div>
+        </div>
+        <div class=" row ">
+            <div class="form-group  ">
+                <label class="from-label"><i class="icon icon-channel"></i>关联指标:</label>
+                <div class="form-value zb-tag-inf">
+                    <span class="tag-inf-item">最大空闲块大小 ORA_TABLESPACE_TB_SP </span>
+                    <span class="tag-inf-item">最大空闲块大小 ORA_TABLESPACE_TB_SP </span>
+                    <span class="tag-inf-item">最大空闲块大小 ORA_TABLESPACE_TB_SP </span>
+                    <span class="tag-inf-item">最大空闲块大小 ORA_TABLESPACE_TB_SP </span>
+                    <span class="tag-inf-item">最大空闲块大小 ORA_TABLESPACE_TB_SP </span>
+                    <span class="tag-inf-item">最大空闲块大小 ORA_TABLESPACE_TB_SP </span>
+                    <span class="tag-inf-item">最大空闲块大小 ORA_TABLESPACE_TB_SP </span>
+                    <span class="tag-inf-item">最大空闲块大小 ORA_TABLESPACE_TB_SP </span>
+                    <span class="tag-inf-item">最大空闲块大小 ORA_TABLESPACE_TB_SP </span>
+                    <span class="tag-inf-item">最大空闲块大小 ORA_TABLESPACE_TB_SP </span>
+                    <span class="tag-inf-item">最大空闲块大小 ORA_TABLESPACE_TB_SP </span>
+                    <span class="tag-inf-item">最大空闲块大小 ORA_TABLESPACE_TB_SP </span>
+                    <span class="tag-inf-item">最大空闲块大小 ORA_TABLESPACE_TB_SP </span>
+                    <span class="tag-inf-item">最大空闲块大小 ORA_TABLESPACE_TB_SP </span>
+                    <span class="tag-inf-item">最大空闲块大小 ORA_TABLESPACE_TB_SP </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="box">
+        <div class="box-h">
+            <div class="h-right  ">
+                <a class="btn-line-t">对象名称</a>
+                <a class="btn-line-t hide" id="object-to-hide">收起 <span class="arrowtop"></span></a>
+            </div>
+            <i class="icon  icon-template"></i><span class="box-h-title">监控资源</span>
+        </div>
+        <div class="box-c filter-wap">
+            <div class="filter-row">
+                <label class="filter-title">业务类型:</label>
+                <div class="filter-c">
+                    <div class="filter-items">
+                        <span class="filter-item sel">PMP </span>
+                        <span class="filter-item">电子渠道</span>
+                        <span class="filter-item">全网监控系统</span>
+                    </div>
+                </div>
+            </div>
+            <div class="filter-row" for="box-h-title">
+                <label class="filter-title">
+                    对象名称:
+                    <!--  <i class="checkbox"><input type="checkbox"></input><label class="icon icon-check"></label></i>反选  -->
+                </label>
+                <div class="filter-c  filter-seach">
+                    <div class="filter-items">
+                        <div class="filter-seach-box">
+                            <input type="text"> <i class="icon icon-search"></i>
+                        </div>
+                        <div class="filter-items-contain-left">
+                            <p><i class="checkbox"><input type="checkbox" checked="true">  </i>全选</p>
+                            <p><i class="checkbox"><input type="checkbox" checked="true"> </i>反选</p>
+                        </div>
+                        <div class="filter-items-contain">
+                            <span class="filter-item">10.46.100.167/as-jf2</span>
+                            <span class="filter-item">as-jf2/10.46.100.167</span>
+                            <span class="filter-item">as-jf2/10.46.100.167</span>
+                            <span class="filter-item">as-jf2/10.46.100.167</span>
+                            <span class="filter-item">as-jf2/10.46.100.167</span>
+                            <span class="filter-item">as-jf2/10.46.100.167</span>
+                            <span class="filter-item">as-jf2/10.46.100.167</span>
+                            <span class="filter-item">as-jf2/10.46.100.167</span>
+                            <span class="filter-item">as-jf2/10.46.100.167</span>
+                            <span class="filter-item">as-jf2/10.46.100.167</span>
+                            <span class="filter-item">as-jf2/10.46.100.167</span>
+                            <span class="filter-item">as-jf2/10.46.100.167</span>
+                            <span class="filter-item">as-jf2/10.46.100.167</span>
+                            <span class="filter-item">as-jf2/10.46.100.167</span>
+                            <span class="filter-item">as-jf2/10.46.100.167</span>
+                            <span class="filter-item">as-jf2/10.46.100.167</span>
+                            <span class="filter-item">as-jf2/10.46.100.167</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="btn-block">
+        <a href="javascript::void(0)" class="btn">保存</a>
+        <a href="javascript::void(0)" class="btn btn-gray">取消</a>
+    </div>
+    <script type="text/javascript" src="../../js/jquery/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../js/bomc.js"></script>
+    <script>
+    $(function() {
+        $(".btn-line-t").on("click", function() {
+            $(this).addClass("hide");
+            $(this).siblings().removeClass("hide");
+           
+        });
+        $(".filter-input .dropdown-toggle").on("click keyup change", function() {
+            var filter = $(this).val().trim().toLowerCase();
+            $drop=$(this).parents(".filter-input").find(".dropdown-menu") ;
+            $lis= $drop.find("li");
+            if (filter === "") $lis.show();
+            $lis.each(function() {
+                var text = $(this).text();
+                if (text.toLowerCase().indexOf(filter) >= 0) {
+                    if ($(this).css("display") == "none") {
+                        $(this).show(); 
+                    }
+                } else {
+                    if ($(this).css("display") != "none") {
+                        $(this).hide();
+                    }
+                }
+            });   
+        }) ;
+         $(".filter-input ").on("click",".dropdown-menu li",function(){
+                $drop=$(this).parents(".filter-input");
+                $drop.find("input").val($(this).text()); 
+         });
+   
+    });
+    </script>
+</body>
+
+</html>

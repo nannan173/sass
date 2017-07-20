@@ -1,0 +1,202 @@
+$dropdown-menu-border-color:$theme;
+$dropdown-menu-font-size:14*$px;
+$dropdown-menu-line-height:30*$px;
+$dropdown-menu-sel-color:$theme;
+$dropdown-menu-padding:10*$px;
+$dropdown-menu-box-shadow: 0 6px 12px rgba($theme, .175);
+$dropdown-caret: #999;
+.dropdown-wap {
+    position: relative;
+    &:hover {
+        .dropdown-menu, .dropdown-expend {
+            display: block;
+        }
+        .dropdown-toggle {
+            color: $dropdown-menu-sel-color;
+            .caret {
+                border-top-color: $dropdown-menu-sel-color
+            }
+        }
+    }
+    .show {
+        &.dropdown-menu, &.dropdown-expend {
+            display: block;
+        }
+    }
+}
+
+.dropdown-menu {
+    position: absolute;
+    display: none;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border: 1px solid $dropdown-menu-border-color;
+    font-size: $dropdown-menu-font-size;
+    line-height: $dropdown-menu-line-height;
+    padding: $dropdown-menu-padding;
+    box-shadow: $dropdown-menu-box-shadow;
+    z-index: 10;
+}
+
+.dropdown-item {
+    line-height: inherit;
+    color: inherit;
+    display: block;
+    &:hover, &.sel {
+        color: $dropdown-menu-sel-color;
+    }
+}
+
+.dropdown-toggle {
+    position: relative;
+    cursor: pointer;
+    @include nowrap;
+    padding-right:15*$px;
+    .caret {
+        position: absolute;
+        top: 50%;
+        margin-top: -4*$px;
+        border-width: 8*$px 4*$px 0 5*$px;
+        border-style: solid;
+        font-size: 0;
+        border-color: $dropdown-caret transparent transparent transparent;
+        margin-left: 10*$px;
+    }
+}
+
+.dropdown-expend {
+    position: absolute;
+    display: none;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    padding-top: 10*$px;
+    &:before, &:after {
+        content: "";
+        position: absolute;
+        border-style: solid;
+        left: 50%;
+        z-index: 100;
+    }
+    &:before {
+        border-color: transparent transparent #ddd transparent;
+        border-width: 0 7*$px 7*$px;
+        margin-left: -7*$px;
+        top: 4px;
+    }
+    &:after {
+        border-color: transparent transparent #fff transparent;
+        border-width: 0 5*$px 6*$px;
+        margin-left: -5*$px;
+        top: 5px;
+    }
+}
+
+.dropdown-expend-inner {
+    position: absolute;
+    z-index: 99;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 6px rgba(#000, .1);
+    background: #fff;
+    padding: 10*$px 15*$px;
+    @include keep-all;
+    .inf-row-inline {
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        line-height: 30*$px;
+        .icon {
+            font-size: 13*$px;
+            margin-right: 10*$px;
+            vertical-align: -1px;
+        }
+        .label {
+            color: #828282;
+            width: 50*$px;
+            display: inline-block;
+        }
+        .value {
+            color: #333;
+        }
+    }
+}
+
+.dropdown-expend-outer {
+    position: relative;
+    margin-top: 10*$px;
+    z-index: 1;
+    &:before {
+        top: -7*$px;
+    }
+    &:after {
+        top: -6*$px;
+    }
+    &.dropdown-expend-right {
+        &:before, &:after {
+            left: auto;
+        }
+        &:before {
+            right: 30*$px;
+        }
+        &:after {
+            right: 32*$px;
+        }
+    }
+    
+}
+
+.h-right {
+    &.dropdown-wap {
+        margin: 0 -15*$px;
+        &:hover {
+            .dropdown-toggle {
+                position: relative;
+                background: #fff;
+                border: 1px solid #e6e6e6;
+                border-bottom-color: #fff;
+                margin: -1px;
+                z-index: 11;
+            }
+        }
+        .dropdown-toggle {
+            padding: 0 15*$px;
+        }
+    }
+    .dropdown-toggle {
+        line-height: 40*$px;
+        .icon {
+            color: inherit;
+            font-size: 12*$px;
+        }
+        .icon+span {
+            margin-left: 5*$px;
+        }
+    }
+    .dropdown-menu {
+        border: 1px solid #e6e6e6;
+        right: -1px;
+        left: auto;
+        color: #333;
+    }
+}
+
+.filter-input.dropdown-wap {
+    @include inline-block;
+    .input-result {
+        position: absolute;
+        visibility: hidden;
+    }
+    .dropdown-menu {
+        padding: 0;
+        max-height: 250*$px;
+        overflow: auto;
+        margin-top: -1px;
+    }
+    li {
+        padding: 0 10*$px;
+        @include nowrap;
+        &.sel, &:hover {
+            background: $theme;
+            color: #fff;
+        }
+    }
+}

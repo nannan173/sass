@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>shixutu</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <link rel="stylesheet" href="../../css/bomc.css">
+</head>
+
+<body style="overflow-x:auto;">
+    <div>
+        <h2 class="yingyue">营业管理</h2>
+        <div class="bs_main" id="sequence">
+            <!-- 	<div class="bs_ment" id="draggable">
+				<div class="bs_ment_header">
+					  <a href="javascript:void(0);" class="pl162">BSSP_SEC</a>
+					  <div class="bs_tip_a">
+							<p>请求类型：1 （BSSP的Process_Code()发起请求</p>
+							<p>请求代码：BM_NGInterBOSSNotify</p>
+							<p>请求描述：</p>
+							<p>外部请求处理时长：583ms</p>
+					  </div>
+				</div>
+				<span class="bs_progress po"></span>
+				<div class="bs_text">
+					<p class="bs_text_n pl62"><span>1</span>BSSP的Process_Code()发起请求</p>
+					<p class="bs_text_l mt260 pl62"><span>6</span>应答接收</p>
+					<div class="bs_tip">
+						<p>请求类型：1 （BSSP的Process_Code()发起请求</p>
+						<p>请求代码：BM_NGInterBOSSNotify</p>
+						<p>请求描述：</p>
+						<p>外部请求处理时长：583ms</p>
+					</div>
+				</div>
+			</div>
+			<div class="bs_ment" id="draggable2">
+				<div class="bs_ment_header">
+					<a href="javascript:void(0);" class="pl162">BSSP_SEC</a>
+				</div>
+				<span class="bs_progress pt"></span>
+				<div class="bs_text bs_tow">
+					<div class="wait">
+						<i class="bs_one"></i>
+						请求等待
+						<span>18s</span>
+					</div>
+					<p class="bs_text_n pl62"><span>2</span>BSSP的Process_Code()发起请求</p>
+					<p class="pl62">省BOSS发起方业务通知提醒(发起方)</p>
+					<p class="bs_text_l mt126 pl62"><span>5</span>应答接收</p>
+					<div class="wait">
+						<i class="bs_one"></i>
+						请求等待
+						<span>18s</span>
+					</div>
+				</div>
+			</div>
+			<div class="bs_ment">
+				<div class="bs_ment_header">
+					<a href="javascript:void(0);" class="pl14">BM_TE_SERVICE</a>
+				</div>
+				<span class="bs_progress ph"></span>
+				<div class="bs_text bs_three">
+					<div class="wait">
+						<i class="bs_one"></i>
+						请求等待
+						<span>18s</span>
+					</div>
+					<p class="bs_text_n pl62"><span>3</span>Ejb相关代码发起请求></p>
+					<p class="bs_text_l pl62"><span>4</span>应答接收<span class="bs_m">0s</span></p>
+					<div class="wait">
+						<i class="bs_one"></i>
+						请求等待
+						<span>18s</span>
+					</div>
+				</div>
+			</div>
+			<div class="bs_ment">
+				<div class="bs_ment_header">
+					<a href="javascript:void(0);" class="pl162">未知应用</a>
+				</div>
+				<span class="bs_progress pf"></span>
+			</div> -->
+        </div>
+    </div>
+    <script src="../../js/jquery/jquery-1.11.0.min.js"></script>
+    <script src="../../js/sequence.js"></script> 
+    <!-- <script type="text/javascript">
+			var data = {
+                    nodes: [
+						        { 
+						            id: "n-a",
+						            menu:"12" ,
+						            title: "BSSP_SEC", 
+						            detail: { "a": "1231231111", "b": "ss" }, 
+						            lifeline:{
+						                width:"22px",
+						                height:"",  
+						            },
+
+						            style: { 
+						                background: "", 
+						                radius: "", 
+						                fontfamily: "", 
+						                fontStyle: "", 
+						                color: "", 
+						                fontSize: "" 
+						            }
+						        },
+						        { 
+						            id: "n-a1", 
+						            menu:"34",
+						            title: "123456789", 
+						            detail: { "a": "1231231234", "b": "ss" }, 
+						            lifeline:{
+						                width:"22px",
+						                height:""  
+						            },
+
+						            style: { 
+						                background: "", 
+						                radius: "", 
+						                fontfamily: "", 
+						                fontStyle: "", 
+						                color: "", 
+						                fontSize: "" 
+						            }
+						        },
+						        { 
+						            id: "n-a2", 
+						            menu:"56",
+						            title: "123456789", 
+						            detail: { "a": "1231231234", "b": "ss" }, 
+						            lifeline:{
+						                width:"22px",
+						                height:""  
+						            },
+
+						            style: { 
+						                background: "", 
+						                radius: "", 
+						                fontfamily: "", 
+						                fontStyle: "", 
+						                color: "", 
+						                fontSize: "" 
+						            }
+						        },
+
+
+                                ],
+                  message: [
+						        { 
+						         id: "m-1", 
+						         title: "",
+						         index: "1",
+						         nodeA: "A",
+						         nodeB: "B",  
+						         state: "", 
+						         remark: "", //
+						         detail: { "a": "12", "b": "ss" }, 
+						         style: {
+						         	lineStyle:{
+						         		borderColor:''
+						         	}, 
+							        indexStyle: {}, 
+							        timeStyle: {},
+
+						         }, 
+						         wait:{
+						         	text:"请求等待",
+						         	remark:"10s",
+						            style:{
+						            	
+						            },
+						            icon:""
+						         }
+						     	},
+						     	{ 
+						         id: "m-12", 
+						         title: "",
+						         index: "2",
+						         nodeA: "A",
+						         nodeB: "B",  
+						         state: "", 
+						         remark: "2", //
+						         detail: { "a": "12", "b": "ss" }, 
+						         style: {
+						         	lineStyle:{
+						         		borderColor:''
+						         	}, 
+							        indexStyle: {}, 
+							        timeStyle: {},
+
+						         }, 
+						         wait:{
+						         	text:"请求等待",
+						         	remark:"2s",
+						            style:{
+
+						            },
+						            icon:""
+						         }
+						     	},
+						     	{ 
+						         id: "m-13", 
+						         title: "",
+						         index: "6",
+						         nodeA: "A",
+						         nodeB: "A",  
+						         state: "", 
+						         remark: "", //
+						         detail: { "a": "34", "b": "ss" }, 
+						         style: {
+						         	lineStyle:{
+						         		borderColor:''
+						         	}, 
+							        indexStyle: {}, 
+							        timeStyle: {},
+
+						         }, 
+						         wait:{
+						         	text:"请求等待",
+						         	remark:"2s",
+						            style:{
+
+						            },
+						            icon:""
+						         }
+						     	},
+						     	{ 
+						         id: "m-14", 
+						         title: "",
+						         index: "7",
+						         nodeA: "A",
+						         nodeB: "A",  
+						         state: "", 
+						         remark: "", //
+						         detail: { "a": "34", "b": "ss" }, 
+						         style: {
+						         	lineStyle:{
+						         		borderColor:''
+						         	}, 
+							        indexStyle: {}, 
+							        timeStyle: {},
+
+						         }, 
+						         wait:{
+						         	text:"请求等待",
+						         	remark:"2s",
+						            style:{
+
+						            },
+						            icon:""
+						         }
+						     	},
+     	                       ]
+			};
+			var showMent = {
+				Nodes:[],
+				init:function(){
+			    	for(var i=0;i<data.nodes.length;i++){
+			    		this.node = data.nodes[i].menu;
+						var html = "<div class='bs_ment' id='"+data.nodes[i].menu+"'>"+
+						   				"<div class='bs_ment_header'>"+
+						   				    "</div>"+
+						   				    "<span class='bs_progress po'></span>"+
+						   				    "</div>";
+						var id = "#"+data.nodes[i].id,
+						Node = "#"+this.node,
+						index = "#"+data.message[i].index;
+						this.Nodes.push(Node);
+						$(".bs_main").append(html);
+						var progress = $(Node).find(".bs_progress");
+						var width_progress = $(Node).find(".bs_progress").innerWidth()/2;
+						$(Node).find(".bs_progress").css(data.nodes[i].lifeline).css("left",-width_progress+"px");
+						var main_width = data.nodes.length;
+			    	    $(".bs_main").css("width",324*(main_width+4)+"px");
+					}
+
+			        
+			    },
+				addNode:function(){
+					for(var i=0;i<data.nodes.length;i++){
+						Node = this.Nodes[i];
+						var html = "<a href='javascript:void(0);' class='pl162' id='"+data.nodes[i].id+"'>"+data.nodes[i].title+"</a>"+"<div class='bs_tip_a'>"+
+						   				    "<p>请求类型："+data.nodes[i].detail.a+"</p>"+
+						   				    "<p>请求代码："+data.nodes[i].detail.b+"</p>"+
+						   				    "<p>请求描述：</p>"+
+						   				    "<p>外部请求处理时长：583ms</p>"+
+						   				    "</div>";
+						var id = "#"+data.nodes[i].id,
+						index = "#"+data.message[i].index;
+						var bs_ment_header = $(Node).find(".bs_ment_header");
+						$(bs_ment_header).append(html);
+						$(".bs_text_n").css(data.message[i].style.lineStyle);
+						var id = "#"+data.nodes[i].id;
+						var width_a = -$(id).innerWidth()/2,
+						width_tip = -$(id).next().innerWidth()/2,
+						width_top = $(id).offset().left;
+						$(id).css("left",width_a+'px').next().css("left",width_tip+'px');
+					}
+				},
+			    addMessage:function(){
+			    	for(var i=0;i<data.message.length;i++){
+			    		Node = this.Nodes[i];
+						var html = "<div class='bs_text' id='"+data.message[i].id+"'>"+
+											"<div class='wait'>"+
+						                    "<i class='bs_one'></i>"+
+						                    data.message[i].wait.text+
+						                    "<span>"+data.message[i].wait.remark+"</span>"+
+					                        "</div>"+
+						   				    "<div class='pl62 Text'>"+
+						   				    "<span id='"+data.message[i].index+"'>"+data.message[i].index+"</span>"+
+						   				    data.message[i].detail.a+
+						   				    "<div class='bs_tip'>"+
+						   				    "<p>请求类型："+data.message[i].detail.a+"</p>"+
+						   				    "<p>请求代码："+data.message[i].detail.b+"</p>"+
+						   				    "<p>请求描述：</p>"+
+						   				    "<p>外部请求处理时长：583ms</p>"+
+						   				    "</div></div>"+
+						   				    "</div>";
+						var htmlLeft = "<div class='bs_text' id='"+data.message[i].id+"'>"+
+						   				    "<div class='pl62 Text'>"+
+						   				    "<span id='"+data.message[i].index+"'>"+data.message[i].index+"</span>"+
+						   				    data.message[i].detail.a+
+						   				    "<div class='bs_tip'>"+
+						   				    "<p>请求类型："+data.message[i].detail.a+"</p>"+
+						   				    "<p>请求代码："+data.message[i].detail.b+"</p>"+
+						   				    "<p>请求描述：</p>"+
+						   				    "<p>外部请求处理时长：583ms</p>"+
+						   				    "</div></div>"+
+						   				    "<div class='wait'>"+
+						                    "<i class='bs_one'></i>"+
+						                    data.message[i].wait.text+
+						                    "<span>"+data.message[i].wait.remark+"</span>"+
+					                        "</div>"+
+						   				    "</div>";
+						var index = "#"+data.message[i].index,
+						message_id = "#"+data.message[i].id;
+						var A = data.message[i].nodeA,
+			    			B = data.message[i].nodeB;
+						if(A != B){
+							$(Node).append(html);
+							$(message_id).find(".Text").eq(0).addClass("bs_text_n");
+							$(message_id).css("marginTop",(i+1)*100+'px');
+							var one = $(message_id).find(".Text").offset().top;
+							var progress = $(Node).find(".bs_progress");
+						    $(progress).css("height",one+'px');
+						}else{
+							$(Node).prev().append(htmlLeft);
+							$(message_id).find(".Text").eq(0).addClass("bs_text_l");
+							$(message_id).css("marginTop",(i+1)*32+'px');
+							var one = $(message_id).find(".Text").offset().top;
+							var progress = $(Node).prev().find(".bs_progress");
+						    $(progress).css("height",one+'px');
+						}
+					}
+			    },
+			    render:function(){
+			    	//xianzhi
+			    	 this.init();
+			    	 this.addNode();
+			    	 this.addMessage();
+			    }
+			    // node:[],
+			    // menssage:[]
+			}
+			showMent.render();
+			// var node={
+			// 	drawlinftline:function(){
+
+			// 	}
+			// 	draw:
+			// }
+			// var Message={
+
+			// }
+
+	  </script>-->
+    <script type="text/javascript">
+    var data = {
+        nodes: [{
+            id: "n-1",
+            title: "BSSP_SEC",
+            detail: {},
+            style: {
+                background: "",
+                radius: "",
+                fontfamily: "",
+                fontStyle: "",
+                color: "",
+                fontSize: "",
+                lifeStyle: {
+                    width: "22px"
+                }
+            }
+        }, {
+            id: "n-2",
+            title: "BSSP_SEC",
+            detail: {
+                "a": "123123",
+                "b": "ss"
+            }, //hover
+            style: {
+                background: "",
+                radius: "",
+                fontfamily: "",
+                fontStyle: "",
+                color: "",
+                fontSize: "",
+                lifeStyle: {
+                    width: "22px"
+                }
+            }
+        }, {
+            id: "n-3",
+            title: "BM_TE_SERVICE",
+            detail: {
+                "a": "123123",
+                "b": "ss"
+            }, //hover
+            style: {
+                background: "",
+                radius: "",
+                fontfamily: "",
+                fontStyle: "",
+                color: "",
+                fontSize: "",
+                lifeStyle: {
+                    width: "22px"
+                }
+            }
+        }, {
+            id: "n-4",
+            title: "未知应用",
+            detail: {
+                "a": "123123",
+                "b": "ss"
+            }, //hover
+            style: {
+                background: "",
+                radius: "",
+                fontfamily: "",
+                fontStyle: "",
+                color: "",
+                fontSize: "",
+                lifeStyle: {
+                    width: "22px"
+                }
+            }
+        }],
+        messages: [{
+                id: "m-1",
+                title: "BSSP的Process_Code()发起请求",
+                index: "1",
+                nodeAId: "n-1",
+                nodeBId: "n-2",
+                type: "", //0 请求 1 回复
+                state: "",
+                remark: "14s", //
+                detail: {
+                    '请求类型:': '1 （BSSP的Process_Code()发起请求）',
+                    '请求代码:': 'BM_NGInterBOSSNotify',
+                    '请求描述:': '外部请求处理时长：583ms'
+                },
+                style: {
+                    linestyle: "",
+                    indexStyle: {},
+                    remarkStyle: {},
+                },
+                wait: {
+                    time: "18s",
+                    title: "请求等待"
+                }
+            }, {
+                id: "m-2",
+                title: "BSSP/UIG规定的Service_ID发起请求省BOSS发起方业务通知提醒(发起方)",
+                index: "1",
+                nodeAId: "n-2",
+                nodeBId: "n-3",
+                type: "", //0 请求 1 回复
+                state: "",
+                remark: "14s", //
+                detail: {
+                    "a": "123123",
+                    "b": "ss"
+                },
+                style: {
+                    linestyle: "",
+                    indexStyle: {},
+                    remarkStyle: {},
+                },
+                wait: {
+                    time: "18s",
+                    title: "请求等待"
+                }
+            }, {
+                id: "m-3",
+                title: "Ejb相关代码发起请求",
+                index: "1",
+                nodeAId: "n-4",
+                nodeBId: "n-1",
+                type: "", //0 请求 1 回复
+                state: "",
+                remark: "14s", //
+                detail: {
+                    "a": "123123",
+                    "b": "ss"
+                },
+                style: {
+                    linestyle: "",
+                    indexStyle: {},
+                    remarkStyle: {},
+                },
+                wait: {
+                    time: "18s",
+                    title: "请求等待"
+                }
+            }, {
+                id: "m-3",
+                title: "结束",
+                index: "1",
+                nodeAId: "n-1",
+                nodeBId: "n-4",
+                type: "", //0 请求 1 回复
+                state: "",
+                remark: "14s", //
+                detail: {
+                    "a": "123123",
+                    "b": "ss"
+                },
+                style: {
+                    linestyle: "",
+                    indexStyle: {},
+                    remarkStyle: {},
+                },
+                wait: {
+                    time: "18s",
+                    title: "请求等待"
+                }
+            }
+
+
+        ]
+    };
+    $("#sequence1").mysequence({
+        data: data
+    }).render();
+    </script>
+</body>
+
+</html>

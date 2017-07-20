@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../../css/bomc.css">
+</head>
+
+<body class=" wpage">
+    <div id="index">
+        <form name="importForm" id="importForm" action="/resource_flow_web/flow/import" enctype="multipart/form-data" method="post">
+            <div class="form-box form-pop-m " >
+                <div class="row">
+                    <div class="form-group  ">
+                        <label class="from-label">模板操作：</label>
+                        <div class="form-value">
+                            <a class="btn" onclick="downloadTemplate($('#objectClass').val())" href="javascript:void(0)"><span>模板下载</span></a>
+                            <a class="btn" style="margin-left: 20px;" onclick="downloadData($('#objectClass').val())" href="javascript:void(0)"><span>数据导出</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group  " style="margin-top: 5px;">
+                        <label class="from-label">选择导入类型：</label>
+                        <div class="form-value ">
+                            <div class="select input-w-sm">
+                                <select name="mode" id="mode">
+                                    <option value="">==请选择==</option>
+                                    <option value="0">新增资源</option>
+                                    <option value="1">修改资源</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <label class="from-label">选择导入文件：</label>
+                        <div class="form-value  ">
+                            <div class="  file-group"> 
+                                <input type="text" class="file-input">
+                    
+                                <div class="file-btn">
+                                    <a class="btn-drak">浏览</a>
+                                    <input type="file" class="file">
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                   <div  class="form-group ">
+                        <label class="from-label form-tip">注意：</label>
+                        <div class="form-value form-tip">
+                             <p>1）请下载模板文件，填写完毕选择文件并点击【导入】；</p>
+                             <P>2）若导入失败，请按照界面提示进行修改后重新导入；</P>
+                        </div>
+                   </div>
+                </div>
+                <!-- <div class="form-group col-xs-wap">
+                    <div class="col-xs-12" style="margin-top: 5px;">
+                        <label>选择导入文件：</label>
+                        <input name="fileName" id="fileName" style="width: 268px; height: 28px; padding-top: 4px;" type="text" readonly="readonly">
+                        <a class="btn ml20" style="padding: 1px 5px 2px; height: 28px; line-height: 26px; min-width: 50px; background-color: rgb(155, 155, 155);" href="javascript:void(0)">
+                            <span>浏览</span>
+                        </a>
+                        <input name="file" class="hidden_files" id="file" onchange="setFileName(this.value)" type="file" size="1">
+                    </div>
+                </div> -->
+                
+            </div>
+            <input name="objectClass" id="objectClass" type="hidden" value="30000002">
+            <input name="opeType" id="opeType" type="hidden" value="1">
+            <input name="businessType" id="businessType" type="hidden" value="SDF">
+            <input name="businessCode" id="businessCode" type="hidden" value="SFSDF">
+        </form>
+    </div>
+    <script type="text/javascript" src="../../js/jquery/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../js/bomc.js"></script>
+    <script type="text/javascript">
+    $(function(){
+        fixed();
+    });
+    </script>
+</body>
+
+</html>

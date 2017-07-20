@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>icon</title>
+    <link rel="stylesheet" href="../css/bomc.css">
+    <style type="text/css">
+    .iconlist {
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+    .iconlist li {
+        position: relative;
+        display: inline-block;
+        width: 200px;
+        height: 100px;
+        margin: 10px;
+        padding: 20px 5px;
+        text-align: center;
+        vertical-align: top;
+        box-sizing: border-box;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    
+    .iconlist li:hover {
+        border: 1px solid #eee;
+    }
+    
+    s .iconlist p {
+        line-height: 18px;
+        padding: 10px 0;
+    }
+    
+    .iconlist .iconlist li {
+        display: block;
+    }
+    
+    .iconlist li:hover .iconlist {
+        display: block;
+    }
+    
+    .iconlist.list-white {
+        background: #999;
+        color: #fff;
+    }
+    </style>
+</head>
+
+<body id="">
+    <div id="iconpage"> 
+    
+     </div>
+    <script type="text/javascript" src="../js/jquery/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript">
+    var str = "p:$icon-p, state:$icon-state, del:$icon-del, send:$icon-send, time:$icon-time, tasklist:$icon-tasklist, search:$icon-search, template:$icon-template, add:$icon-add, channel:$icon-channel, check:$icon-check, daleft:$icon-daleft, daright:$icon-daright, circle:$icon-circle, home:$icon-home, code:$icon-code, asterisk:$icon-asterisk, daup:$icon-daup, dadown:$icon-dadown, include:$icon-include, exclude:$icon-exclude, import:$icon-import, close:$icon-close, list:$icon-list, restart:$icon-restart, edit:$icon-edit, tool:$icon-tool, database:$icon-database, data:$icon-data, pie:$icon-pie, return:$icon-return, update:$icon-update, offline:$icon-offline, upline:$icon-upline, block:$icon-block, voice:$icon-voice, novoice:$icon-novoice, stop:$icon-stop, play:$icon-play, adjust:$icon-adjust, more:$icon-more, copy:$icon-copy, message:$icon-message, nomessage:$icon-nomessage, bc:$icon-bc, noreport:$icon-noreport, recover:$icon-recover, expansion:$icon-expansion, contraction:$icon-contraction, fx:$icon-fx, rank:$icon-rank, function:$icon-function, port:$icon-port, view:$icon-view, inf:$icon-inf, response:$icon-response, link:$icon-link, unlink:$icon-unlink, clean:$icon-clean, handle:$icon-handle, iseq:$icon-iseq, prople-add:$icon-prople-add, prople:$icon-prople, pro:$icon-pro, set:$icon-set, warning:$icon-warning, circleright: $icon-circleright,circledown: $icon-circledown,circleleft:$icon-circleleft,circleup: $icon-circleup,first:$icon-first,pre:$icon-pre,next:$icon-next,last:$icon-last,circleright:$icon-circleright,circledown:$icon-circledown,circleleft:$icon-circleleft,circleup:$icon-circleup, recent:$icon-recent,notice:$icon-notice,center:$icon-center,order:$icon-order,tag:$icon-tag,like:$icon-like,unlike:$icon-unlike,trouble:$icon-trouble,trouble-wait:$icon-trouble-wait,trouble-doing:$icon-trouble-doing,trouble-done:$icon-trouble-done,date:$icon-date,down:$icon-down,up:$icon-up,city: $icon-city,img:$icon-img,business:$icon-business,oracle:$icon-oracle,windows:$icon-windows,mysql:$icon-mysql,process:$icon-process,zport:$icon-zport,jboss:$icon-jboss,linux:$icon-linux,list1:$icon-list1,list2:$icon-list2,upload:$icon-upload"
+
+    var temp = str.match(/([a-z]*)(-[a-z]*)*.(?=:)/g);
+        console.log(temp);
+    // var data1={"classname":[{"c":"i-del"},{"c":"i-edit"},{"c":"i-add"},{"c":"i-refresh"},{"c":"i-offline"},{"c":"i-upline"},{"c":"i-error"},{"c":"i-right"},{"c":"i-block"},{"c":"i-voice"},{"c":"i-no-sound"},{"c":"i-stop"},{"c":"i-play"},{"c":"i-adjust"},{"c":"i-more"},{"c":"i-search"},{"c":"i-copy"},{"c":"i-list"},{"c":"i-first"},{"c":"i-pre"},{"c":"i-next"},{"c":"i-last"},{"c":"i-message"},{"c":"i-no-message"},{"c":"i-bc"},{"c":"i-send"},{"c":"i-recover"},{"c":"i-expansion"},{"c":"i-contraction"},{"c":"i-close-l"},{"c":"i-fx"},{"c":"i-port"},{"c":"i-daleft"},{"c":"i-daright"},{"c":"i-peopleadd"},{"c":"i-setting"},{"c":"i-inf"},{"c":"i-restart"},{"c":"i-return"},{"c":"i-response"},{"c":"i-link"},{"c":"i-unlink"},{"c":"i-clean"},{"c":"i-handle"},{"c":"i-iseq"},{"c":"i-lview"},{"c":"i-people"},{"c":"i-data"},{"c":"i-function"},{"c":"i-data-before"},{"c":"i-data-current"},{"c":"i-abnormal"},{"c":"i-proportion"},{"c":"i-template"},{"c":"i-noreport"},{"c":"i-up"},{"c":"i-down"},{"c":"i-business"},{"c":"i-channel"},{"c":"i-city"},{"c":"i-dig"},{"c":"i-update"},{"c":"i-launch"},{"c":"i-install"},{"c":"i-pause"},{"c":"i-upload"},{"c":"i-log"},{"c":"i-record"},{"c":"i-register"},{"c":"i-topology"},{"c":"i-review"},{"c":"i-remove"},{"c":"i-mess"},{"c":"i-finish"},{"c":"i-accneed"},{"c":"i-schedule"},{"c":"i-task"},{"c":"i-img"},{"c":"i-pause"}],"expand":[{"e":""} ]}
+
+    var htmlstr =    "<ul class=\"iconlist list" + "\">";
+    for (var i = 0; i <  temp.length; i++) {
+        htmlstr = htmlstr + "<li class=\"btn-text\">" +
+            " <i class=\"icon icon-" + temp[i] + "\"></i>" +
+            "<p > icon  icon-" + temp[i] + "</p>" +
+            "</li> "
+
+
+    };
+    htmlstr = htmlstr + "</ul>";
+    $("#iconpage").append(htmlstr);
+    </script>
+</body>
+
+</html>

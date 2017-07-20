@@ -1,0 +1,24 @@
+(function initLoadingDiv(){
+	$(document.body)
+		.append('<div id="loadingBg" style="display:none;width:100%;height:100%;position:fixed;top:0;left:0;background-position:center;background-repeat: no-repeat;background-attachment: fixed;background-color:black;z-index:98;opacity:0.1;filter: progid:DXImageTransform.Microsoft.Alpha(opacity=10);-ms-filter:progid:DXImageTransform.Microsoft.Alpha(opacity=10)"></div>')
+		.append('<div id="loading" style="display:none;width:100%;height:100%;position:fixed;top:0;left:0;background-image:url(../images/loading.gif);background-position:center;background-repeat: no-repeat;background-attachment: fixed;z-index:99;"></div>')
+		.append('<div id="loadingText" style="display:none;width:100%;position:fixed;top:55%;left:0;z-index:99;text-align:center;font-size:14px;"></div>');
+}());
+
+function showLoading(){
+	$("#loadingBg").show();
+	$("#loading").show();
+	$("#loadingText").hide();
+}
+
+function showLoading(text){
+	$("#loadingBg").show();
+	$("#loading").show();
+	$("#loadingText").html(text).show();
+}
+
+function hideLoading(){
+	$("#loadingBg").hide();
+	$("#loading").hide();
+	$("#loadingText").hide();
+}

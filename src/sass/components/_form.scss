@@ -1,0 +1,489 @@
+%fado {
+    &:focus, &:hover, &:active {
+        outline: 1px solid #a5c7fe;
+        border-color: #94b6ed;
+    }
+}
+
+%input {
+    font-size: $input-font-size;
+    box-sizing: border-box;
+    border: $input-border;
+    border-radius: $input-radius;
+    background-color: #fff;
+    &.placeholder {
+        color: $placeholder-color;
+    }
+}
+
+%input-border-none {
+    border: none;
+    outline: none;
+    &:focus, &:hover, &:active {
+        border: none;
+        outline: none;
+    }
+}
+
+input[type="text"], [type="password"], textarea {
+    @extend %fado;
+    @extend %input;
+ 
+}
+
+input[type="text"], [type="password"], .select {
+    padding: $input-padding;
+    width: $input-default-width;
+    line-height: $input-line-height;
+    height: 32*$px;
+    &.input-w-sm {
+        width: $input-default-width/2;
+    }
+}
+
+textarea {
+    padding: $input-padding;
+    line-height: $input-line-height;
+    height: $input-line-height*6;
+}
+
+.textarea-onerow {
+    height: $input-line-height + 10*$px;
+}
+
+.select {
+    @include inline-block;
+    @extend %fado;
+    @extend %input;
+    select {
+        font-size: inherit;
+        color: inherit;
+        box-sizing: border-box;
+        width: 100%;
+        @extend %input-border-none;
+    }
+}
+
+.selbox {
+    width: 602px;
+    @include inline-block;
+}
+
+.selbox-block {
+    &.tc {
+        margin: 0 auto;
+        text-align: left;
+    }
+    display: block;
+    .form-group {
+        padding: 0;
+        .form-label {
+            width: auto;
+            &+.form-value {
+                margin: 0;
+            }
+        }
+    }
+    .col-xs-0 {
+        vertical-align: middle;
+    }
+    .col-xs-6 {
+        padding: 0 50*$px 0 0;
+        &+.col-xs-6 {
+            padding: 0 0 0 50*$px;
+            input {
+                width: 140*$px;
+            }
+        }
+    }
+}
+
+.selects {
+    width: 250*$px;
+    height: auto;
+    padding: 0;
+    line-height: 30*$px;
+    text-indent: 2*$px;
+    select {
+        padding: 5*$px;
+        display: block;
+        min-height: 250*$px; 
+    }
+}
+
+.selbox-title {
+    background: $theme;
+    line-height: 30*$px;
+    font-size: 13*$px;
+    color: #fff;
+    padding-left: 5*$px;
+    text-align: center;
+}
+
+.selelct-btn {
+    padding: 0 40*$px;
+    font-size: 16*$px;
+    .btn-text {
+        margin: 10*$px 0;
+    }
+}
+
+.tc {
+    text-align: center;
+}
+
+.checkbox {
+    position: relative;
+    @include inline-block;
+    height: $checkbox-size;
+    width: $checkbox-size;
+    margin-right: $checkbox-margin-right;
+    @extend %extendicon;
+    border: $input-border;
+    border-radius: $input-radius;
+    cursor: pointer;
+    line-height: $checkbox-size;
+    text-align: center;
+    vertical-align: middle;
+    background: #fff;
+    box-sizing: border-box;
+    &.checked {
+        border-color: $checkbox-sel-bg;
+        background: $checkbox-sel-bg;
+        &:before {
+            opacity: 1;
+        }
+        &::selection {
+            background: $checkbox-sel-bg;
+        }
+    }
+    &:focus, &:hover, &:active {
+        border-color: #94b6ed;
+        outline: none;
+    }
+    &:before {
+        position: absolute;
+        font-size: 11*$px;
+        content: $icon-check;
+        color: #fff;
+        opacity: 0;
+        left: 0px;
+        top: 0px;
+    }
+    input[type="checkbox"] {
+        position: absolute;
+        visibility: hidden;
+        left: 100%;
+    }
+    &.disabled {
+        background: $input-disabled-bg;
+        &:before {
+            color: $input-disabled-bg;
+            &.checked {
+                color: #fff;
+            }
+        }
+    }
+}
+
+.checkbox-switch {
+    position: relative;
+    @include inline-block;
+    @extend %extendicon;
+    background: #ccc;
+    width: 12*$px;
+    height: 16*$px;
+    margin: 0 8*$px;
+    border: none;
+    &.checked {
+        background: $theme;
+        color: $theme;
+        .icon {
+            color: #fff;
+            right: -6*$px;
+            left: auto;
+        }
+        &:before, &:after {
+            color: $theme;
+        }
+    }
+    &:before, &:after {
+        position: absolute;
+        content: $icon-circle;
+        opacity: 1;
+        top: 0;
+        z-index: 1;
+        font-size: 16*$px;
+        line-height: 16*$px;
+        color: #ccc;
+    }
+    &:before {
+        left: -8*$px;
+    }
+    &:after {
+        right: -8*$px;
+    }
+    .icon {
+        position: absolute;
+        color: #fff;
+        left: -6*$px;
+        top: 2*$px;
+        font-size: 12*$px;
+        z-index: 2;
+    }
+}
+
+.pseudo-input-wap {
+    @include inline-block;
+    vertical-align: middle;
+    input {
+        visibility: hidden;
+        width: 0;
+        height: 0;
+        padding: 0;
+        border: none;
+    }
+}
+
+.pseudo-input {
+    border: none;
+    width: auto;
+    min-width: 38px;
+    text-align: center;
+    outline: none;
+    padding: 0 5*$px;
+    margin: 5*$px 0;
+    line-height: $input-line-height;
+    box-sizing: border-box;
+    &.placeholder {
+        color: #999;
+    }
+}
+
+.input-num {
+    @include inline-block;
+    background: #f5f5f5;
+    height: 24px;
+    vertical-align: middle;
+    @include clearspace;
+    color: #333;
+    input {
+        width: 24*$px;
+        padding: 0 3*$px;
+        background-color: transparent;
+        line-height: 24px;
+        height: 24px;
+        text-align: center;
+        vertical-align: top;
+        @extend %input-border-none;
+        color: inherit;
+    }
+    .num-action {
+        @include inline-block;
+        vertical-align: top;
+        padding-right: 4*$px;
+    }
+    .num-up, .num-down {
+        display: block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        margin: 4*$px 0;
+        cursor: pointer;
+    }
+    .num-down {
+        border-width: 6*$px 6*$px 0;
+        border-color: #999 transparent transparent;
+        &:hover {
+            border-color: $theme transparent transparent;
+        }
+        &.disabled {
+            border-color: #ccc transparent transparent;
+        }
+    }
+    .num-up {
+        border-width: 0 6*$px 6*$px;
+        border-color: transparent transparent #999;
+        &:hover {
+            border-color: transparent transparent $theme;
+        }
+        &.disabled {
+            border-color: transparent transparent #ccc;
+        }
+    }
+}
+
+.input-group {
+    display: table;
+    input, #content {
+        display: table-cell;
+        vertical-align: top;
+    }
+    .input-group-btn {
+        display: table-cell;
+        vertical-align: top;
+        width: 1px;
+        @include keep-all;
+        a[class^="btn"] {
+            min-width: 20px;
+            color: #fff;
+        }
+        a[class^="btn"].icon {
+            font-size: 16*$px;
+        }
+        .btn-text {
+            display: inline-block;
+            line-height: 32*$px;
+            min-width: 32*$px;
+        }
+    }
+    input:first-child, .input-group-btn:first-child a[class^="btn"] {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    input-group-btn:first-child a[class^="btn"] {
+        margin-right: -1px;
+    }
+    input:last-child, .input-group-btn:last-child a[class^="btn"] {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    input-group-btn:last-child a[class^="btn"] {
+        margin-left: -1px;
+    }
+}
+
+.file-btn {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    overflow: hidden;
+    input[type="file"] {
+        top: 0;
+        opacity: 0;
+        -ms-filter: 'alpha(opacity=0)';
+        position: absolute;
+        right: 0;
+        font-size: 200px;
+        cursor: pointer;
+    }
+    [class^="btn"] {
+        min-width: 40*$px;
+        cursor: pointer;
+    }
+}
+
+.datapick {
+    white-space: nowrap;
+    @include inline-block;
+    .datapickcon {
+        margin: 5*$px 0;
+        iframe {
+            width: 200px;
+            height: 200px;
+        }
+    }
+    .datapick-btn {
+        margin-left: 5*$px;
+    }
+}
+
+.datequicklink {
+    margin: 10*$px -10*$px;
+    a {
+        color: $theme;
+        white-space: nowrap;
+        margin: 5*$px 10*$px;
+        font-size: 13*$px;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.mline {
+    @include inline-block;
+    vertical-align: middle;
+    width: 6*$px;
+    height: 1px;
+    margin: 0 10*$px;
+    background: #999;
+}
+
+.form-tip {
+    color: #ff0000;
+}
+
+.form-pop-m {
+    padding: 15*$px 10*$px;
+    width: 480px;
+    margin: 25*$px auto 0;
+}
+
+.iconinput {
+    line-height: 1;
+    position: relative;
+    @include inline-block;
+    input {
+        padding-right: 26*$px;
+    }
+    input+.icon {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 0 5*$px;
+        text-align: center;
+        height: $input-btn-height;
+        line-height: $input-btn-height;
+        &:hover {
+            &.t {
+                color: $btn-hover-bg;
+            }
+        }
+    }
+}
+
+.datepick, .datepick {
+    color: #666;
+    &.placeholder {
+        color: #666;
+    }
+    .icon.icon-date, .dropdown-toggle .icon.icon-date {
+        font-size: 16*$px;
+        margin-right: 8*$px;
+    }
+    .datepick-satrt, .datepick-end {
+        @include inline-block;
+        min-width: 80*$px;
+        margin: 0 10*$px;
+        text-align: center;
+    }
+}
+
+.input-nb[type="text"] {
+    border: none;
+    background: transparent;
+    &:hover, &:focus {
+        border: $input-border;
+        outline: none;
+    }
+    &:focus {
+        background: #fff;
+    }
+}
+
+.input-sm {
+    &[type="text"] {
+        width: 40*$px;
+    }
+    &.select {
+        width: 65*$px;
+    }
+    &.dropdown-wap {
+        width: 65*$px;
+    }
+}
+
+.crwap+.crwap {
+    margin-left: 10*$px;
+}

@@ -1,0 +1,264 @@
+$pagination-color:#7e7e7e;
+.pagination {
+    color: $pagination-color;
+    font-size: 13*$px;
+    margin: 15*$px 0;
+    text-align: center;
+    background: #fff;
+    padding: 10*$px;
+    .btn {
+        min-width: 0;
+        width: auto;
+        background: #e8e8e8;
+        color: inherit;
+        font-size: inherit;
+        margin: 0 8*$px;
+        &:hover {
+            background: $theme;
+            color: #fff;
+        }
+    }
+    span {
+        margin: 0 10*$px;
+    }
+    .num {
+        width: 40*$px;
+        text-align: center;
+        line-height: 16*$px;
+    }
+    .select {
+        width: 60*$px;
+        line-height: 16*$px;
+    }
+}
+
+// .pagelist{
+// 	color:$pagination-color;
+// 	font-size:13*$px;
+// 	margin:15*$px 0;
+// 	text-align: center;
+// 	background:#fff;
+// 	padding:10*$px;
+// 	.i-first ,.i-pre ,.i-next,.i-last,.page-jump {
+// 		background:none;
+// 		width:auto;
+// 		background: #e8e8e8; 
+// 		color:inherit;
+// 		font-size:inherit;
+// 		margin:0 8*$px;
+// 		padding: 0 10*$px;
+// 		@include inline-block;
+// 		border-radius: 2*$px;
+// 		line-height: 32*$px;
+// 		cursor: pointer;
+// 		&:hover{
+// 			background:$theme;
+// 			color:#fff;
+// 		}
+// 		&:before{
+// 		}
+// 	}
+// 	.i-first:before{
+// 		content: "首页";
+// 	}
+// 	.i-pre:before{
+// 		content: "上一页";
+// 	}
+// 	.i-next:before{
+// 		content: "下一页";
+// 	}
+// 	.i-last:before{
+// 		content: "尾页";
+// 	}
+// 	#pn{
+// 		width: 40*$px;
+// 		text-align: center;
+// 		line-height:16*$px;
+// 	}
+// 	.select {
+// 		width: 60*$px; 
+// 		line-height:16*$px; 
+// 	}
+// 	.mr10{
+// 		margin-right: 10*$px;
+// 	}
+// 	.ml10{
+// 		margin-left: 10*$px; 
+// 	}
+// 	.i-refresh{
+// 		display: none;
+// 	}
+// 	span{
+// 		vertical-align: middle;
+// 	}
+// }
+//  
+
+/*分页*/
+
+.pagelist {
+    height: 24*$px;
+    margin: 10*$px 0;
+    font-size: 14*$px;
+    line-height: 24*$px;
+    color: #666;
+    text-align: center;
+    .mr10 {
+        margin-right: 10*$px;
+    }
+    .select {
+        width: 50*$px;
+        height: 24*$px;
+        padding: 0;
+        line-height: 21*$px;
+        vertical-align: middle;
+    }
+    .i-first,   .i-next,   .i-pre,   .i-last, .i-refresh {
+        margin: 0 10*$px 0 0;
+        vertical-align: top;
+        @extend %extendicon;
+        color: #999;
+        line-height: 24*$px;
+        vertical-align: middle;
+        &:hover {
+            color: $theme;
+        }
+        cursor: pointer;
+    }
+    input[type='text'] {
+        width: 30*$px;
+        height: 24*$px;
+        margin-right: 10*$px;
+        line-height: 14*$px;
+        text-align: center;
+        vertical-align: middle;
+    }
+}
+
+@each $icon, $value in ( first:$icon-first, pre:$icon-pre, next:$icon-next, last:$icon-last, refresh:$icon-update) {
+    .pagelist .i-#{$icon} {
+        &:before {
+            content: $value;}
+
+    }
+}
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// /*分页*/
+// .pagelist
+// {
+//     height: 24px;
+//     margin: 10px 0;
+//     font-size: 14px;
+//     line-height: 24px;
+//     color: #666;
+//     text-align: center;
+// }
+// .pagelist .select
+// {
+//     width: 50px;
+//     height: 22px;
+//     padding: 0;
+//     line-height: 21px;
+// }
+// .pagelist .icon-first,.pagelist .icon-next,.pagelist .icon-pre,.pagelist .icon-last
+// {
+//     margin: 4px  10px 4px 0;
+//     vertical-align: top;
+// }
+// .page-jump.btn-text
+// {
+//     font-size: inherit;
+//     line-height: inherit;
+// }
+// .pagelist input[type='text']
+// {
+//     width: 20px;
+//     height: 14px;
+//     margin-right: 10px;
+//     line-height: 14px;
+//     text-align: center;
+// }
+// .padgeitem
+// {
+//     margin-right: 10px;
+// }
+// .error
+// {
+//     color: #f00;
+// }
+// .selelct-btn
+// {
+//     padding: 0 40px; 
+// }
+// /*tooltip*/
+// .tooltip
+// {
+//     position: absolute;
+//     visibility: hidden;
+//     padding: 5px;
+//     color: #fff;
+// }
+// .tooltip-arrow
+// {
+//     position: absolute;
+//     top: 0;
+//     left: 50%;
+//     width: 0;
+//     height: 0;
+//     margin-left: -5px;
+//     border: 5px solid transparent;
+//     border-top: none;
+//     border-bottom: 5px solid #000001;
+// }
+// .tooltip-inner
+// {
+//     max-width: 250px;
+//     padding: 7px 15px;
+//     color: #ebedf3;
+//     background-color: #000001;
+//     text-align: center;
+//     white-space: normal;
+//    /* white-space: nowrap;
+//     word-break: keep-all;*/
+// }
+// /*tooltip end*/=======
+
+.page-jump.btn-text {
+    font-size: inherit;
+    line-height: inherit;
+    cursor: pointer;
+    color: #666;
+    margin-left: 5*$px;
+    &:hover {
+        color: $theme;
+        .i-refresh {
+            color: $theme;
+        }
+    }
+    .i-refresh {
+        margin-right: 5*$px;
+        vertical-align: baseline;
+    }
+}
+
+.padgeitem {
+    margin-right: 10*$px;
+}
+ 
+

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>shuxin</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=8" >
+	<link rel="stylesheet" type="text/css" href="../../css/bomc-green.css">
+	<script src="../../js/jquery/jquery-1.11.0.min.js" type="text/javascript"></script>
+</head>
+<body class="mainpage">
+	<div class="container">
+		<div class="sx-navbar">
+			<ul class="sx-ul">
+				<li><a href="javascript:;"><i class="icon icon-pro"></i>属性</a></li>
+				<li><a href="javascript:;"><i class="icon icon-channel"></i>关系</a></li>
+				<li><a href="javascript:;"><i class="icon icon-time"></i>历史</a></li>
+				<li><a href="javascript:;" class="active"><i class="icon icon-set"></i>性能</a></li>
+				<li><a href="javascript:;"><i class="icon icon-warning"></i>告警</a></li>
+				<li class="marginLeft"><a href="javascript:;"><i class="icon icon-restart"></i>巡检</a></li>
+			</ul>
+		</div>
+		<div class="sx-main xn-main">
+			 	<div class="clearfix">
+						<div class="box">
+							<div class="box-h box-h-theme">
+								<span class="box-h-title">严重告警分析</span>
+							</div>
+							<div class="box-c clearfix">
+								      <div id="myEchartsTl" style="width:100%;height:400px;"></div>
+						    </div>
+					    </div>
+				</div>
+				<div class="clearfix">
+						<div class="box">
+							<div class="box-h box-h-theme">
+								<span class="box-h-title">重要告警分析</span>
+							</div>
+							<div class="box-c clearfix">
+									<div id="myEchartsFl" style="width:100%;height:400px;"></div>   
+							</div>
+						</div>
+				</div>
+				<div class="clearfix">
+						<div class="box">
+							<div class="box-h box-h-theme">
+								<span class="box-h-title">一般告警分析</span>
+							</div>
+							<div class="box-c clearfix">
+									<div id="myEchartsXl" style="width:100%;height:400px;"></div>  
+							</div>
+						</div>
+				</div>	
+		</div>
+	</div>
+	<script src="../../js/echarts/echarts.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.sx-ul li').bind("mouseover",function(){
+				$(".sx-ul li a").removeClass("active");
+				$(this).children("a").addClass("active");
+			})
+			$(".h-btn").bind("mouseover",function(){
+				var num = $(".h-btn").index(this);
+				console.log(num);
+				$(".h-cs-table").eq(num).css("display","block").siblings(".h_cs_table").css("display","none");
+			})
+		})
+		
+		var optionT = {
+			    	title:{
+			    		text:"趋势变化图",
+			    		x:'center'
+			    	},
+				    tooltip : {
+				        trigger: 'axis'
+				    },
+				    legend: {
+				    	y:'29px',
+				         data:['exceed','mem','emergencies','standby','critical']
+				    },
+			    	calculable : true,
+				    xAxis : [
+				        {
+				            type : 'category',
+				            boundaryGap : false,
+				            axisTick:{
+				            	show:true
+				            },
+				            data : ['9:00','10:00','11:00','12:00','13:00','14:00','15:00']
+				        }
+				    ],
+				    yAxis : [
+				        {
+				            type : 'value'
+				        }
+				    ],
+				    series : [
+				        {
+				            name:'exceed',
+				            type:'line',
+				            stack: '总量',
+				            itemStyle: {normal: {areaStyle: {type: 'default'}}},
+				            data:[120, 132, 101, 134, 90, 230, 210]
+				        },
+				        {
+				            name:'mem',
+				            type:'line',
+				            stack: '总量',
+				            itemStyle: {normal: {areaStyle: {type: 'default'}}},
+				            data:[220, 182, 191, 234, 290, 330, 310]
+				        },
+				        {
+				            name:'emergencies',
+				            type:'line',
+				            stack: '总量',
+				            itemStyle: {normal: {areaStyle: {type: 'default'}}},
+				            data:[150, 232, 201, 154, 190, 330, 410]
+				        },
+				        {
+				            name:'standby',
+				            type:'line',
+				            stack: '总量',
+				            itemStyle: {normal: {areaStyle: {type: 'default'}}},
+				            data:[320, 332, 301, 334, 390, 330, 320]
+				        },
+				        {
+				            name:'critical',
+				            type:'line',
+				            stack: '总量',
+				            itemStyle: {normal: {areaStyle: {type: 'default'}}},
+				            data:[820, 932, 901, 934, 1290, 1330, 1320]
+				        }
+				    ]
+		};             
+		myEchartsT  = echarts.init(document.getElementById('myEchartsTl'));
+		myEchartsF  = echarts.init(document.getElementById('myEchartsFl'));
+		myEchartsX  = echarts.init(document.getElementById('myEchartsXl'));
+		myEchartsT.setOption(optionT);
+		myEchartsF.setOption(optionT);
+		myEchartsX.setOption(optionT);
+	</script>
+</body>
+</html>

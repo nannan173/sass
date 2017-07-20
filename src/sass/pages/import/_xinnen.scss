@@ -1,0 +1,275 @@
+.main{
+    width:100%;
+    overflow:hidden;
+}
+a{
+    margin:0px;
+    padding:0px;
+}
+.main_navbar{
+    line-height:42px;
+    background:#eeeeee;
+    border:1px solid #e8e8e8;
+    margin-bottom:22px;
+    overflow:hidden;
+    font-size:0px;
+    a{
+        font-size:14px;
+    }
+}
+.navbar{
+    padding:16px 22px;
+    color:#6d6d6d;
+    border:1px solid transparent;
+    &:hover{
+        color:#43b7f1;
+        background:#fff;
+        // border-color:#e8e8e8;
+    }
+}
+.active{
+    background:#fff;
+    // border:1px solid #e8e8e8;
+    border-left:0px;
+    color:#43b7f1;
+}
+.main_content{
+    width:100%;
+    margin-left:22px;
+    margin-bottom:62px;
+}
+.card-item-t{
+    width:182px;
+    height:300px;
+    text-align:center;
+    position:relative;
+    z-index:1;
+    &:hover{
+        width:240px;
+        position:relative;
+        z-index:9999;
+        -webkit-transition:all 0.6s ease;
+        -moz-transition:all 0.6s ease;
+        -o-transition:all 0.6s ease;
+        transition:all 0.6s ease;
+    }
+    &:hover .card-item-inner-t{
+        width:240px;
+        height:352px;
+        // border:1px solid #fc7a8c;
+        -webkit-transition:all 0.6s ease;
+        -moz-transition:all 0.6s ease;
+        -o-transition:all 0.6s ease;
+        transition:all 0.6s ease;
+        -webkit-box-shadow:6px 6px 10px rgba(0,0,0,0.2);
+        -moz-box-shadow:6px 6px 10px rgba(0,0,0,0.2);
+        -o-box-shadow:6px 6px 10px rgba(0,0,0,0.2);
+        box-shadow:6px 6px 10px rgba(0,0,0,0.2);
+    }
+    &:hover .chanxun_header{
+        // background:#fc7a8c;
+        // color:#fff;
+        -webkit-transition:all 0.6s ease;
+        -moz-transition:all 0.6s ease;
+        -o-transition:all 0.6s ease;
+        transition:all 0.6s ease;
+    }
+    &:hover .item_content{
+        margin:0px 16px;
+        border-bottom:1px solid #e6e6e6;
+    }
+    &:hover .tow,&:hover .one{
+        display:block;
+        float:left;
+        width:50%;
+        text-align:left;
+    }
+}
+.card-item-inner-t{
+    width:182px;
+    height:300px;
+    border:1px solid #e6e6e6;
+    background:#fff;
+    &:hover{
+        border:1px solid #ebebec;
+    }
+}
+.chanxun_header{
+    background:#ebebec;
+    color:#555555;
+    font-size:14px;
+    padding:22px 0px;
+}
+.chanxun_header i{
+    display:inline-block;
+    font-size:22px;
+}
+.item{
+    background:#fff;
+    padding:12px 0px 14px 0px;
+}
+.item_content{
+    overflow:hidden;
+    margin:6px 16px;
+}
+.chanxun_item p{
+    line-height:22px;
+    white-space:nowrap;
+    
+    text-overflow:ellipsis;
+    overflow:hidden;
+}
+.chanxun_item .text_one{
+    color:#373d41;
+    font-size:14px;
+}
+.chanxun_item .text_tow{
+    color:#999999;
+    font-size:12px;
+}
+.fl{
+    float:left;
+}
+.fr{
+    float:right;
+}
+.tow{
+    display:none;
+}
+.chanxun_button{
+    line-height:62px;
+    a{
+        padding:6px 28px;
+        border:1px solid #555;
+        color:#555;
+    }
+}
+.alarm-lever-1{
+	.chanxun_header{
+        color:#fc7a8c;
+    }
+    &:hover .chanxun_header{
+        background:#fc7a8c;
+        color:#fff;
+    }
+    &:hover .card-item-inner{
+        border:1px solid #fc7a8c;
+    }
+     &:hover .chanxun_button a{
+        border:1px solid #fc7a8c;
+        color:#fc7a8c;
+    }
+}
+.alarm-lever-2{
+    .chanxun_header{
+        color:#efc72f;
+    }
+    &:hover .chanxun_header{
+        background:#efc72f;
+        color:#fff;
+    }
+    &:hover .card-item-inner{
+        border:1px solid #efc72f;
+    }
+    &:hover .chanxun_button a{
+        border:1px solid #efc72f;
+        color:#efc72f;
+    }
+}
+.alarm-lever-3{
+    .chanxun_header{
+        color:#dd77ee;
+    }
+    &:hover .chanxun_header{
+        background:#dd77ee;
+        color:#fff;
+    }
+    &:hover .card-item-inner{
+        border:1px solid #dd77ee;
+    }
+    &:hover .chanxun_button a{
+        border:1px solid #dd77ee;
+        color:#dd77ee;
+    }
+}
+.alarm-lever-4{
+    .chanxun_header{
+        color:#5de7ed;
+    }
+    &:hover .chanxun_header{
+        background:#5de7ed;
+        color:#fff;
+    }
+    &:hover .card-item-inner{
+        border:1px solid #5de7ed;
+    }
+    &:hover .chanxun_button a{
+        border:1px solid #5de7ed;
+        color:#5de7ed;
+    }
+}
+.alarm-lever-5{
+    .chanxun_header{
+        color:#f6a22a;
+    }
+    &:hover .chanxun_header{
+        background:#f6a22a;
+        color:#fff;
+    }
+    &:hover .card-item-inner{
+        border:1px solid #f6a22a;
+    }
+    &:hover .chanxun_button a{
+        border:1px solid #f6a22a;
+        color:#f6a22a;
+    }
+}
+.alarm-lever-6{
+    .chanxun_header{
+        color:#82e0a4;
+    }
+    &:hover .chanxun_header{
+        background:#82e0a4;
+        color:#fff;
+    }
+    &:hover .card-item-inner{
+        border:1px solid #82e0a4;
+    }
+    &:hover .chanxun_button a{
+        border:1px solid #82e0a4;
+        color:#82e0a4;
+    }
+}
+input[class="time"]{
+    width:72px;
+    font-size:12px;
+    border:none;
+    color:#999999;
+    font-size:12px;
+}
+input[class="time"]:hover,input[type='text']:active,input[type='text']:focus,input[type='text']:visited{
+    outline:none;
+}
+.rowBorder{
+    border-bottom:1px dashed #dedede;
+}
+.tip{
+	position:absolute;
+	top:12px;
+	right:12px;
+    &:hover{
+        color:#00c1de!important;
+    }
+}
+.filter-select-bar-item-a{
+    padding:4px 11px;
+}
+.form-group{
+	margin-bottom:6px;
+}
+.filter-c-ml {
+    margin:0px 0px 0px 115px;
+}
+.form-box{
+    margin-bottom:0px;
+}

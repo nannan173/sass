@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>shuxin</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=8" >
+	<link rel="stylesheet" type="text/css" href="../../css/bomc-green.css">
+	<script src="../../js/jquery/jquery-1.11.0.min.js" type="text/javascript"></script>
+</head>
+<body class="mainpage">
+	<div class="container">
+		<div class="sx-navbar">
+			<ul class="sx-ul">
+				<li><a href="javascript:;" class="active"><i class="icon icon-pro"></i>属性</a></li>
+				<li><a href="javascript:;"><i class="icon icon-channel"></i>关系</a></li>
+				<li><a href="javascript:;"><i class="icon icon-time"></i>历史</a></li>
+				<li><a href="javascript:;"><i class="icon icon-set"></i>性能</a></li>
+				<li><a href="javascript:;"><i class="icon icon-warning"></i>告警</a></li>
+				<li class="marginLeft"><a href="javascript:;"><i class="icon icon-restart"></i>巡检</a></li>
+			</ul>
+		</div>
+		<div class="sx-main">
+			<div class="sx-item">
+				<div class="sx-ben-title sx-ben fl"><span>基本属性</span></div>
+				<div class="ben-content">
+					<div class="sx-xinxi">
+						<span>资源名称：SDFGSD </span>
+						<span>搜索代码：HW-EPS-ZZZ-905555</span>
+						<span>配置管理员：超级管理员</span>
+					</div>
+					<div class="sx-xinxi">
+						<span>资源状态：已安装 </span>
+						<span>最后更新时间：2017-4-23 09:34:44</span>
+						<span>最近审核时间：2017-04-23 09：56:33</span>
+					</div>
+				</div>
+			</div>
+			<div class="sx-item">
+				<div class="sx-ben-title sx-yewu fl"><span>业务属性</span></div>
+				<div class="ben-content">
+					<div class="sx-xinxi">
+						<span>资源名称：SDFGSD </span>
+						<span>搜索代码：HW-EPS-ZZZ-905555</span>
+						<span>配置管理员：超级管理员</span>
+					</div>
+					<div class="sx-xinxi">
+						<span>资源状态：已安装 </span>
+						<span>最后更新时间：2017-4-23 09:34:44</span>
+						<span>最近审核时间：2017-04-23 09：56:33</span>
+					</div>
+				</div>
+			</div>
+			<div class="sx-item">
+				<div class="sx-ben-title sx-goncheng fl"><span>工程属性</span></div>
+				<div class="ben-content">
+					<div class="sx-xinxi">
+						<span>资源名称：SDFGSD </span>
+						<span>搜索代码：HW-EPS-ZZZ-905555</span>
+						<span>配置管理员：超级管理员</span>
+					</div>
+					<div class="sx-xinxi">
+						<span>资源状态：已安装 </span>
+						<span>最后更新时间：2017-4-23 09:34:44</span>
+						<span>最近审核时间：2017-04-23 09：56:33</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.sx-ul li').bind("mouseover",function(){
+				$(".sx-ul li a").removeClass("active");
+				$(this).children("a").addClass("active");
+			})
+			$(".h-btn").bind("mouseover",function(){
+				var num = $(".h-btn").index(this);
+				console.log(num);
+				$(".h-cs-table").eq(num).css("display","block").siblings(".h_cs_table").css("display","none");
+			})
+		})
+	</script>
+</body>
+</html>

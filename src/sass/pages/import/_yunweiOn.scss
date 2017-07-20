@@ -1,0 +1,95 @@
+.head{
+	height:80px;
+	position:relative;
+	border:none;
+	.logo{
+		background:url("../images/yunwei/yunwei-logo.png") center left no-repeat;
+		height:100%;
+	}
+	.yw-h-right{
+		position:absolute;
+		top: 17px;
+		right: 20px;
+		font-size: 14px;
+		.col-xs-0{
+			label{
+				display: inline-block;
+				width: 100px;
+				padding-right:20px;
+				text-align: right;
+				line-height: 30px;
+			}
+			.orange{
+				color: #fff;
+                background: #e49f26;
+                &:hover {
+                      background: #d69420;
+                   }
+			}
+
+		}
+		.ml20{
+			margin-left:20px;
+		}
+	}
+	.form{
+		margin:0px auto;
+	}
+}
+.banner{
+	height: 336px;
+    background: url(../images/yunwei/yunwei-banner.jpg) center no-repeat;
+}
+.con{
+	width: 1000px;
+	min-height: 250px;
+	margin: 0 auto;
+	.col-xs-yw{
+		width:20%;
+		display:inline-block;
+		overflow:hidden;
+		.yw-funmenu-btn{
+				display: inline-block;
+				zoom: 1;
+				*display: inline;
+				padding: 20px 30px 10px 30px;
+				font-size: 20px;
+				line-height: 60px;
+				border: 1px solid #fff;
+		}
+	}
+}
+.lx-con{
+	width:1140px;
+	margin-top:49px;
+}
+.col-xs-wap {
+    word-spacing: -.3333em;
+}
+.tc{
+	text-align:center;
+}
+
+.ebus,.dianqu,.nbjyjk,.dwdfx,.ywjs{
+	display: block;
+	width: 126px;
+	height: 146px;
+	vertical-align: middle;
+    background: url(../images/yunwei/yw.png) no-repeat;
+
+}
+.ebus{
+    background-position: -31px -32px;
+}
+.dianqu{
+    background-position: -161px -32px;
+}
+.nbjyjk{ 
+    background-position: -291px -32px;
+}
+.dwdfx{ 
+    background-position: -421px -32px;
+}
+.ywjs{ 
+    background-position: -551px -32px;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../../css/bomc.css">
+</head>
+
+<body class="tabpage">
+    <div class="tab-card">
+  <ul class="tab-main" id="pro-state-tab">
+            <li class="tab-item sel">
+                <div class="tab-item-inner">
+                    <div class="tab-icon"><i class="icon icon-home"></i></div>
+                    <div class="tab-item-r">
+                        <p class="tab-item-title">全部</p><span>12311个</span>
+                    </div>
+                </div>
+            </li>
+            <li class="tab-item s-new">
+                <div class="tab-item-inner ">
+                    <div class="tab-icon "><i class="icon icon-add"></i></div>
+                    <div class="tab-item-r ">
+                        <p class="tab-item-title">新进程</p><span>123112</span>
+                    </div>
+                </div>
+            </li>
+              <li class="tab-item s-disappear">
+                <div class="tab-item-inner ">
+                    <div class="tab-icon  "><i class="icon icon-search"></i></div>
+                    <div class="tab-item-r">
+                        <p class="tab-item-title">消失</p><span>123112</span>
+                    </div>
+                </div>
+            </li>
+              <li class="tab-item s-disappear">
+                <div class="tab-item-inner ">
+                    <div class="tab-icon  "><i class="icon icon-prople"></i></div>
+                    <div class="tab-item-r">
+                        <p class="tab-item-title">用户变动</p><span>123112</span>
+                    </div>
+                </div>
+            </li>
+            <li class="tab-item s-exist">
+                <div class="tab-item-inner ">
+                    <div class="tab-icon "><i class="icon icon-asterisk"></i></div>
+                    <div class="tab-item-r">
+                        <p class="tab-item-title">已存在</p><span>123112</span>
+                    </div>
+                </div>
+            </li>
+            <li class="tab-item s-restart">
+                <div class="tab-item-inner ">
+                    <div class="tab-icon "><i class="icon icon-restart"></i></div>
+                    <div class="tab-item-r">
+                        <p class="tab-item-title">用户</p><span>123112</span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="tab-cons  " id="pro-state-cons">
+        <div class="tab-con show ">
+            <iframe src="tab-nav-con.html" frameborder="0" scrolling="auto"></iframe>
+        </div>
+    </div>
+</body>
+<script src="../../js/jquery/jquery-1.11.0.min.js"></script>
+<script type="text/javascript">
+$(function() {
+    var h = $(window).height() - $(".tab-cons").offset().top;
+    $(".tab-cons").css("height", h + "px");
+    $(window).resize(function() {
+        var h = $(window).height() - $(".tab-cons").offset().top;
+        $(".tab-cons").css("height", h + "px");
+
+    });
+
+    $("#pro-state-tab .tab-item").on("click", function() {
+        var index = $(this).index();
+        var $con = $("#pro-state-cons .tab-con").eq(index);
+        if ($con.length <= 0) {
+            $("#pro-state-tab .tab-item").removeClass("sel");
+            $("#pro-state-cons .tab-con").removeClass("show");
+            $(this).addClass("sel");
+            addTabCon("tab-nav-con.html");
+        } 
+        else if ($con.hasClass("show")) {} 
+        else {
+            $(this).addClass("sel");
+            $("#pro-state-cons .tab-con").removeClass("show");
+            $con.addClass("show");
+        }
+
+    }); 
+    function addTabCon(src) {
+        var html = " <div class='tab-con show '>" +
+            "<iframe src='" + src + "' frameborder='0' scrolling='auto'></iframe>" +
+            "</div>";
+        $("#pro-state-cons").append(html);
+    }
+})
+</script>
+
+</html>

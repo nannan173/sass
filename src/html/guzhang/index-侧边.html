@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../../css/bomc.css">
+    <link rel="stylesheet" type="text/css" href="../../js/scroll/jquery.mCustomScrollbar.css">
+</head>
+
+<body class="mainpage">
+    <div class="leftmain leftmenu-sm  ">
+        <i class="lr-icon-toggle icon "></i>
+        <div class="leftcontain">
+            <div class="scrollcontain">
+                <div class="listmenu">
+                    <li class="menu-item sel"><a href="javascript:;"><i class="icon icon-center"></i><span class="menu-item-title">故障处理中心</span></a></li>
+                    <li class="menu-item  "><a href="javascript:;"><i class="icon icon-order"></i><span   class="menu-item-title">工单处理中心</span></a></li>
+                    <li class="menu-item  "><a href="javascript:;"><i class="icon icon-tag"></i><span   class="menu-item-title">标签处理中心</span></a></li>
+                    <li class="menu-item  "><a href="javascript:;"><i class="icon icon-voice"></i><span   class="menu-item-title">公告管理中心</span></a></li>
+                    <li class="selbg  "> </li>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="rightmain">
+        <div class="box">
+            <div class="box-h box-h-lgray">
+                <div class="h-right">
+                    <div class="dropdown-wap col-xs-0 datepick placeholder" id="datepick">
+                        <div class="dropdown-toggle"> <i class="icon icon-date t"></i><span class="datepick-satrt">年/月/日</span> 到 <span class="datepick-end">年/月/日</span> </div>
+                        <div class="dropdown-menu" style="right:-98px">
+                            <div class="row">
+                                <div class="form-group  ">
+                                    <label class="form-label tr">时间段:</label>
+                                    <div class="form-value">
+                                        <div class="datapick">
+                                            <div class="col-xs-0">
+                                                <input type="text" id="start-input">
+                                                <div id="start" class="datapickcon"></div>
+                                            </div>
+                                            <span class="mline"></span>
+                                            <div class="col-xs-0">
+                                                <input type="text" id="end-input">
+                                                <div id="end" class="datapickcon"></div>
+                                            </div>
+                                            <div class="col-xs-0 datapick-btn">
+                                                <a href="" class="btn-gray btn-sm">查询</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="septalline"></span>
+                    <a class="btn-text t " id="search-more">
+                        高级查询 
+                    </a>
+                </div>
+                <i class="icon icon-list"></i>
+                <span class="box-h-title">故障列表</span><span class="sub">( <span class="  tag-sm tag-circle  s-wtaudit">待审核</span> <span class="f-red">1000</span> 条 ; <span class="tag-sm  tag-circle s-wtcheck">待确认</span> <span class="f-red">1000</span> 条 )</span>
+            </div>
+        </div>
+        <div class="form-box  dropdown-expend dropdown-expend-outer dropdown-expend-right">
+            <div class=" ">
+                <div class="row">
+                    <div class="form-group col-xs-4">
+                        <label class="form-label">
+                            地市
+                        </label>
+                        <div class="form-value">
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="form-group col-xs-4">
+                        <label class="form-label">
+                            状态
+                        </label>
+                        <div class="form-value">
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="form-group col-xs-4">
+                        <label class="form-label">
+                            所属系统
+                        </label>
+                        <div class="form-value">
+                            <div class="select">
+                                <select>
+                                    <option>1</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group  ">
+                        <label class="form-label">
+                            所属系统
+                        </label>
+                        <div class="form-value">
+                            <input type="text" class="form-control-full">
+                        </div>
+                    </div>
+                </div>
+                <div class="row btn-block">
+                    <a href="" class="btn">查询</a>
+                    <a href="" class="btn-gray">重置</a>
+                </div>
+            </div>
+        </div>
+        <table class="table  table-dark nowrap">
+            <tr>
+                <th>故障编号</th>
+                <th>故障时间</th>
+                <th>故障系统</th>
+                <th>保障厅</th>
+                <th>故障内容</th>
+                <th>保障人</th>
+                <th>状态</th>
+                <th>操作</th>
+            </tr>
+            <tr>
+                <td>sads</td>
+                <td>2017-08-09</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+        <div class="pagination">
+            <a href="" class="btn">首页</a>
+            <a href="" class="btn">上一页</a>
+            <input class="num" type="text">
+            <span>/ 10</span>
+            <a href="" class="btn">下一页</a>
+            <a href="" class="btn">尾页</a>
+            <span>每一页
+                    <div class="select">
+
+                        <select>
+                            <option>10</option>
+                        </select>
+                    </div>
+                    条</span>
+            <span>共 100 条</span>
+            <a href="" class="btn">跳转</a>
+        </div>
+    </div>
+    <div class="right-fixed">
+        <a class="quick-link">
+            <i class="icon icon-voice"></i>
+            <span class="num">12</span>
+        </a>
+        <a class="quick-link ">
+            <i class="icon icon-notice"></i>
+        </a>
+        <a class="quick-link">
+            <i class="icon icon-center"></i>
+        </a>
+    </div>
+    <div class="rightpop  ">
+        <div class="leftbar">
+            <div class="close">
+                <i class="icon  icon-next"></i>
+            </div>
+            <div class="leftnav">
+                <ul>
+                    <li class="leftnav-item sel">
+                        <a href="javascript:;"><i class="icon icon-center"></i><span class="icon-text">我的故障中心</span>
+                    </a>
+                        <ul class="leftnav-sub">
+                            <li class="leftnav-sub-item  sel" tooltip="近期故障" tooltip-dirction="left"><i class="icon icon-recent"></i></li>
+                            <li class="leftnav-sub-item " tooltip="历史故障" tooltip-dirction="left"><i class="icon icon-state"></i></li>
+                        </ul>
+                    </li>
+                    <li class="leftnav-item"><a href="javascript:;"><i class="icon icon-notice"></i><span class="icon-text">故障反馈</span></a></li>
+                    <li class="leftnav-item"><a href="javascript:;"><i class="icon icon-voice"></i><span class="icon-text">故障公告</span></a></li>
+                </ul>
+                 <div class="leftnav-b">
+                    <a class="btn-text icon  icon-update">
+                                 
+                   </a>
+               </div>
+            </div>
+        </div>
+        <div class="pop-rightmian">
+            <div class="notice-bar ">
+                <ul class="notice-bar-list marquee">
+                    <li><i class="icon icon-voice"></i><span>1公告标题阿三打asdasjhdklashdlaskjdlaskjdlaskdjlaskjdl雷克斯就得啦烧烤架达拉斯asdasdasdas1</span></li>
+                    <!--  <li><i class="icon icon-voice"></i><span>2公告标题阿三打雷克斯就得啦烧烤架达拉斯asdasdasdas2</span></li>
+                    <li><i class="icon icon-voice"></i><span>3公告标题阿三打雷克斯就得啦烧烤架达拉斯asdasdasdas3</span></li> -->
+                </ul>
+                <div class="notice-detail-panel">
+                    <div class="notice-detail">
+                        <div class="h-right">
+                            <div class="icon icon-close"></div>
+                        </div>
+                        <h4 class="notice-h">bssp网关故障</h4>
+                        <p class="notice-sub">2017-10-10 24:40</p>
+                        <p class="notice-c">省公司bssp网关故障，目前163鉴权，业务办理，缴费，详单查询，发票打印的功能出现异常，省公司已加强处理，请各单位耐心等待，预计10个小时后恢复，造成不便，敬请谅解</p>
+                    </div>
+                    <ul class="notice-list">
+                        <li class="notice-item">
+                            <!--   公告length 24 后面加。。。 -->
+                            <a href=""><span class="icon-rect "><i class="icon icon-voice"></i></span><p class="list-title">省公司bssp网关故障，目前163鉴权，业务办理...</p><span class="list-sub">2017-01-01 24:40</span></a>
+                        </li>
+                        <li class="notice-item">
+                            <a href=""><span class="icon-rect "><i class="icon icon-voice"></i></span><p class="list-title">省公司bssp网关故障，目前163鉴权，业务办理...</p><span class="list-sub">2017-01-01 24:40</span></a>
+                        </li>
+                        <li class="notice-item">
+                            <a href=""><span class="icon-rect "><i class="icon icon-voice"></i></span><p class="list-title">省公司bssp网关故障，目前163鉴权，业务办理...</p><span class="list-sub">2017-01-01 24:40</span></a>
+                        </li>
+                        <li class="notice-item">
+                            <a href=""><span class="icon-rect "><i class="icon icon-voice"></i></span><p class="list-title">省公司bssp网关故障，目前163鉴权，业务办理...</p><span class="list-sub">2017-01-01 24:40</span></a>
+                        </li>
+                        <div class="list-bottom"><a href="" class="btn-text">点击加载更多</a></div>
+                    </ul>
+                </div>
+            </div>
+            <!-- 故障 -->
+            <div class="leftnav-con sel">
+                <!-- 近期 -->
+                <div class="leftnav-sub-con sel">
+                    <ul class="nav-bar">
+                        <li class="sel"><a href="">处理中</a></li>
+                        <li><a href="">待处理</a></li>
+                        <li><a href="">已处理</a></li>
+                    </ul>
+                    <div class="scrollcon">
+                        <div class="gz-list">
+                            <div class="gz-item">
+                                <div class="gz-h">
+                                    <i class="icon icon-trouble-wait gz-icon"></i>
+                                    <div class="gz-h-c">
+                                        <p class="gz-title">增值产品受理</p>
+                                        <p class="gz-sub">2017-01-30-11:13:59:234</p>
+                                    </div>
+                                    <a class="icon icon-next more-toggle"></a>
+                                </div>
+                                <div class="gz-c">
+                                    <p>业务错误,错误码[1:99]。详细信息[产品订购:超时返回失败 (bssplog=433149862318:1. 46:727)]烦请相关部门协处...
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="gz-item">
+                                <div class="gz-h">
+                                    <i class="icon icon-trouble-doing gz-icon"></i>
+                                    <div class="gz-h-c">
+                                        <p class="gz-title">增值产品受理</p>
+                                        <p class="gz-sub">2017-01-30-11:13:59:234</p>
+                                    </div>
+                                    <a class="icon icon-next more-toggle"></a>
+                                </div>
+                                <div class="gz-c">
+                                    <p>业务错误,错误码[1:99]。详细信息[产品订购:超时返回失败 (bssplog=433149862318:1. 46:727)]烦请相关部门协处...
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="gz-item">
+                                <div class="gz-h">
+                                    <i class="icon icon-trouble-done gz-icon"></i>
+                                    <div class="gz-h-c">
+                                        <p class="gz-title">增值产品受理</p>
+                                        <p class="gz-sub">2017-01-30-11:13:59:234</p>
+                                    </div>
+                                    <a class="icon icon-next more-toggle"></a>
+                                </div>
+                                <div class="gz-c">
+                                    <p>业务错误,错误码[1:99]。详细信息[产品订购:超时返回失败 (bssplog=433149862318:1. 46:727)]烦请相关部门协处...
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list-bottom"><a href="" class="btn-text">点击加载更多</a></div>
+                    </div>
+                </div>
+                <!-- 历史 -->
+                <div class="leftnav-sub-con ">
+                    <div class="date-bar">
+                        <div class="dropdown-wap col-xs-0 datepick placeholder">
+                            <div class=" ">
+                                <i class="icon icon-time t"></i>
+                                <input class="datepick-satrt" id="startspan" type="text" placeholder="年月日"> </input> 到
+                                <input class="datepick-end" id="endspan" type="text" placeholder="年月日"> </input>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="search-bar">
+                        <div class="input-group form-control-full">
+                            <input class="form-control-full" type="text">
+                            <div class="input-group-btn">
+                                <a class="btn-text ">查询</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="scrollcon">
+                        <div class="gz-list">
+                            <div class="gz-item">
+                                <div class="gz-h">
+                                    <i class="icon icon-trouble-wait gz-icon"></i>
+                                    <div class="gz-h-c">
+                                        <p class="gz-title">增值产品受理</p>
+                                        <p class="gz-sub">2017-01-30-11:13:59:234</p>
+                                    </div>
+                                    <a class="icon icon-next more-toggle"></a>
+                                </div>
+                                <div class="gz-c">
+                                    <p>业务错误,错误码[1:99]。详细信息[产品订购:超时返回失败 (bssplog=433149862318:1. 46:727)]烦请相关部门协处...
+                                    </p>
+                                </div>
+                                <div class="gz-c">
+                                    <p><span class="imp">【处理结果】</span>业务错误,错误码[1:99]。详细信息[产品订购:超时返回失败 (bssplog=433149862318:1. 46:727)]烦请相关部门协处...
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="list-bottom"><a href="" class="btn-text">点击加载更多</a></div>
+                        </div>
+                    </div>
+                    <!-- 详情 -->
+                    <div class="pop-pop">
+                        <div class="pop-pop-h">故障详情<i class="icon icon-close"></i></div>
+                        <div class="pop-pop-con">
+                            <div class=" box-nb">
+                                <div class="box-nb-h box-h-gray "><i class="icon icon-order"></i><span class="box-h-title">处理信息</span></div>
+                                <div class="box-nb-c">
+                                    <div class="form-detail gz-form-detail">
+                                        <div class="row">
+                                            <label class="form-group form-label">
+                                                故障状态:
+                                            </label>
+                                            <div class="form-value">
+                                                <div class=" tag-sm tag-circle   s-dealing">处理中</div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <label class="form-group form-label">
+                                                故障时间:
+                                            </label>
+                                            <div class="form-value">
+                                                <span class="form-control-static">2017-09-09 12:23:23:123</span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <label class="form-group form-label">
+                                                处理历时:
+                                            </label>
+                                            <div class="form-value">
+                                                <span class="form-control-static">2天</span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <label class="form-group form-label">
+                                                处理类型:
+                                            </label>
+                                            <div class="form-value">
+                                                <span class="form-control-static">人工处理</span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <label class="form-group form-label">
+                                                处理类型:
+                                            </label>
+                                            <div class="form-value">
+                                                <span class="form-control-static">人工处理</span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <label class="form-group form-label">
+                                                是否共性:
+                                            </label>
+                                            <div class="form-value">
+                                                <span class=" checkbox checkbox-switch">
+                                               <i class="icon icon-circle"></i>
+                                               <input type="checkbox" readonly="true">
+                                           </span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <label class="form-group form-label">
+                                                处理结果:
+                                            </label>
+                                            <div class="form-value">
+                                                <div class="form-control-static">啥达纳苏斯宽度就阿瑞斯宽度阿瑞斯宽度就阿瑞斯宽度就阿斯宽度就
+                                                    <div class="icon-group">
+                                                        <a class="btn-text icon icon-like"></a>
+                                                        <a class="btn-text icon icon-unlike"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="  box-nb">
+                                <div class="box-nb-h box-h-gray "><i class="icon icon-tag"></i><span class="box-h-title">标签信息</span></div>
+                                <div class="box-nb-c">
+                                    <div class="form-detail gz-form-detail">
+                                        <div class="row">
+                                            <label class="form-group form-label">
+                                                标签标题:
+                                            </label>
+                                            <div class="form-value">
+                                                <span class="form-control-static">2017-09-09 12:23:23:123</span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <label class="form-group form-label">
+                                                是否派单:
+                                            </label>
+                                            <div class="form-value">
+                                                <span class=" checkbox checkbox-switch">
+                                               <i class="icon icon-circle"></i>
+                                               <input type="checkbox" readonly="true">
+                                           </span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <label class="form-group form-label">
+                                                标签内容:
+                                            </label>
+                                            <div class="form-value">
+                                                <span class="form-control-static">啥达纳苏斯宽度就阿瑞斯宽度阿瑞斯宽度就阿瑞斯宽度就阿斯宽度就  </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="  box-nb">
+                                <div class="box-nb-h box-h-gray "><i class="icon icon-trouble"></i><span class="box-h-title">故障信息</span></div>
+                                <div class="box-nb-c">
+                                    <div class="form-detail gz-form-detail">
+                                        <div class="row">
+                                            <label class="form-group form-label">
+                                                采集信息:
+                                            </label>
+                                            <div class="form-value">
+                                                <span class="form-control-static">阿萨德啥大所大所多</span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <label class="form-group form-label">
+                                                人工描述:
+                                            </label>
+                                            <div class="form-value">
+                                                <span class="form-control-static">啥达纳苏斯宽度就阿瑞斯宽度阿瑞斯宽度就阿瑞斯宽度就阿斯宽度就 </span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="img-upload">
+                                                <a class="img-upload-item" href="javascript:;"><img src="../../images/zy/ziyuanshuxin/wuliji.png"></a>
+                                                <a class="img-upload-item" href="javascript:;"><img src="../../images/zy/ziyuanshuxin/wuliji.png"></a>
+                                                <a class="img-upload-btn" href="javascript:;"> </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 反馈 -->
+            <div class="leftnav-con  scrollcon">
+                <div class="box-nb block-item">
+                    <div class="box-nb-h">
+                        <span class="box-h-title t">温馨提示</span>
+                    </div>
+                    <div class="box-nb-c">
+                        <ul class="  tip-list">
+                            <li>业务系统使用过程中，系统提示异常且您无法自行解决时，点击F2按钮进行故障反馈</li>
+                            <li>可在下方的故障描述框中描述故障现象，包括故障时间、办理业务、受理号码、故障现象等</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="box-nb block-item">
+                    <div class="box-nb-h">
+                        <div class="h-right">
+                            <span class=" checkbox checkbox-switch">
+                                               <i class="icon icon-circle"></i>
+                                               <input type="checkbox" >
+                            </span>
+                            <span class="sub">
+                                反馈系统弹窗故障消息
+                            </span>
+                        </div>
+                        <span class="box-h-title t">采集信息</span>
+                    </div>
+                    <div class="box-nb-c">
+                        <div class="form-detail gz-form-detail">
+                            <div class="row">
+                                <label class="form-group form-label">
+                                    故障时间:
+                                </label>
+                                <div class="form-value">
+                                    <span class="form-control-static">2017-09-09 12:23:23:123</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label class="form-group form-label">
+                                    受理业务:
+                                </label>
+                                <div class="form-value">
+                                    <span class="form-control-static">增值产品受理</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label class="form-group form-label">
+                                    菜单地址:
+                                </label>
+                                <div class="form-value">
+                                    <span class="form-control-static">综合营销服务平台:业务受理-产品受理-产品受理-增值产品受理</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label class="form-group form-label">
+                                    受理号码:
+                                </label>
+                                <div class="form-value">
+                                    <span class="form-control-static">18760422586</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label class="form-group form-label">
+                                    系统提示:
+                                </label>
+                                <div class="form-value">
+                                    <span class="form-control-static">业务错误,错误码[1:99]。详细信息[产品订购:超时返回失败 (bssplog=433149862318:1.46:727)]</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-nb block-item">
+                    <div class="box-nb-h">
+                        <span class="box-h-title t">故障描述</span>
+                    </div>
+                    <div class="box-nb-c">
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="form-value">
+                                    <textarea class="form-control-full"> </textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="img-url-list">
+                                <div class=" img-url-item   add ">
+                                    <div class="file-group ">
+                                        <span class="tip">请选择要上传的故障截图</span>
+                                        <input type="hidden" class="file-input  " placeholder="脚本路径">
+                                        <div class="file-btn">
+                                            <a class="btn "> 添加图片</a>
+                                            <input type="file" class="file " multiple="multiple">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="img-url-item">
+                                    <div class="form-control-full">
+                                        <span class="img-url-text">D:\work\bomc-sass\src\sass\components</span>
+                                        <div class="img-url-ac">
+                                            <a href="" class="btn-text icon icon-del"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="img-url-item">
+                                    <div class="    form-control-full">
+                                        <span class="img-url-text">D:\work\bomc-sass\src\sass\components</span>
+                                        <div class="img-url-ac">
+                                            <a href="" class="btn-text icon icon-del"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-block full">
+                    <a class="btn form-control-full">asds</a>
+                </div>
+            </div>
+            <div class="leftnav-con  scrollcon">
+                <ul class="notice-list">
+                    <li class="notice-item">
+                        <!--   公告length 24 后面加。。。 -->
+                        <a href=""><span class="icon-rect "><i class="icon icon-voice"></i></span><p class="list-title">省公司bssp网关故障，目前163鉴权，业务办理...</p><span class="list-sub">2017-01-01 24:40</span></a>
+                    </li>
+                    <li class="notice-item">
+                        <a href=""><span class="icon-rect "><i class="icon icon-voice"></i></span><p class="list-title">省公司bssp网关故障，目前163鉴权，业务办理...</p><span class="list-sub">2017-01-01 24:40</span></a>
+                    </li>
+                    <li class="notice-item">
+                        <a href=""><span class="icon-rect "><i class="icon icon-voice"></i></span><p class="list-title">省公司bssp网关故障，目前163鉴权，业务办理...</p><span class="list-sub">2017-01-01 24:40</span></a>
+                    </li>
+                    <li class="notice-item">
+                        <a href=""><span class="icon-rect "><i class="icon icon-voice"></i></span><p class="list-title">省公司bssp网关故障，目前163鉴权，业务办理...</p><span class="list-sub">2017-01-01 24:40</span></a>
+                    </li>
+                    <div class="list-bottom"><a href="" class="btn-text">点击加载更多</a></div>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../../js/jquery/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../js/bomc.js"></script>
+    <script type="text/javascript" src="../../js/My97DatePicker/WdatePicker.js"></script>
+    <script src="../../js/scroll/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript">
+    $(function() {
+
+        WdatePicker({
+            el: "start-input",
+            vel: "start-input",
+            eCont: 'start',
+            dateFmt: 'yyyy-MM-dd HH ',
+            skin: "simple",
+            autoUpdateOnChanged: true
+        });
+        WdatePicker({
+            el: "end-input",
+            vel: "end-input",
+            eCont: 'end',
+            dateFmt: 'yyyy-MM-dd HH:mm:ss',
+            skin: "simple",
+            autoUpdateOnChanged: true
+        });
+        WdatePicker({
+
+            eCont: 'start1',
+            dateFmt: 'yyyy/MM/dd ',
+            skin: "simple",
+            // onpicked: function(dp) {
+            //     $("#startspan").html(dp.cal.getNewDateStr());
+
+            // },
+            ychanged: function(dp) {
+                $("#startspan").html(dp.cal.getNewDateStr());
+
+            },
+            Mchanged: function(dp) {
+                $("#startspan").html(dp.cal.getNewDateStr());
+
+            },
+            dchanged: function(dp) {
+                $("#startspan").html(dp.cal.getNewDateStr());
+
+            },
+            Hchanged: function(dp) {
+                $("#startspan").html(dp.cal.getNewDateStr());
+
+            },
+            mchanged: function(dp) {
+                $("#startspan").html(dp.cal.getNewDateStr());
+
+            },
+            schanged: function(dp) {
+                $("#startspan").html(dp.cal.getNewDateStr());
+
+            }
+        });
+
+        WdatePicker({
+            eCont: 'end1',
+            dateFmt: 'yyyy/MM/dd ',
+            skin: "simple",
+            ychanged: function(dp) {
+                $("#endspan").html(dp.cal.getNewDateStr());
+
+            },
+            Mchanged: function(dp) {
+                $("#endspan").html(dp.cal.getNewDateStr());
+
+            },
+            dchanged: function(dp) {
+                $("#endspan").html(dp.cal.getNewDateStr());
+
+            },
+            Hchanged: function(dp) {
+                $("#endspan").html(dp.cal.getNewDateStr());
+
+            },
+            mchanged: function(dp) {
+                $("#endspan").html(dp.cal.getNewDateStr());
+
+            },
+            schanged: function(dp) {
+                $("#endspan").html(dp.cal.getNewDateStr());
+
+            }
+        });
+        $("#datepick").on(" mouseover ", function() {
+            $("#datepick").find(".dropdown-menu").show();
+        }).on("mouseout ", function() {
+            $("#datepick").find(".dropdown-menu").hide();
+        });
+        //菜单动画
+        $(".menu-item").on("click", function() {
+            $(".menu-item").removeClass("sel");
+            $(this).addClass("sel")
+            $(".selbg").css("top", $(this).position().top);
+        })
+        $("#search-more").on("click", function() {
+                $(".dropdown-expend-outer").toggle();
+            })
+            //rightpop
+        $(".quick-link").on("click", function() {
+            var $show = $(".rightpop");
+            if ($show.hasClass("show")) {
+                $show.removeClass("show");
+                setTimeout(function() {
+                    $show.addClass("show");
+                }, 500);
+            } else {
+                $show.addClass("show");
+            }
+            marquee_item(0, -1);
+            return false;
+        });
+
+        $(".rightpop .close").on("click", function() {
+            var $show = $(".rightpop").removeClass("show");
+
+        });
+
+        $(".scrollcon").each(function() {
+            // body...
+            $(this).css("height", $(".pop-rightmian").height() - $(this).position().top).mCustomScrollbar({
+                axis: "y",
+                autoHideScrollbar: true,
+                advanced: {
+                    updateOnContentResize: false,
+                    updateOnImageLoad: false,
+                    updateOnSelectorChange: false
+                },
+                scrollbarPosition: 'inside',
+                contentTouchScroll: false,
+                theme: "min-dark-tree",
+                setdraggerMaxheight: "50",
+                mouseWheelPixels: '66'
+            });
+        });
+        $(".leftnav-item").on("click", function(argument) {
+            $(".leftnav-item").removeClass("sel");
+            $(this).addClass("sel");
+            var $con = $(".leftnav-con").removeClass("sel").eq($(this).index());
+            $con.addClass("sel");
+            $con.hasClass("scrollcon") && $con.mCustomScrollbar("update");
+        });
+        $(".leftnav-sub-item").on("click", function(argument) {
+            // body...
+            $(".leftnav-sub-item").removeClass("sel");
+            $(this).addClass("sel");
+            var $con = $(".leftnav-sub-con").removeClass("sel").eq($(this).index()).addClass("sel").find(".scrollcon");
+            $con.css("height", $(".pop-rightmian").height() - $con.position().top - 10).mCustomScrollbar("update");
+
+        });
+        $(".pop-pop").mCustomScrollbar({
+            axis: "y",
+            autoHideScrollbar: true,
+            advanced: {
+                updateOnContentResize: false,
+                updateOnImageLoad: false,
+                updateOnSelectorChange: false
+            },
+            scrollbarPosition: 'inside',
+            contentTouchScroll: false,
+            theme: "min-dark-tree",
+            setdraggerMaxheight: "50",
+            mouseWheelPixels: '66'
+        });
+        $(".gz-item").on("click", function() {
+            // body...
+            $(".pop-pop").addClass("show").mCustomScrollbar("update");
+        });
+        $(".pop-pop .icon-close").on("click", function() {
+            // body...
+            $(".pop-pop").removeClass("show");
+        });
+
+        // 公告滚动
+
+        $(".marquee li").on("mouseover", function() {
+            $(".marquee li  ").stop(true, true);
+            $(".marquee li span").stop(true, false);
+        }).on("mouseout", function() {
+            marquee_item($(this).index(), -1);
+        }).on("click", function() {
+            $(".notice-detail-panel").show();
+        });
+        $(".notice-detail-panel ").on("click", ".icon-close", function() {
+            $(".notice-detail-panel").hide();
+        })
+
+        function marquee_item(i, flag) {
+            // body...
+            var l = $(".marquee li").length;
+            var $li = $(".marquee li").eq(i).addClass("surrent"),
+                $span = $li.find("span");
+
+            $span.css("opacity", 1);
+            if (l > 1) {
+                if (flag == -1) {
+                    $(this).css({
+                        top: "35px"
+                    });
+                } else {
+
+                    $(".marquee li").eq((i - 1 + l) % l).animate({
+                        top: "-35px"
+                    }, 1000, function() {
+                        $(this).css({
+                            top: "35px"
+                        });
+                    });
+                }
+            }
+            $li.animate({
+                top: 0
+            }, 1000, function() {
+                var w = $(".marquee li").width() - 22 - $span.width();
+                $span.animate({
+                    "left": w
+                }, Math.abs(w) / 50 * 1000, function() { 
+                    setTimeout(function function_name(argument) {
+                        // body... 
+                        if (l > 1) {
+                            i = (i + 1) % l;
+                            marquee_item(i);
+                            $span.css({
+                                "left": 0
+                            });
+                        } else {
+                            $span.animate({
+                                "left": 0
+                            }, Math.abs(w) / 50 * 1000, function() {
+                                setTimeout(function() {
+                                    i = (i + 1) % l;
+                                    marquee_item(i);
+                                }, 1000);
+                            });
+                        }
+                    }, 1000);
+                });
+            });
+
+        };
+        // 公告滚动
+
+    });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+.f-leftcontain{
+	.left-h .row{
+		margin:0px;
+		text-indent:12px;
+	}
+	.box{
+		border:none;
+		.inner-box .box-h{
+			color:#6eaef6;
+			border-top:none;
+			padding:0px 10px;
+			border-bottom: 1px solid #e6e6e6;
+			.lf .h-right a{
+				color:#6eaef6;
+			}
+		}
+		.box-c{
+			padding:0px;
+			font-size:14px;
+			border:none;
+			.row{
+				padding-left:20px;
+				min-height:69px;
+			}
+			.row .form-group{
+				padding:0px 6px;
+			}
+		}
+	}
+}
+.f-title{
+	float:left;
+	margin-left:20px;
+}
+.f-leftmenu .lr-icon-toggle{
+	right:9px;
+}

@@ -1,0 +1,11 @@
+body { 
+}
+
+body, html { 
+	font-size:12px; 
+} 
+.info {
+	font-style:italic;
+	font-size: 0.9em;
+	color: #FFFFFF;
+}

@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>日志采集</title>
+    <link rel="stylesheet" type="text/css" href="../../css/bomc.css">
+</head>
+
+<body class="mainpage">
+    <div class="box">
+        <div class="box-h  box-h-theme">
+            <div class="h-right  dropdown-wap" id="datepick">
+                <div class="dropdown-toggle"> <i class="icon icon-time"></i><span>2016-07-06  -  2016-07-31</span> </div>
+                <div class="dropdown-menu">
+                    <div class="row">
+                        <div class="form-group  ">
+                            <label class="from-label tr">时间段:</label>
+                            <div class="form-value">
+                                <div class="datapick">
+                                    <div class="col-xs-0">
+                                        <input type="text" id="start-input">
+                                        <div id="start" class="datapickcon"></div>
+                                    </div>
+                                    <span class="mline"></span>
+                                    <div class="col-xs-0">
+                                        <input type="text" id="end-input">
+                                        <div id="end" class="datapickcon"></div>
+                                    </div>
+                                    <div class="col-xs-0 datapick-btn">
+                                        <a href="" class="btn-gray btn-sm">查询</a>
+                                    </div>
+                                </div>
+                                <div class="datequicklink">
+                                    <a href="javascript:void(0)">最近5天</a>
+                                    <a href="javascript:void(0)">最近5天</a>
+                                    <a href="javascript:void(0)">最近5天</a>
+                                    <a href="javascript:void(0)">最近5天</a>
+                                    <a href="javascript:void(0)">最近5天</a>
+                                    <a href="javascript:void(0)">最近5天</a>
+                                    <a href="javascript:void(0)">最近5天</a>
+                                    <a href="javascript:void(0)">最近5天</a>
+                                    <a href="javascript:void(0)">最近5天</a>
+                                    <a href="javascript:void(0)">最近5天</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <i class="icon icon-list"></i><span class="box-h-title">日志检索</span>
+        </div>
+    </div>
+    <div class="form-box">
+        <div class="row form-group">
+            <div class="input-group form-control-full">
+                <input class="form-control-full" type="text"></input>
+                <div class="input-group-btn"><a class="btn-gray icon icon-search"> </a></div>
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class="filter-result">
+                <i class="filter-result-toggle close icon icon-circle"><i class="icon-triangle"></i> </i>
+                <div class="filter-result-inner">
+                    <div class="filter-result-item">分类：<span>主机</span> <i class="icon icon-del"></i></div>
+                    <div class="filter-result-item red">!&nbsp;&nbsp;路径：<span>var/log/message</span><i class="icon icon-del"></i></div>
+                    <div class="filter-result-item">分类：<span>主机</span><i class="icon icon-del"></i></div>
+                </div>
+                <div class="filter-inner-wap">
+                    <div class="filter-row">
+                        <label class="filter-title">分类:</label>
+                        <div class="filter-items-tail">
+                            <a href="javascript:void(0)" class="filter-more">更多</a>
+                        </div>
+                        <div class=" filter-c ">
+                            <div class="filter-items">
+                                <span class="filter-item">全部</span>
+                                <span class="filter-item">mytest</span>
+                                <span class="filter-item">mytest</span>
+                                <span class="filter-item">mytest</span>
+                                <span class="filter-item">mytest</span>
+                                <span class="filter-item">mytest</span>
+                            </div>
+                            <div class="filter-items-more">
+                                <div class="filter-seach-box">
+                                    <input type="text"> <i class="icon icon-search"></i>
+                                </div>
+                                <div class="filter-items-contain">
+                                    <span class="filter-item">全部</span>
+                                    <span class="filter-item">as-jf2/10.46.100.167</span>
+                                    <span class="filter-item">as-jf2/10.46.100.167</span>
+                                    <span class="filter-item">as-jf2/10.46.100.167</span>
+                                    <span class="filter-item">as-jf2/10.46.100.167</span>
+                                    <span class="filter-item">as-jf2/10.46.100.167</span>
+                                    <span class="filter-item">as-jf2/10.46.100.167</span>
+                                    <span class="filter-item">as-jf2/10.46.100.167</span>
+                                    <span class="filter-item">as-jf2/10.46.100.167</span>
+                                    <span class="filter-item">as-jf2/10.46.100.167</span>
+                                    <span class="filter-item">as-jf2/10.46.100.167</span>
+                                    <span class="filter-item">as-jf2/10.46.100.167</span>
+                                    <span class="filter-item">as-jf2/10.46.100.167</span>
+                                    <span class="filter-item">as-jf2/10.46.100.167</span>
+                                    <span class="filter-item">as-jf2/10.46.100.167</span>
+                                    <span class="filter-item">as-jf2/10.46.100.167</span>
+                                    <span class="filter-item">as-jf2/10.46.100.167</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter-row">
+                        <label class="filter-title">组件:</label>
+                        <div class="filter-items-tail">
+                            <a href="javascript:void(0)" class="filter-more">更多</a>
+                        </div>
+                        <div class=" filter-c ">
+                            <div class="filter-items">
+                                <span class="filter-item">mytest</span>
+                                <span class="filter-item">mytest</span>
+                                <span class="filter-item">mytest</span>
+                                <span class="filter-item">mytest</span>
+                                <span class="filter-item">mytest</span>
+                            </div>
+                            <div class="filter-items-more">
+                                <div class="filter-seach-box">
+                                    <input type="text"> <i class="icon icon-search"></i>
+                                </div>
+                                <div class="filter-items-contain">
+                                    <span class="filter-item">全部</span>
+                                    <span class="filter-item">as-jf2/10.46.100.167</span>
+                                    <span class="filter-item">as-jf2/10.46.100.167</span>
+                                    <span class="filter-item">as-jf2/10.46.100.167</span>
+                                    <span class="filter-item">as-jf2/10.46.100.167</span>
+                                    <span class="filter-item">as-jf2/10.46.100.167</span>
+                                    <span class="filter-item">as-jf2/10.46.100.167</span>
+                                    <span class="filter-item">as-jf2/10.46.100.167</span>
+                                    <span class="filter-item">as-jf2/10.46.100.167</span>
+                                    <span class="filter-item">as-jf2/10.46.100.167</span>
+                                    <span class="filter-item">as-jf2/10.46.100.167</span>
+                                    <span class="filter-item">as-jf2/10.46.100.167</span>
+                                    <span class="filter-item">as-jf2/10.46.100.167</span>
+                                    <span class="filter-item">as-jf2/10.46.100.167</span>
+                                    <span class="filter-item">as-jf2/10.46.100.167</span>
+                                    <span class="filter-item">as-jf2/10.46.100.167</span>
+                                    <span class="filter-item">as-jf2/10.46.100.167</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter-row">
+                        <label class="filter-title">路径:</label>
+                        <div class="filter-items-tail">
+                            <a href="javascript:void(0)" class="filter-more">更多</a>
+                        </div>
+                        <div class=" filter-c ">
+                            <div class="filter-items">
+                                <span class="filter-item">mytest</span>
+                                <span class="filter-item">mytest</span>
+                                <span class="filter-item">mytest</span>
+                                <span class="filter-item">mytest</span>
+                                <span class="filter-item">mytest</span>
+                            </div>
+                            <div class="filter-items-more">
+                                <div class="filter-seach-box">
+                                    <input type="text"> <i class="icon icon-search"></i>
+                                </div>
+                                <div class="filter-items-contain">
+                                    <span class="filter-item">全部</span>
+                                    <span class="filter-item">as-jf2/10.46.100.167</span>
+                                    <span class="filter-item">as-jf2/10.46.100.167</span>
+                                    <span class="filter-item">as-jf2/10.46.100.167</span>
+                                    <span class="filter-item">as-jf2/10.46.100.167</span>
+                                    <span class="filter-item">as-jf2/10.46.100.167</span>
+                                    <span class="filter-item">as-jf2/10.46.100.167</span>
+                                    <span class="filter-item">as-jf2/10.46.100.167</span>
+                                    <span class="filter-item">as-jf2/10.46.100.167</span>
+                                    <span class="filter-item">as-jf2/10.46.100.167</span>
+                                    <span class="filter-item">as-jf2/10.46.100.167</span>
+                                    <span class="filter-item">as-jf2/10.46.100.167</span>
+                                    <span class="filter-item">as-jf2/10.46.100.167</span>
+                                    <span class="filter-item">as-jf2/10.46.100.167</span>
+                                    <span class="filter-item">as-jf2/10.46.100.167</span>
+                                    <span class="filter-item">as-jf2/10.46.100.167</span>
+                                    <span class="filter-item">as-jf2/10.46.100.167</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter-row">
+                        <label class="filter-title">IP地址:</label>
+                        <div class="filter-items-tail">
+                            <a href="javascript:void(0)" class="filter-more">更多</a>
+                        </div>
+                        <div class=" filter-c ">
+                            <div class="filter-items">
+                                <span class="filter-item">mytest</span>
+                                <span class="filter-item">mytest</span>
+                                <span class="filter-item">mytest</span>
+                                <span class="filter-item">mytest</span>
+                                <span class="filter-item">mytest</span>
+                            </div>
+                            <div class="filter-items-more">
+                                <div class="filter-seach-box">
+                                    <input type="text"> <i class="icon icon-search"></i>
+                                </div>
+                                <div class="filter-items-contain">
+                                    <span class="filter-item">全部</span>
+                                    <span class="filter-item">as-jf2/10.46.100.167</span>
+                                    <span class="filter-item">as-jf2/10.46.100.167</span>
+                                    <span class="filter-item">as-jf2/10.46.100.167</span>
+                                    <span class="filter-item">as-jf2/10.46.100.167</span>
+                                    <span class="filter-item">as-jf2/10.46.100.167</span>
+                                    <span class="filter-item">as-jf2/10.46.100.167</span>
+                                    <span class="filter-item">as-jf2/10.46.100.167</span>
+                                    <span class="filter-item">as-jf2/10.46.100.167</span>
+                                    <span class="filter-item">as-jf2/10.46.100.167</span>
+                                    <span class="filter-item">as-jf2/10.46.100.167</span>
+                                    <span class="filter-item">as-jf2/10.46.100.167</span>
+                                    <span class="filter-item">as-jf2/10.46.100.167</span>
+                                    <span class="filter-item">as-jf2/10.46.100.167</span>
+                                    <span class="filter-item">as-jf2/10.46.100.167</span>
+                                    <span class="filter-item">as-jf2/10.46.100.167</span>
+                                    <span class="filter-item">as-jf2/10.46.100.167</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="box  innerlinebox">
+        <div class="echartContain" style="height:200px">
+        </div>
+    </div>
+    <div class=" box innerlinebox">
+        <div class="log-list">
+            <div class="list-item close">
+                <div class="list-item-h">
+                    <div class=" h-right"><a class="link-t" href="javascript:void(0)">查看上下文</a></div>
+                    <i class="list-toggle"></i>
+                    <span class="log-time">2017-03-16 03:12:12:123</span>
+                    <p class="log-inf "><span>type:</span> switch <span>ip:</span>127.0.0.1<span>log:</span> /var/logs/message</p>
+                </div>
+                <div class="log-c">
+                    <div class="log-inf log-inf-block">
+                        <span class="log-inf-h">message:</span>
+                        <p class="log-inf-c">ar 21 10:28:55 leo-MacBook-Pro eospreflightagent[67426]: objc[67426]: Class AMSupportURLConnectionDelegate is implementedin both /System/Library/ivateFrameworkMobileDevice.framework/VePrivateFrameworkMobileDevice.framework/Versions/A/MobileDevice (0x7fffa2d286e0) and /System/Library/PrivateFrameworks/EmbeddedOSInstall.framework/Versions/A/EmbeddedOSInstall (0x108af4de8). One of the two will be u sed.undefined.</p>
+                    </div>
+                    <div class="log-inf log-inf-block">
+                        <span class="log-inf-h">message:</span>
+                        <p class="log-inf-c">ar 21 10:28:55 leo-MacBook-Pro eospreflightagent[67426]: objc[67426]: Class AMSupportURLConnectionDelegate is implementedin both /System/Library/ivateFrameworkMobileDevice.framework/VePrivateFrameworkMobileDevice.framework/Versions/A/MobileDevice (0x7fffa2d286e0) and /System/Library/PrivateFrameworks/EmbeddedOSInstall.framework/Versions/A/EmbeddedOSInstall (0x108af4de8). One of the two will be u sed.undefined.</p>
+                    </div>
+                </div>
+                <div class="list-item-detail">
+                    <ul>
+                        <li>
+                            <i class="list-detail-icon">t</i>
+                            <span class="list-detail-title">hostname : </span>
+                            <span class="list-detail-action"><i class="icon icon-include"></i><i class="icon icon-exclude"></i><i class="icon icon-asterisk"></i></span>
+                            <span class="list-detail-c">220.249.162.145</span>
+                        </li>
+                        <li>
+                            <i class="list-detail-icon">t</i>
+                            <span class="list-detail-title">message : </span>
+                            <span class="list-detail-action"><i class="icon icon-include"></i><i class="icon icon-exclude"></i><i class="icon icon-asterisk"></i></span>
+                            <span class="list-detail-c">ar 21 10:28:55 leo-MacBook-Pro eospreflightagent[67426]: objc[67426]: Class AMSupportURLConnectionDelegate is implementedin both /System/Library/ivateFrameworkMobileDevice.framework/VePrivateFrameworkMobileDevice.framework/Versions/A/MobileDevice (0x7fffa2d286e0) and /System/Library/PrivateFrameworks/EmbeddedOSInstall.framework/Versions/A/EmbeddedOSInstall (0x108af4de8). One of the two will be u sed.undefined.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="list-item open">
+                <div class="list-item-h">
+                    <i class="list-toggle "></i>
+                    <span class="log-time">2017-03-16 03:12:12:123</span>
+                    <p class="log-inf"><span>type:</span>switch <span>ip:</span>127.0.0.1<span>log:</span> /var/logs/message</p>
+                </div>
+                <div class="log-c">
+                    <div class="log-inf log-inf-block">
+                        <span class="log-inf-h">时间:</span>
+                        <p class="log-inf-c">ar 21 10:28:55 leo-MacBook-Pro eospreflightagent[67426]: objc[67426]: Class AMSupportURLConnectionDelegate is implementedin both /System/Library/ivateFrameworkMobileDevice.framework/VePrivateFrameworkMobileDevice.framework/Versions/A/MobileDevice (0x7fffa2d286e0) and /System/Library/PrivateFrameworks/EmbeddedOSInstall.framework/Versions/A/EmbeddedOSInstall (0x108af4de8). One of the two will be u sed.undefined.</p>
+                    </div>
+                </div>
+                <div class="list-item-detail">
+                    <ul>
+                        <li>
+                            <i class="list-detail-icon">t</i>
+                            <span class="list-detail-title">hostname : </span>
+                            <span class="list-detail-action"><i class="icon icon-include  disabled"></i><i class="icon icon-exclude"></i><i class="icon icon-asterisk"></i></span>
+                            <span class="list-detail-c">220.249.162.145</span>
+                        </li>
+                        <li>
+                            <i class="list-detail-icon">t</i>
+                            <span class="list-detail-title">fileds.hostrelease : </span>
+                            <span class="list-detail-action"><i class="icon icon-include"></i><i class="icon icon-exclude"></i><i class="icon icon-asterisk"></i></span>
+                            <span class="list-detail-c">220.249.162.145</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pagination">
+        <a href="" class="btn">首页</a>
+        <a href="" class="btn">上一页</a>
+        <input class="num" type="text">
+        <span>/ 10</span>
+        <a href="" class="btn">下一页</a>
+        <a href="" class="btn">尾页</a>
+        <span>每一页
+                    <div class="select">
+
+                        <select>
+                            <option>10</option>
+                        </select>
+                    </div>
+                    条</span>
+        <span>共 100 条</span>
+        <a href="" class="btn">跳转</a>
+    </div>
+    <div class="maskpage ">
+        <div class="box logpop">
+            <div class="box-h box-h-theme">
+                <div class="h-right">
+                    <div class="h-theme-tab"><a href="javascript:void(0)" class="sel">上下各25条</a><a href="javascript:void(0)">上下各25条</a><a href="javascript:void(0)">上下各25条</a></div>
+                    <div class="pop-close"><i class="icon icon-close"></i></div>
+                </div>
+                <i class="icon icon-template"></i>
+                <span class="box-h-title">上下文检索</span>
+            </div>
+            <div class="box-c">
+                <ul class="d-list">
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="../../js/My97DatePicker/WdatePicker.js"></script>
+<script type="text/javascript" src="../../js/jquery/jquery-1.11.0.min.js"></script>
+<script type="text/javascript">
+$(function() {
+    WdatePicker({
+        el: "start-input",
+        vel: "start-input",
+        eCont: 'start',
+        dateFmt: 'yyyy-MM-dd HH:mm:ss',
+        skin: "simple",
+        autoUpdateOnChanged: true
+    });
+    WdatePicker({
+        el: "end-input",
+        vel: "end-input",
+        eCont: 'end',
+        dateFmt: 'yyyy-MM-dd HH:mm:ss',
+        skin: "simple",
+        autoUpdateOnChanged: true
+    });
+    $("#datepick").on(" mouseover ", function() {
+        $("#datepick").find(".dropdown-menu").show();
+    }).on("mouseout ", function() {
+        $("#datepick").find(".dropdown-menu").hide();
+    });
+    $(".filter-more").on("click", function() {
+        if (!$(this).hasClass("expend")) {
+            $(this).parents(".filter-row").find(".filter-items").addClass("hide")
+            $(this).parents(".filter-row").find(".filter-items-more").addClass("show");
+            $(this).text("收起").addClass("expend");
+        } else {
+            $(this).parents(".filter-row").find(".filter-items").removeClass("hide")
+            $(this).parents(".filter-row").find(".filter-items-more").removeClass("show");
+            $(this).text("更多").removeClass("expend");
+        }
+    });
+    $(".filter-result-toggle").on("click", function() {
+        if ($(this).hasClass("open")) {
+            $(this).removeClass("open").addClass("close");
+            $(this).parents(".filter-result").find(".filter-inner-wap").removeClass("open");
+        } else {
+            $(this).removeClass("close").addClass("open");
+            $(this).parents(".filter-result").find(".filter-inner-wap").addClass("open");
+        }
+    });
+    $(document).on("click", ".list-toggle", function() {
+        $(this).parents(".list-item").hasClass("close") ? $(this).parents(".list-item").removeClass("close").addClass("open") :
+            $(this).parents(".list-item").removeClass("open").addClass("close")
+    }).on("click", ".link-t", function() {
+        $(".logpop").parents(".maskpage").show();
+        var width = 800,
+            height = 616;
+        $(".logpop").css({
+            "width": width + "px",
+            "height": height + "px",
+            marginTop: ($(window).height() - 600) / 2 + "px"
+        });
+        $(".logpop").find(".box-c").css({
+            "height": height - 41 + "px",
+            "overflow": "auto"
+        });
+        var html = "<li>Tue Mar 21 10:44:16.019  &ltkernel&gt IO80211Interface::updatereport_peerManage is missing </li>" + "<li>Tue Mar 21 10:44:16.019  &ltkernel&gt IO80211Interface::updatereport_peerManage is missing </li>" + "<li>Tue Mar 21 10:44:16.019  &ltkernel&gt IO80211Interface::updatereport_peerManage is missing </li>" + "<li>Tue Mar 21 10:44:16.019  &ltkernel&gt IO80211Interface::updatereport_peerManage is missing </li>" + "<li>Tue Mar 21 10:44:16.019  &ltkernel&gt IO80211Interface::updatereport_peerManage is missing </li>" + "<li>Tue Mar 21 10:44:16.019  &ltkernel&gt IO80211Interface::updatereport_peerManage is missing </li>" + "<li>Tue Mar 21 10:44:16.019  &ltkernel&gt IO80211Interface::updatereport_peerManage is missing </li>" + "<li>Tue Mar 21 10:44:16.019  &ltkernel&gt IO80211Interface::updatereport_peerManage is missing </li>" + "<li>Tue Mar 21 10:44:16.019  &ltkernel&gt IO80211Interface::updatereport_peerManage is missing </li>" + "<li>Tue Mar 21 10:44:16.019  &ltkernel&gt IO80211Interface::updatereport_peerManage is missing </li>" + "<li>Tue Mar 21 10:44:16.019  &ltkernel&gt IO80211Interface::updatereport_peerManage is missing </li>" + "<li>Tue Mar 21 10:44:16.019  &ltkernel&gt IO80211Interface::updatereport_peerManage is missing </li>" + "<li>Tue Mar 21 10:44:16.019  &ltkernel&gt IO80211Interface::updatereport_peerManage is missing </li>" + "<li>Tue Mar 21 10:44:16.019  &ltkernel&gt IO80211Interface::updatereport_peerManage is missing </li>" + "<li>Tue Mar 21 10:44:16.019  &ltkernel&gt IO80211Interface::updatereport_peerManage is missing </li>" + "<li>Tue Mar 21 10:44:16.019  &ltkernel&gt IO80211Interface::updatereport_peerManage is missing </li>" + "<li>Tue Mar 21 10:44:16.019  &ltkernel&gt IO80211Interface::updatereport_peerManage is missing </li>" + "<li>Tue Mar 21 10:44:16.019  &ltkernel&gt IO80211Interface::updatereport_peerManage is missing </li>" + "<li>Tue Mar 21 10:44:16.019  &ltkernel&gt IO80211Interface::updatereport_peerManage is missing </li>" + "<li>Tue Mar 21 10:44:16.019  &ltkernel&gt IO80211Interface::updatereport_peerManage is missing </li>" + "<li>Tue Mar 21 10:44:16.019  &ltkernel&gt IO80211Interface::updatereport_peerManage is missing </li>" + "<li>Tue Mar 21 10:44:16.019  &ltkernel&gt IO80211Interface::updatereport_peerManage is missing </li>" + "<li>Tue Mar 21 10:44:16.019  &ltkernel&gt IO80211Interface::updatereport_peerManage is missing </li>" + "<li>Tue Mar 21 10:44:16.019  &ltkernel&gt IO80211Interface::updatereport_peerManage is missing </li>" + "<li>Tue Mar 21 10:44:16.019  &ltkernel&gt IO80211Interface::updatereport_peerManage is missing </li>" + "<li>Tue Mar 21 10:44:16.019  &ltkernel&gt IO80211Interface::updatereport_peerManage is missing </li>"
+        $(".logpop .d-list").html(html);
+    }).on("click", ".maskpage", function() {
+        $(this).hide();
+        return false;
+    }).on("click", ".maskpage .logpop", function() {
+        return false;
+    });
+
+});
+</script>
+
+</html>

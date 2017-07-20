@@ -1,0 +1,101 @@
+.tag, .tag-sm {
+    padding: 0 5*$px;
+    line-height: 24*$px;
+    min-width: 40*$px;
+    text-align: center;
+    @include inline-block;
+    border-radius: 2*$px;
+    color: #fff;
+    @each $state, $color in(s-new: $s-new, s-restart: $s-restart, s-disappear: $s-disappear, s-exist: $s-exist, s-wtcheck: $s-wtcheck, s-wtaudit: $s-wtaudit, s-wtmark: $s-wtmark, s-marked: $s-marked, s-dealing: $s-dealing, s-dealed: $s-dealed, s-replied: $s-replied, s-mark-failed: $s-mark-failed, s-unusual: $s-unusual, s-normal: $s-normal, s-null: $s-null, s-nondeployed: $s-nondeployed, s-chulizhong: $s-chulizhong, s-yiqueren: $s-yiqueren, s-weiqueren: $s-weiqueren, s-yanz2: $s-yanz2, s-alevel1: $s-alevel1, s-alevel2: $s-alevel2, s-alevel3: $s-alevel3, s-alevel4: $s-alevel4, s-alevel5: $s-alevel5, s-alevel6: $s-alevel6, s-alevel7: $s-alevel7) {
+        &.#{$state} {
+            background: $color;
+        }
+    }
+}
+
+.tag-sm {
+    line-height: 18*$px;
+    font-size: 12*$px;
+}
+
+.tag-circle {
+    border-radius: 24*$px;
+}
+
+.imp-tag {
+    display: inline-block;
+    zoom: 1;
+    background: #ecf0f1;
+    font-weight: bold;
+    color: #666;
+    font-family: monospace;
+    padding: 0 5*$px;
+    margin: 0 5*$px 0 10*$px;
+    line-height: 18*$px;
+    font-style: normal;
+}
+
+.status-bar {
+    @include inline-block;
+    vertical-align: middle;
+    margin-left: 15*$px;
+}
+
+.status-item {
+    @include inline-block;
+    text-align: center;
+    font-size: 13*$px;
+    margin: 0 2*$px;
+    @include keep-all();
+    @include clearspace();
+    cursor: pointer;
+    .status-title {
+        @include inline-block;
+        background: #333;
+        width: 48*$px;
+        color: #fff;
+        line-height: 24*$px;
+        vertical-align: top;
+    }
+    .status-num {
+        @include inline-block;
+        color: #333;
+        min-width: 34*$px;
+        padding: 0 5*$px;
+        line-height: 22*$px;
+        font-size: 14*$px;
+        border: 1px solid #999;
+        vertical-align: top;
+    }
+    @each $state, $color in(s-unusual:$s-unusual, s-normal:$s-normal, s-null:$s-null, s-nondeployed:$s-nondeployed, s-chulizhong:$s-chulizhong, s-yiqueren:$s-yiqueren, s-weiqueren:$s-weiqueren, s-alevel1:$s-alevel1, s-alevel2:$s-alevel2, s-alevel3:$s-alevel3, s-alevel4:$s-alevel4, s-alevel5:$s-alevel5, s-alevel6:$s-alevel6, s-alevel7:$s-alevel7) {
+        &.#{$state} {
+            .status-title {
+                background: $color;
+            }
+            .status-num {
+                border-color: $color;
+            }
+            &:hover {
+                .status-title {
+                    background: darken($color, 15%);
+                }
+                .status-num {
+                    border-color: darken($color, 15%);
+                }
+            }
+            &.sel, &.sel:hover {
+                .status-title {
+                    background-color: transparent;
+                    border: 1px solid $color;
+                    line-height: 22*$px;
+                    color: $color;
+                }
+                .status-num {
+                    background: $color;
+                    color: #fff;
+                    border-color: $color;
+                }
+            }
+        }
+    }
+}

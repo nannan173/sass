@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)http://10.1.3.122:8088/IPAddressManage/network/list.action -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>网段列表</title>
+		<meta http-equiv="pragma" content="no-cache">
+		<meta http-equiv="cache-control" content="no-cache">
+		<meta http-equiv="expires" content="0">
+		
+
+<link rel="stylesheet" type="text/css" href=" ../css/bomc.css">
+<link href="./网段列表_files/css.css" rel="stylesheet" type="text/css">
+<link href="./网段列表_files/css-theme.css" rel="stylesheet" type="text/css">
+<link href="./网段列表_files/index.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="./网段列表_files/jquery-1.7.2.js.下载"></script>
+<script type="text/javascript" src="./网段列表_files/jquery.json-2.4.min.js.下载"></script>
+<script type="text/javascript" src="./网段列表_files/jquery.form.js.下载"></script>
+<script type="text/javascript" src="./网段列表_files/WdatePicker.js.下载"></script><link href="./网段列表_files/WdatePicker.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="./网段列表_files/FusionCharts.js.下载"></script><style type="text/css" media="screen">object.FusionCharts:focus, embed.FusionCharts:focus {outline: none}</style>
+<script type="text/javascript" src="./网段列表_files/submodalsource.js.下载"></script>
+<link rel="stylesheet" type="text/css" href="./网段列表_files/submodal.css">
+<link rel="stylesheet" type="text/css" href="./网段列表_files/submodal-green.css">
+<link rel="stylesheet" type="text/css" href="./网段列表_files/style.css">
+<script type="text/javascript" src="./网段列表_files/ui.js.下载"></script>
+
+		<link href="./网段列表_files/easyui.css" rel="stylesheet" type="text/css">
+		<link href="./网段列表_files/icon.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="./网段列表_files/jquery.easyui.min.js.下载"></script>
+		<link href="./网段列表_files/combobox.css" rel="stylesheet" type="text/css">
+		<style>
+			.hidden_files{position:absolute;z-index:10;left:-40px; top:0px; height:26px;cursor:pointer;filter: Alpha(opacity=0);-moz-opacity:0;opacity:0; } 
+
+			.limitwap{
+				 white-space:normal;
+				 word-break:break-all;	
+			}
+			.form{
+				padding-top:0px;
+				padding-bottom:0px;
+			}
+	
+		</style>
+	</head>
+
+<body class="contpage device">
+		<form class="box-toggle" id="queryForm" action="http://10.1.3.122:8088/IPAddressManage/network/list.action" method="post">
+			
+			<div class="h-inf box-h">
+			<i class="icon icon-list" style="color: #9bbb52"></i>
+				<span class="box-h-title">网段管理</span>
+				<div class="col-xs-0 adr dc-search-tag">			
+					<span onclick="add();" class="btn-text" style="cursor: pointer;"><i class="icon icon-add i-add mr5" title="新增"></i></span>
+					<span onclick="importExcel();" class="btn-text" style="cursor: pointer;"><i class="icon icon-import i-add mr5" title="导入"></i></span>
+					<span onclick="exportExcel();" class="btn-text" style="cursor: pointer;"><i class="icon icon-shuchu i-add mr5" title="导出"></i></span>
+				</div>
+			</div>
+
+			<div class="dc-search-box col-xs-wap label-inline wbg-b dc-normal-search box-toggle-con" style="padding-bottom: 1px">
+
+				<div id="search" class="form-group col-xs-wap">
+					   <div class="col-xs-4 col-xs-wap">
+                           <label>网络号：</label>
+                           <input type="text" name="search.name" value="" id="name">
+                       </div>
+					   <div class="col-xs-4 col-xs-wap ">
+                           <label>所属系统：</label>
+                           <div class="select">
+							<select name="search.sysName" id="sysName" value="">
+								<option value=""> 请选择 </option>
+								
+										<option value="BASS系统">BASS系统
+										</option>
+								
+										<option value="BOMC系统">BOMC系统
+										</option>
+								
+										<option value="BOSS系统">BOSS系统
+										</option>
+								
+										<option value="CRM系统">CRM系统
+										</option>
+								
+										<option value="MSS系统">MSS系统
+										</option>
+								
+										<option value="OSS系统">OSS系统
+										</option>
+								
+										<option value="安全管理系统">安全管理系统
+										</option>
+								
+										<option value="测试系统">测试系统
+										</option>
+								
+										<option value="大数据资源池">大数据资源池
+										</option>
+								
+										<option value="电子渠道系统">电子渠道系统
+										</option>
+								
+										<option value="两级接口">两级接口
+										</option>
+								
+										<option value="内部支撑系统">内部支撑系统
+										</option>
+								
+										<option value="其他系统">其他系统
+										</option>
+								
+										<option value="容灾系统">容灾系统
+										</option>
+								
+										<option value="私有云资源池">私有云资源池
+										</option>
+								
+										<option value="业务支撑网络">业务支撑网络
+										</option>
+								
+										<option value="增值业务系统">增值业务系统
+										</option>
+								
+							</select>
+						</div>
+                     </div>	
+					<div class="col-xs-4 col-xs-wap ">
+                            <label>子网掩码：</label>
+                            <input type="text" name="search.netMasks" value="" id="netMasks">
+                     </div>	
+                </div>	
+				<div id="search" class="form-group col-xs-wap">
+					<div class="col-xs-4 col-xs-wap">
+                           <label>网段类型：</label>
+                           <div class="select">
+		                       <select name="search.netSegType" id="netSegType" value="">
+									<option value=""> 请选择 </option>
+									<option value="A类">A类</option>
+									<option value="B类">B类</option>
+									<option value="C类">C类</option>
+									<option value="D类">D类</option>
+								</select>
+							</div>
+                       </div>
+					<div class="col-xs-4 col-xs-wap ">
+						<label for="">状态：</label>
+						<div class="select">
+						<select name="search.netSegStatus" id="netSegStatus" value="">
+							<option value=""> 请选择 </option>
+							
+									<option value="空闲">空闲
+									</option>
+							
+									<option value="预分配">预分配
+									</option>
+							
+									<option value="已分配">已分配
+									</option>
+							
+									<option value="正常">正常
+									</option>
+							
+						</select>
+						</div>
+					</div>
+					<div class="col-xs-4 col-xs-wap ">
+                           <label>更新时间：</label>
+                          <input name="search.updateTimeBegin" id="updateTimeBegin" style="width:64px;margin-right: 3px;" onclick="WdatePicker({maxDate:&#39;#F{$dp.$D(\&#39;updateTimeEnd\&#39;,{d:-0})}&#39;,dateFmt:&#39;yyyy-MM-dd&#39;,isShowClear:false})" type="text" readonly="readonly" value="" >
+                          -<input name="search.updateTimeEnd" id="updateTimeEnd" onclick="WdatePicker({minDate:&#39;#F{$dp.$D(\&#39;updateTimeBegin\&#39;,{d:-0})}&#39;,dateFmt:&#39;yyyy-MM-dd &#39;,isShowClear:false})" type="text" readonly="readonly" style="width:64px;margin-left: 4px;" value="" >
+                    </div>	
+				
+                </div>
+				<div class="tc mb10">
+					<span class="btn ml10" onclick="search()" style="margin-left: 0">查询</span>
+					<span class="btn white ml10" onclick="resetBtn()">重置</span>
+				<!-- 	<span class="btn ml10" onclick="add()">新增</span> -->
+				<!-- 	<span class="btn ml10" onclick="split()">一键拆分网段</span> -->
+					<!-- <span class="btn ml10" onclick="importExcel()">导入</span>
+					<span class="btn ml10" onclick="exportExcel()">EXCEL导出</span> -->
+                    <!-- <span class="btn" onclick="easyChange()" id="easyChange" style="display:none;">简单搜索</span>
+                    <span class="btn" onclick="moreChange()" id="moreChange">精确搜索</span> -->
+				 </div>
+				 
+			</div>
+			<a href="javascript:;" class="icon-toggle-wap"><i class="icon-toggle" style="color: #9bbb52"></i></a>
+		</form>
+		
+	
+		
+		<form id="searchForm" action="http://10.1.3.122:8088/IPAddressManage/network/list.action" method="post">
+		<input type="hidden" name="search.name" value="">
+		<input type="hidden" name="search.sysName" value="">
+		<input type="hidden" name="search.netMasks" value="">
+		<input type="hidden" name="search.netSegType" value="">
+		<input type="hidden" name="search.netSegStatus" value="">
+		<input type="hidden" name="search.updateTimeBegin" value="">
+		<input type="hidden" name="search.updateTimeEnd" value="">
+			<table class="t-l t-l-58 tc tp" id="t_account">
+				<tbody><tr>					
+					<th width ="12%" >
+						网络号 <span onclick="" class="btn-text" style="cursor: pointer;"><i class="sort icon icon-sort-amount-asc i-add mr5" title="排序" style="color: #647b30;"></i></span>
+					</th>
+					<th width="12%">
+						子网掩码 <span onclick="" class="btn-text" style="cursor: pointer;"><i class="icon icon-sort-amount-asc i-add mr5" title="排序" style="color: #647b30;"></i></span>
+					</th>
+					<th width="7%" style="height: 40px;">
+						网段类型  <span onclick="" class="btn-text" style="cursor: pointer;"><i class="icon icon-sort-amount-asc i-add mr5" title="排序" style="color: #647b30;"></i></span>
+					</th>					
+					<th width="6%">
+						网段状态
+					</th>
+					<th width="15%">
+						起始IP - 结束IP
+					</th>
+					
+					<th width="10%">
+						所属系统
+					</th>
+					<th width="12%">
+						更新时间  <span onclick="" class="btn-text" style="cursor: pointer;"><i class="icon icon-sort-amount-asc i-add mr5" title="排序" style="color: #647b30;"></i></span>
+					</th>
+					<th width="15%">
+						操作
+					</th>
+				</tr>
+				
+					
+						<tr class="even">
+					
+					
+						<td title="10.46.10.32/28">
+							10.46.10.32/28
+						</td>
+						<td title="--">
+							--
+						</td>
+						<td title="A类">
+							A类
+						</td>						
+						<td title="--">
+							--
+						</td>
+						<td title="10.46.10.32-10.46.10.47" class="td-left">
+							10.46.10.32 - 10.46.10.47
+						</td>
+						
+						<td title="其他系统">
+							其他系统 
+						</td>
+						<td title="2017-07-18 09:38:03">
+							
+							2017-07-18 09:38:03
+						</td>
+						<td title="操作">
+							
+							<a class="btn-text" onclick="edit(&#39;15375339&#39;)" title="编辑处理"><i class="i-edit"></i>
+							</a>
+							
+							
+								<a class="btn-text" onclick="init(&#39;15375339&#39;)" title="初始化IP"><i class="i-copy"></i>
+								</a>
+							
+							
+								<a class="btn-text" onclick="split(&#39;15375339&#39;)" title="拆分网段"><i class="i-unlink"></i>
+								</a>	
+															
+							<a class="btn-text" onclick="viewHis(&#39;15375339&#39;)" title="变更历史"><i class="i-data"></i>
+							</a>
+							
+							<a class="btn-text" onclick="del(&#39;15375339&#39;,&#39;0&#39;)" title="删除"><i class="i-del"></i>
+							</a>
+						</td>											
+					</tr>
+				
+					
+					
+						<tr class="odd">
+					
+						<td title="10.6.10.32/28">
+							10.46.10.32/28
+						</td>
+						<td title="255, 255, 255, 240">
+							255, 255, 255, 240
+						</td>
+						<td title="A类">
+							A类
+						</td>						
+						<td title="--">
+							--
+						</td>
+						<td title="10.6.10.32-10.6.10.47" class="td-left">
+							10.6.10.32 - 10.6.10.47
+						</td>
+						
+						<td title="其他系统">
+							其他系统 
+						</td>
+						<td title="2017-07-18 02:24:25">
+							
+							2017-07-18 02:24:25
+						</td>
+						<td title="操作">
+							
+							<a class="btn-text" onclick="edit(&#39;15375340&#39;)" title="编辑处理"><i class="i-edit"></i>
+							</a>
+							
+							
+								<a class="btn-text" onclick="init(&#39;15375340&#39;)" title="初始化IP"><i class="i-copy"></i>
+								</a>
+							
+							
+								<a class="btn-text" onclick="split(&#39;15375340&#39;)" title="拆分网段"><i class="i-unlink"></i>
+								</a>	
+															
+							<a class="btn-text" onclick="viewHis(&#39;15375340&#39;)" title="变更历史"><i class="i-data"></i>
+							</a>
+							
+							<a class="btn-text" onclick="del(&#39;15375340&#39;,&#39;0&#39;)" title="删除"><i class="i-del"></i>
+							</a>
+						</td>											
+					</tr>
+				
+					
+						<tr class="even">
+					
+					
+						<td title="10.46.221.0/25">
+							10.46.221.0/25
+						</td>
+						<td title="255. 255. 255. 128">
+							255. 255. 255. 128
+						</td>
+						<td title="A类">
+							A类
+						</td>						
+						<td title="正常">
+							正常
+						</td>
+						<td title="10.46.221.1-10.46.221.126"class="td-left">
+							10.46.221.1 - 10.46.221.126
+						</td>
+						
+						<td title="不要动这条">
+							不要动这条 
+						</td>
+						<td title="2017-07-17 16:37:49">
+							
+							2017-07-17 16:37:49
+						</td>
+						<td title="操作">
+							
+							<a class="btn-text" onclick="edit(&#39;15238578&#39;)" title="编辑处理"><i class="i-edit"></i>
+							</a>
+							
+							
+								<a class="btn-text" onclick="init(&#39;15238578&#39;)" title="初始化IP"><i class="i-copy"></i>
+								</a>
+							
+							
+								<a class="btn-text" onclick="split(&#39;15238578&#39;)" title="拆分网段"><i class="i-unlink"></i>
+								</a>	
+															
+							<a class="btn-text" onclick="viewHis(&#39;15238578&#39;)" title="变更历史"><i class="i-data"></i>
+							</a>
+							
+							<a class="btn-text" onclick="del(&#39;15238578&#39;,&#39;0&#39;)" title="删除"><i class="i-del"></i>
+							</a>
+						</td>											
+					</tr>
+				
+					
+					
+						<tr class="odd">
+					
+						<td title="10.46.223.32/28">
+							10.46.223.32/28
+						</td>
+						<td title="255. 255. 255. 240">
+							255. 255. 255. 240
+						</td>
+						<td title="A类">
+							A类
+						</td>						
+						<td title="正常">
+							正常
+						</td>
+						<td title="10.46.223.33-10.46.223.46"class="td-left">
+							10.46.223.33 - 10.46.223.46
+						</td>
+						
+						<td title="--">
+							-- 
+						</td>
+						<td title="2017-07-17 16:37:49">
+							
+							2017-07-17 16:37:49
+						</td>
+						<td title="操作">
+							
+							<a class="btn-text" onclick="edit(&#39;15238582&#39;)" title="编辑处理"><i class="i-edit"></i>
+							</a>
+							
+							
+															
+							<a class="btn-text" onclick="viewHis(&#39;15238582&#39;)" title="变更历史"><i class="i-data"></i>
+							</a>
+								
+								<a class="btn-text" onclick="linkIp(&#39;15238582&#39;)" title="关联IP"><i class="i-list"></i>
+								</a>
+							
+							<a class="btn-text" onclick="del(&#39;15238582&#39;,&#39;1&#39;)" title="删除"><i class="i-del"></i>
+							</a>
+						</td>											
+					</tr>
+				
+					
+						<tr class="even">
+					
+					
+						<td title="10.46.223.48/28">
+							10.46.223.48/28
+						</td>
+						<td title="255. 255. 255. 240">
+							255. 255. 255. 240
+						</td>
+						<td title="A类">
+							A类
+						</td>						
+						<td title="正常">
+							正常
+						</td>
+						<td title="10.46.223.49-10.46.223.62"class="td-left">
+							10.46.223.49 - 10.46.223.62
+						</td>
+						<td title="--">
+							-- 
+						</td>
+						<td title="2017-07-17 16:37:49">
+							
+							2017-07-17 16:37:49
+						</td>
+						<td title="操作">
+							
+							<a class="btn-text" onclick="edit(&#39;15238583&#39;)" title="编辑处理"><i class="i-edit"></i>
+							</a>
+							
+							
+															
+							<a class="btn-text" onclick="viewHis(&#39;15238583&#39;)" title="变更历史"><i class="i-data"></i>
+							</a>
+								
+								<a class="btn-text" onclick="linkIp(&#39;15238583&#39;)" title="关联IP"><i class="i-list"></i>
+								</a>
+							
+							<a class="btn-text" onclick="del(&#39;15238583&#39;,&#39;1&#39;)" title="删除"><i class="i-del"></i>
+							</a>
+						</td>											
+					</tr>
+				
+					
+					
+						<tr class="odd">
+					
+						<td title="10.48.237.0/26">
+							10.48.237.0/26
+						</td>
+						<td title="255. 255. 255. 192">
+							255. 255. 255. 192
+						</td>
+						<td title="A类">
+							A类
+						</td>						
+						<td title="正常">
+							正常
+						</td>
+						<td title="10.48.237.1-10.48.237.62"class="td-left">
+							10.48.237.1 - 10.48.237.62
+						</td>
+						<td title="--">
+							-- 
+						</td>
+						<td title="2017-07-17 16:37:49">
+							
+							2017-07-17 16:37:49
+						</td>
+						<td title="操作">
+							
+							<a class="btn-text" onclick="edit(&#39;15238584&#39;)" title="编辑处理"><i class="i-edit"></i>
+							</a>
+							
+							
+															
+							<a class="btn-text" onclick="viewHis(&#39;15238584&#39;)" title="变更历史"><i class="i-data"></i>
+							</a>
+								
+								<a class="btn-text" onclick="linkIp(&#39;15238584&#39;)" title="关联IP"><i class="i-list"></i>
+								</a>
+							
+							<a class="btn-text" onclick="del(&#39;15238584&#39;,&#39;1&#39;)" title="删除"><i class="i-del"></i>
+							</a>
+						</td>											
+					</tr>
+				
+					
+						<tr class="even">
+					
+					
+						<td title="10.48.237.64/27">
+							10.48.237.64/27
+						</td>
+						<td title="255. 255. 255. 224">
+							255. 255. 255. 224
+						</td>
+						<td title="A类">
+							A类
+						</td>						
+						<td title="正常">
+							正常
+						</td>
+						<td title="10.48.237.65-10.48.237.94"class="td-left">
+							10.48.237.65 - 10.48.237.94
+						</td>
+						
+						<td title="--">
+							-- 
+						</td>
+						<td title="2017-07-17 16:37:49">
+							
+							2017-07-17 16:37:49
+						</td>
+						<td title="操作">
+							
+							<a class="btn-text" onclick="edit(&#39;15238585&#39;)" title="编辑处理"><i class="i-edit"></i>
+							</a>
+							
+							
+															
+							<a class="btn-text" onclick="viewHis(&#39;15238585&#39;)" title="变更历史"><i class="i-data"></i>
+							</a>
+								
+								<a class="btn-text" onclick="linkIp(&#39;15238585&#39;)" title="关联IP"><i class="i-list"></i>
+								</a>
+							
+							<a class="btn-text" onclick="del(&#39;15238585&#39;,&#39;1&#39;)" title="删除"><i class="i-del"></i>
+							</a>
+						</td>											
+					</tr>
+				
+					
+					
+						<tr class="odd">
+					
+						<td title="10.48.237.96/27">
+							10.48.237.96/27
+						</td>
+						<td title="255. 255. 255. 224">
+							255. 255. 255. 224
+						</td>
+						<td title="A类">
+							A类
+						</td>						
+						<td title="正常">
+							正常
+						</td>
+						<td title="10.48.237.97-10.48.237.126"class="td-left">
+							10.48.237.97 - 10.48.237.126
+						</td>
+						
+						<td title="--">
+							-- 
+						</td>
+						<td title="2017-07-17 16:37:49">
+							
+							2017-07-17 16:37:49
+						</td>
+						<td title="操作">
+							
+							<a class="btn-text" onclick="edit(&#39;15238586&#39;)" title="编辑处理"><i class="i-edit"></i>
+							</a>
+							
+							
+															
+							<a class="btn-text" onclick="viewHis(&#39;15238586&#39;)" title="变更历史"><i class="i-data"></i>
+							</a>
+								
+								<a class="btn-text" onclick="linkIp(&#39;15238586&#39;)" title="关联IP"><i class="i-list"></i>
+								</a>
+							
+							<a class="btn-text" onclick="del(&#39;15238586&#39;,&#39;1&#39;)" title="删除"><i class="i-del"></i>
+							</a>
+						</td>											
+					</tr>
+				
+					
+						<tr class="even">
+					
+					
+						<td title="10.48.237.128/29">
+							10.48.237.128/29
+						</td>
+						<td title="255. 255. 255. 248">
+							255. 255. 255. 248
+						</td>
+						<td title="A类">
+							A类
+						</td>						
+						<td title="正常">
+							正常
+						</td>
+						<td title="10.48.237.129-10.48.237.134"class="td-left">
+							10.48.237.129 - 10.48.237.134
+						</td>
+						
+						<td title="--">
+							-- 
+						</td>
+						<td title="2017-07-17 16:37:49">
+							
+							2017-07-17 16:37:49
+						</td>
+						<td title="操作">
+							
+							<a class="btn-text" onclick="edit(&#39;15238587&#39;)" title="编辑处理"><i class="i-edit"></i>
+							</a>
+							
+							
+															
+							<a class="btn-text" onclick="viewHis(&#39;15238587&#39;)" title="变更历史"><i class="i-data"></i>
+							</a>
+								
+								<a class="btn-text" onclick="linkIp(&#39;15238587&#39;)" title="关联IP"><i class="i-list"></i>
+								</a>
+							
+							<a class="btn-text" onclick="del(&#39;15238587&#39;,&#39;1&#39;)" title="删除"><i class="i-del"></i>
+							</a>
+						</td>											
+					</tr>
+				
+					
+					
+						<tr class="odd">
+					
+						<td title="10.48.237.136/25">
+							10.48.237.136/25
+						</td>
+						<td title="255. 255. 255. 128">
+							255. 255. 255. 128
+						</td>
+						<td title="A类">
+							A类
+						</td>						
+						<td title="正常">
+							正常
+						</td>
+						<td title="10.48.237.137-10.48.237.254"class="td-left">
+							10.48.237.137 - 10.48.237.254
+						</td>
+						
+						<td title="--">
+							-- 
+						</td>
+						<td title="2017-07-17 16:37:49">
+							
+							2017-07-17 16:37:49
+						</td>
+						<td title="操作">
+							
+							<a class="btn-text" onclick="edit(&#39;15238588&#39;)" title="编辑处理"><i class="i-edit"></i>
+							</a>
+							
+							
+															
+							<a class="btn-text" onclick="viewHis(&#39;15238588&#39;)" title="变更历史"><i class="i-data"></i>
+							</a>
+								
+								<a class="btn-text" onclick="linkIp(&#39;15238588&#39;)" title="关联IP"><i class="i-list"></i>
+								</a>
+							
+							<a class="btn-text" onclick="del(&#39;15238588&#39;,&#39;1&#39;)" title="删除"><i class="i-del"></i>
+							</a>
+						</td>											
+					</tr>
+				
+					
+						<tr class="even">
+					
+					
+						<td title="10.48.238.0/29">
+							10.48.238.0/29
+						</td>
+						<td title="255. 255. 255. 248">
+							255. 255. 255. 248
+						</td>
+						<td title="A类">
+							A类
+						</td>						
+						<td title="正常">
+							正常
+						</td>
+						<td title="10.48.238.1-10.48.238.6"class="td-left">
+							10.48.238.1 - 10.48.238.6
+						</td>
+						
+						<td title="--">
+							-- 
+						</td>
+						<td title="2017-07-17 16:37:49">
+							
+							2017-07-17 16:37:49
+						</td>
+						<td title="操作">
+							
+							<a class="btn-text" onclick="edit(&#39;15238589&#39;)" title="编辑处理"><i class="i-edit"></i>
+							</a>
+							
+							
+															
+							<a class="btn-text" onclick="viewHis(&#39;15238589&#39;)" title="变更历史"><i class="i-data"></i>
+							</a>
+								
+								<a class="btn-text" onclick="linkIp(&#39;15238589&#39;)" title="关联IP"><i class="i-list"></i>
+								</a>
+							
+							<a class="btn-text" onclick="del(&#39;15238589&#39;,&#39;1&#39;)" title="删除"><i class="i-del"></i>
+							</a>
+						</td>											
+					</tr>
+				
+					
+					
+						<tr class="odd">
+					
+						<td title="10.48.238.8/29">
+							10.48.238.8/29
+						</td>
+						<td title="255. 255. 255. 248">
+							255. 255. 255. 248
+						</td>
+						<td title="A类">
+							A类
+						</td>						
+						<td title="正常">
+							正常
+						</td>
+						<td title="10.48.238.9-10.48.238.14"class="td-left">
+							10.48.238.9 - 10.48.238.14
+						</td>
+						<td title="--">
+							-- 
+						</td>
+						<td title="2017-07-17 16:37:49">
+							
+							2017-07-17 16:37:49
+						</td>
+						<td title="操作">
+							
+							<a class="btn-text" onclick="edit(&#39;15238590&#39;)" title="编辑处理"><i class="i-edit"></i>
+							</a>
+							
+							
+															
+							<a class="btn-text" onclick="viewHis(&#39;15238590&#39;)" title="变更历史"><i class="i-data"></i>
+							</a>
+								
+								<a class="btn-text" onclick="linkIp(&#39;15238590&#39;)" title="关联IP"><i class="i-list"></i>
+								</a>
+							
+							<a class="btn-text" onclick="del(&#39;15238590&#39;,&#39;1&#39;)" title="删除"><i class="i-del"></i>
+							</a>
+						</td>											
+					</tr>
+				
+					
+						<tr class="even">
+					
+					
+						<td title="10.48.238.16/29">
+							10.48.238.16/29
+						</td>
+						<td title="255. 255. 255. 248">
+							255. 255. 255. 248
+						</td>
+						<td title="A类">
+							A类
+						</td>						
+						<td title="正常">
+							正常
+						</td>
+						<td title="10.48.238.17-10.48.238.22"class="td-left">
+							10.48.238.17 - 10.48.238.22
+						</td>
+						<td title="--">
+							-- 
+						</td>
+						<td title="2017-07-17 16:37:49">
+							
+							2017-07-17 16:37:49
+						</td>
+						<td title="操作">
+							
+							<a class="btn-text" onclick="edit(&#39;15238591&#39;)" title="编辑处理"><i class="i-edit"></i>
+							</a>
+							
+							
+															
+							<a class="btn-text" onclick="viewHis(&#39;15238591&#39;)" title="变更历史"><i class="i-data"></i>
+							</a>
+								
+								<a class="btn-text" onclick="linkIp(&#39;15238591&#39;)" title="关联IP"><i class="i-list"></i>
+								</a>
+							
+							<a class="btn-text" onclick="del(&#39;15238591&#39;,&#39;1&#39;)" title="删除"><i class="i-del"></i>
+							</a>
+						</td>											
+					</tr>
+				
+					
+					
+						<tr class="odd">
+					
+						<td title="10.48.238.24/30">
+							10.48.238.24/30
+						</td>
+						<td title="255. 255. 255. 252">
+							255. 255. 255. 252
+						</td>
+						<td title="A类">
+							A类
+						</td>						
+						<td title="正常">
+							正常
+						</td>
+						<td title="10.48.238.25-10.48.238.26"class="td-left">
+							10.48.238.25 - 10.48.238.26
+						</td>
+						<td title="--">
+							-- 
+						</td>
+						<td title="2017-07-17 16:37:49">
+							
+							2017-07-17 16:37:49
+						</td>
+						<td title="操作">
+							
+							<a class="btn-text" onclick="edit(&#39;15238592&#39;)" title="编辑处理"><i class="i-edit"></i>
+							</a>
+							
+							
+															
+							<a class="btn-text" onclick="viewHis(&#39;15238592&#39;)" title="变更历史"><i class="i-data"></i>
+							</a>
+								
+								<a class="btn-text" onclick="linkIp(&#39;15238592&#39;)" title="关联IP"><i class="i-list"></i>
+								</a>
+							
+							<a class="btn-text" onclick="del(&#39;15238592&#39;,&#39;1&#39;)" title="删除"><i class="i-del"></i>
+							</a>
+						</td>											
+					</tr>
+				
+					
+						<tr class="even">
+					
+					
+						<td title="10.48.238.28/30">
+							10.48.238.28/30
+						</td>
+						<td title="255. 255. 255. 252">
+							255. 255. 255. 252
+						</td>
+						<td title="A类">
+							A类
+						</td>						
+						<td title="正常">
+							正常
+						</td>
+						<td title="10.48.238.29-10.48.238.30"class="td-left">
+							10.48.238.29 - 10.48.238.30
+						</td>
+						<td title="--">
+							-- 
+						</td>
+						<td title="2017-07-17 16:37:49">
+							
+							2017-07-17 16:37:49
+						</td>
+						<td title="操作">
+							
+							<a class="btn-text" onclick="edit(&#39;15238593&#39;)" title="编辑处理"><i class="i-edit"></i>
+							</a>
+							
+							
+															
+							<a class="btn-text" onclick="viewHis(&#39;15238593&#39;)" title="变更历史"><i class="i-data"></i>
+							</a>
+								
+								<a class="btn-text" onclick="linkIp(&#39;15238593&#39;)" title="关联IP"><i class="i-list"></i>
+								</a>
+							
+							<a class="btn-text" onclick="del(&#39;15238593&#39;,&#39;1&#39;)" title="删除"><i class="i-del"></i>
+							</a>
+						</td>											
+					</tr>
+				
+					
+					
+						<tr class="odd">
+					
+						<td title="10.48.238.32/29">
+							10.48.238.32/29
+						</td>
+						<td title="255. 255. 255. 248">
+							255. 255. 255. 248
+						</td>
+						<td title="A类">
+							A类
+						</td>						
+						<td title="正常">
+							正常
+						</td>
+						<td title="10.48.238.33-10.48.238.38"class="td-left">
+							10.48.238.33 - 10.48.238.38
+						</td>
+						<td title="--">
+							-- 
+						</td>
+						<td title="2017-07-17 16:37:49">
+							
+							2017-07-17 16:37:49
+						</td>
+						<td title="操作">
+							
+							<a class="btn-text" onclick="edit(&#39;15238594&#39;)" title="编辑处理"><i class="i-edit"></i>
+							</a>
+							
+							
+															
+							<a class="btn-text" onclick="viewHis(&#39;15238594&#39;)" title="变更历史"><i class="i-data"></i>
+							</a>
+								
+								<a class="btn-text" onclick="linkIp(&#39;15238594&#39;)" title="关联IP"><i class="i-list"></i>
+								</a>
+							
+							<a class="btn-text" onclick="del(&#39;15238594&#39;,&#39;1&#39;)" title="删除"><i class="i-del"></i>
+							</a>
+						</td>											
+					</tr>
+				
+					
+						<tr class="even">
+					
+					
+						<td title="10.48.238.40/29">
+							10.48.238.40/29
+						</td>
+						<td title="255. 255. 255. 248">
+							255. 255. 255. 248
+						</td>
+						<td title="A类">
+							A类
+						</td>						
+						<td title="正常">
+							正常
+						</td>
+						<td title="10.48.238.41-10.48.238.46"class="td-left">
+							10.48.238.41 - 10.48.238.46
+						</td>
+						<td title="--">
+							-- 
+						</td>
+						<td title="2017-07-17 16:37:49">
+							
+							2017-07-17 16:37:49
+						</td>
+						<td title="操作">
+							
+							<a class="btn-text" onclick="edit(&#39;15238595&#39;)" title="编辑处理"><i class="i-edit"></i>
+							</a>
+							
+							
+															
+							<a class="btn-text" onclick="viewHis(&#39;15238595&#39;)" title="变更历史"><i class="i-data"></i>
+							</a>
+								
+								<a class="btn-text" onclick="linkIp(&#39;15238595&#39;)" title="关联IP"><i class="i-list"></i>
+								</a>
+							
+							<a class="btn-text" onclick="del(&#39;15238595&#39;,&#39;1&#39;)" title="删除"><i class="i-del"></i>
+							</a>
+						</td>											
+					</tr>
+				
+					
+					
+						<tr class="odd">
+					
+						<td title="10.48.238.48/30">
+							10.48.238.48/30
+						</td>
+						<td title="255. 255. 255. 252">
+							255. 255. 255. 252
+						</td>
+						<td title="A类">
+							A类
+						</td>						
+						<td title="正常">
+							正常
+						</td>
+						<td title="10.48.238.49-10.48.238.50"class="td-left">
+							10.48.238.49 - 10.48.238.50
+						</td>
+						<td title="--">
+							-- 
+						</td>
+						<td title="2017-07-17 16:37:49">
+							
+							2017-07-17 16:37:49
+						</td>
+						<td title="操作">
+							
+							<a class="btn-text" onclick="edit(&#39;15238596&#39;)" title="编辑处理"><i class="i-edit"></i>
+							</a>
+							
+							
+															
+							<a class="btn-text" onclick="viewHis(&#39;15238596&#39;)" title="变更历史"><i class="i-data"></i>
+							</a>
+								
+								<a class="btn-text" onclick="linkIp(&#39;15238596&#39;)" title="关联IP"><i class="i-list"></i>
+								</a>
+							
+							<a class="btn-text" onclick="del(&#39;15238596&#39;,&#39;1&#39;)" title="删除"><i class="i-del"></i>
+							</a>
+						</td>											
+					</tr>
+				
+					
+						<tr class="even">
+					
+					
+						<td title="10.48.238.52/30">
+							10.48.238.52/30
+						</td>
+						<td title="255. 255. 255. 252">
+							255. 255. 255. 252
+						</td>
+						<td title="A类">
+							A类
+						</td>						
+						<td title="正常">
+							正常
+						</td>
+						<td title="10.48.238.53-10.48.238.54"class="td-left">
+							10.48.238.53 - 10.48.238.54
+						</td>
+						<td title="--">
+							-- 
+						</td>
+						<td title="2017-07-17 16:37:49">
+							
+							2017-07-17 16:37:49
+						</td>
+						<td title="操作">
+							
+							<a class="btn-text" onclick="edit(&#39;15238597&#39;)" title="编辑处理"><i class="i-edit"></i>
+							</a>
+							
+							
+															
+							<a class="btn-text" onclick="viewHis(&#39;15238597&#39;)" title="变更历史"><i class="i-data"></i>
+							</a>
+								
+								<a class="btn-text" onclick="linkIp(&#39;15238597&#39;)" title="关联IP"><i class="i-list"></i>
+								</a>
+							
+							<a class="btn-text" onclick="del(&#39;15238597&#39;,&#39;1&#39;)" title="删除"><i class="i-del"></i>
+							</a>
+						</td>											
+					</tr>
+				
+					
+					
+						<tr class="odd">
+					
+						<td title="10.48.238.64/29">
+							10.48.238.64/29
+						</td>
+						<td title="255. 255. 255. 248">
+							255. 255. 255. 248
+						</td>
+						<td title="A类">
+							A类
+						</td>						
+						<td title="正常">
+							正常
+						</td>
+						<td title="10.48.238.65-10.48.238.70"class="td-left">
+							10.48.238.65 - 10.48.238.70
+						</td>
+						<td title="--">
+							-- 
+						</td>
+						<td title="2017-07-17 16:37:49">
+							
+							2017-07-17 16:37:49
+						</td>
+						<td title="操作">
+							
+							<a class="btn-text" onclick="edit(&#39;15238599&#39;)" title="编辑处理"><i class="i-edit"></i>
+							</a>
+							
+							
+															
+							<a class="btn-text" onclick="viewHis(&#39;15238599&#39;)" title="变更历史"><i class="i-data"></i>
+							</a>
+								
+								<a class="btn-text" onclick="linkIp(&#39;15238599&#39;)" title="关联IP"><i class="i-list"></i>
+								</a>
+							
+							<a class="btn-text" onclick="del(&#39;15238599&#39;,&#39;1&#39;)" title="删除"><i class="i-del"></i>
+							</a>
+						</td>											
+					</tr>
+				
+			</tbody></table>
+			<div class="pagelist ">
+				<div class="pagelist"><span class="i-first disable" title="首页"></span>&nbsp;<span class="i-pre disable" title="上一页"></span>&nbsp; <input type="text" id="pn" size="3" name="pn" value="1" onkeyup="this.value=this.value.replace(/\D/g,&#39;&#39;)" onafterpaste="this.value=this.value.replace(/\D/g,&#39;&#39;)" ><span class=" mr10">/</span><span class=" mr10">77</span> <a href="http://10.1.3.122:8088/IPAddressManage/network/void(0)" class="i-next" title="下一页" onclick="page_next()"></a>&nbsp;<a href="javascript:void(0)" class="i-last" title="末页" onclick="page_last()"></a> <span class=" mr10 ml10">每页</span><select id="pageSize" class=" select mr10" name="pageSize" value="20" onchange="submitForPageNum(this.form);"><option value="5">5</option><option value="10">10</option><option value="15">15</option><option value="20" selected="">20</option></select><span class=" mr10 ">条</span> <span class=" mr10 ">共</span><span class=" mr10 ">1526</span> <span class=" mr10 ">条</span><a href="javascript:page_go(document.getElementById(&#39;searchForm&#39;))" name="jump" class="page-jump  btn-text"><i class="i-refresh"></i>跳转</a></div>
+
+<script type="text/javascript" src=" ../../js/jquery/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src=" ../../js/scroll/jquery.mCustomScrollbar.concat.min.js"></script>
+<script type="text/javascript" src=" ../../js/bomc.js"></script>
+<script type="text/javascript" src=" ../../js/submodal/submodalsource.js"></script>
+<script type="text/javascript">
+    	$(function(argument) {
+        // body...
+        $(".icon-toggle-wap").on("click", function(argument) {
+            // body...
+            $(".box-toggle").toggleClass("hide");
+        });
+
+        $(".sort").on("click",function() {
+			// $(".sort").addClass('icon-add');
+			// $(".sort").removeClass("icon-sort-amount-asc");
+			$(".sort").toggleClass("icon-sort-amount-asc");
+			$(".sort").toggleClass("icon-sort-amount-desc");
+
+
+		});
+    });
+
+   
+    
+</script>
+<script language="JavaScript">
+ //<!--
+function page_first(){
+event.returnValue=false;
+}
+function page_next(){
+event.returnValue=false;
+searchForm.pn.value="2";
+ submitForPageNum(searchForm);
+}
+function page_prior(){
+event.returnValue=false;
+}
+function page_last(){
+event.returnValue=false;
+searchForm.pn.value="77";
+ submitForPageNum(searchForm);
+}function page_go(obj){
+var pn=$("#pn").val();
+if(pn<1) pn=1;if(pn>77)pn=77;
+$("#pn").val(pn);
+if($("#pn").val()!=1)submitForPageNum(obj);
+}function submitForPageNum(obj){
+obj.submit();}
+ //-->
+</script>
+			</div>
+		</form>
+	<script type="text/javascript" src="./网段列表_files/jquery.cookie.js.下载"></script>
+	<script type="text/javascript" src="./网段列表_files/loadDiv.js.下载"></script><div id="loadingBg" style="display:none;width:100%;height:100%;position:fixed;top:0;left:0;background-position:center;background-repeat: no-repeat;background-attachment: fixed;background-color:black;z-index:98;opacity:0.1;filter: progid:DXImageTransform.Microsoft.Alpha(opacity=10);-ms-filter:progid:DXImageTransform.Microsoft.Alpha(opacity=10)"></div><div id="loading" style="display:none;width:100%;height:100%;position:fixed;top:0;left:0;background-image:url(../images/loading.gif);background-position:center;background-repeat: no-repeat;background-attachment: fixed;z-index:99;"></div><div id="loadingText" style="display:none;width:100%;position:fixed;top:55%;left:0;z-index:99;text-align:center;font-size:14px;"></div>
+	
+<script type="text/javascript">
+	function noInit(){
+		alert("该网段已初始化IP!不可再次初始化！");
+	}
+	function noEdit(){
+		alert("该网段已初始化IP，不可编辑！");
+	}
+	function noSplit(){
+		alert("该网段已初始化IP!不可拆分！");
+	}
+	function NoLinkIp(){
+		alert("该网段未初始化IP!无关联IP！");
+	}
+	function search(){
+		showLoading();
+		$("#queryForm").submit();
+	}
+
+	function resetBtn(){
+		$("#name").val("");
+		$("#sysName").val("");
+		$("#netMasks").val("");
+		$("#updateTimeBegin").val("");
+		$("#updateTimeEnd").val("");
+		$('#netSegStatus').val("");
+		$('#netSegType').val("");
+	}
+	function exportExcel(){
+		var url = "/IPAddressManage/network/exportExcel.action";
+		var queryForm = $("#queryForm")[0];
+		queryForm.action = url;
+		queryForm.method = "POST";
+		//queryForm.target = "excel_frame";
+		queryForm.submit();
+		queryForm.target = "";
+		queryForm.action = "/IPAddressManage/network/list.action";
+	}
+	function edit(sysIntId){
+		var url = "/IPAddressManage/network/toedit.action?search.sysIntId="+sysIntId;
+		showPopWin(url, 750, 480,  null,"编辑", null);
+	}
+	function view(sysIntId){
+		var url = "/IPAddressManage/network/toview.action?search.sysIntId="+sysIntId;
+		showPopWin(url, 650, 485,  null,"查看", null);
+	}
+	function viewHis(sysIntId){
+		var url = "/IPAddressManage/network/toviewHis.action?search.sysIntId="+sysIntId;
+		showPopWin(url, 1300, 520,  null,"变更历史", null);
+	}
+	function del(sysIntId,isSplit){
+		if(confirm("删除该网段，该网段下的所有IP都会删除,是否删除？")){
+			if(isSplit==1){
+				alert("该网段已初始化，不可删除！");
+				return;
+			}			
+			$.ajax({
+					url : "deleteNet.action?search.sysIntId="+sysIntId,
+		            type : "post",
+		            dataType:"json",
+		            success : function(result) {
+		            			/* if(result==3){
+		            				alert("该网段下的IP有已分配或者预分配的状态，不能删除!");
+		            				window.parent.$("#queryForm").submit();		   */          		
+		            			if(result==1){
+		            				alert("删除成功!");
+		            				window.parent.$("#queryForm").submit();		            		
+		            			}else{
+		            				alert("删除失败!");		            
+		            			}
+		            } 
+			});
+		}
+	}
+
+
+	function add(){
+		var url = "/IPAddressManage/network/toadd.action";
+		showPopWin(url, 750, 450,  null,"新增", null);
+	}
+	
+	function init(sysIntId){
+		showLoading("初始化中。。。");
+		 $.ajax({
+				url : "init.action?search.sysIntId="+sysIntId,
+	            type : "post",
+	            dataType:"json",
+	            success : function(result) {	            	
+	            		  	if(result==1){
+	            				alert("初始化成功!");	
+	            				search();
+	            			}else{
+	            				alert("初始化失败!不存在未拆分网段。");	            				
+	            			}
+	            },
+	            error:function(){
+	            	alert("初始化异常!");	  
+	            	hideLoading();
+	            },
+	            complete:function(){
+	            	hideLoading();
+	            }
+		});
+	}
+	 function split(sysIntId){
+		var left = (screen.width-900)/2;
+		var top = (screen.height-800)/2;
+		var url="/IPAddressManage/network/toSplit.action?search.sysIntId="+sysIntId;		
+		window.open(url,'_blank','Height=850px,Width=950px,left='+left+',top='+top+'');			
+	}
+	
+	function importExcel(){
+		var url = "/IPAddressManage/network/forImportNetWorks.action";
+		showPopWin(url,600,150,null,"导入网段",null);
+	}
+	
+	function linkIp(sysIntId){
+		var url = "/IPAddressManage/network/toLinkIp.action?search.sysIntId="+sysIntId;		
+		window.open(url,null,'width='+(window.screen.availWidth-10)+',height='+(window.screen.availHeight-30)+ ',top=0,left=0,toolbar=yes,menubar=no,scrollbars=yes, resizable=yes,location=yes, status=no');	
+	}
+</script>
+		
+		
+<script>
+    $(".pagelist a.i-first,.pagelist a.i-pre,.pagelist a.i-next,.pagelist a.i-last").on("click",function(){
+        showLoading();
+        return true;
+    });
+    $("#pageSize").on("change",function(){
+        showLoading();
+    });
+</script>
+
+
+
+<div id="_my97DP" style="position: absolute; top: 131px; left: 1476.78px; display: none; z-index: 100004;"><iframe style="width: 186px; height: 198px;" src="./网段列表_files/My97DatePicker.html" frameborder="0" border="0" scrolling="no"></iframe></div><div id="popupMask" style="display: none; height: 950px; width: 1920px; top: 0px; left: 0px;"></div><div id="popupContainer" style="display: none; top: 220px; left: 585px; width: 750px; height: 510px;"><div id="popupInner"><div id="popupTitleBar"><div id="popupTitleBar_left"></div><div id="popupTitle">编辑</div><div id="popupControls"><a onclick="hidePopWin(true);"><span>Close</span></a></div></div><iframe src="./网段列表_files/saved_resource.html" style="width: 750px; height: 480px; overflow: hidden; background: rgb(247, 247, 247);" scrolling="auto" frameborder="0" allowtransparency="true" id="popupFrameId" name="popupFrameId" width="100%" height="100%"></iframe></div></div></body></html>

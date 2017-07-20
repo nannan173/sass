@@ -1,0 +1,187 @@
+.seq-list {
+    padding: 10*$px 0;
+    .seq-item {
+        position: relative;
+        border: 1px dashed transparent;
+        border-left: 1px dashed #ddd;
+        padding-left: 10*$px;
+        margin-left: 25*$px;
+        visibility: visible;
+        opacity: 1;
+        transition: all   0.5s cubic-bezier(0.4, 0, 0.2, 1)  ;
+        max-height:999px;
+        &:hover { 
+            border: 1px solid transparent;
+            box-shadow: 0 0 20px rgba($theme, 0.2); 
+            .seq-corner-right{ 
+                visibility: visible;
+                opacity: 1; 
+            } 
+        }
+        &.init,&.remove{
+             opacity: 0; 
+             visibility: hidden;  
+             max-height:0;
+             overflow: hidden;
+        }
+        
+        
+    }
+    .add {
+        padding: 10*$px 0 10*$px 50*$px;
+        cursor: pointer;
+      
+        .icon-circle {
+            position: relative;
+            font-size: 64*$px;
+            color: #eee;
+            &:hover {
+                color: $theme;
+            }
+            .icon-add {
+                position: absolute;
+                color: #fff;
+                font-size: 90%;
+                top: 5%;
+                left: 5%;
+            }
+        }
+
+    }
+    .add-edit { 
+        .seq-index {
+            .icon-circle {
+                color: #ccc;
+            }
+            input {
+                color: #333;
+            }
+        }
+    }
+    input ,.select{
+        border: none;
+        &:hover, &:focus {
+            border: none;
+            outline: none;
+        }
+    }
+   
+    .input-num {
+        color: $theme;
+    }
+
+}
+
+.seq-index {
+    position: absolute; 
+    top: 10*$px;
+    left: -12*$px;
+    z-index: 1;
+    background-color: #fff;
+    padding: 4*$px 0;
+    .icon-circle {
+        position: absolute;
+        font-size: 24*$px;
+        z-index: -1;
+        color: $icon-hover-color;
+    }
+    input {
+        text-align: center;
+        background-color: transparent;
+        width: 24*$px;
+        height: 24*$px;
+        line-height: 24*$px;
+        padding: 0;
+        color: #fff;
+    }
+}
+
+.zone-list-inner {
+    @include clearspace;
+}
+
+.zone-item {
+    position: relative;
+    @include inline-block;
+    min-width: 33%;
+    padding-right: 50*$px;
+    box-sizing: border-box;
+    .pseudo-input-wap{
+        min-width:40*$px;
+    }
+    .zone-item-right{
+        position: absolute; 
+        cursor: pointer;
+        display: none;
+        margin-left: 5*$px;
+        top:1px;
+        .icon{ 
+             color: $icon-defalute-color;
+            margin-left: 10*$px; 
+            vertical-align: -1px;
+              
+        }
+        .icon:hover {
+            color: $icon-hover-color;
+        }
+    }
+    &:hover {
+        .zone-item-right {
+           @include inline-block;
+        }
+    }
+     .add-btn{ 
+        color: $theme;
+            padding:5*$px 0;
+        .icon{ 
+            padding:0 10*$px;
+            font-size:16*$px;
+            vertical-align: -2px;
+        }
+            &:hover{
+                background-color:$theme;
+                color: $theme;
+                .icon{
+                    color: #fff;
+                }
+            }
+        }
+
+}
+
+.arg-item {
+    @include inline-block;
+    padding: 0 10*$px;
+    color: #666;
+    input,.select {
+        width: 80*$px;
+    }
+
+}
+.seq-corner-right{
+    position: absolute; 
+    right: 0;
+    top: 0; 
+    width:0;
+    height:0;
+    border-width:24*$px 24*$px  24*$px 24*$px;
+    border-style:solid;
+    border-color:$theme $theme transparent transparent; 
+    visibility: hidden;
+    opacity: 0;
+    .icon-del{
+        position: absolute;
+        color: #fff;
+        font-size: 13px;
+        cursor: pointer;
+        right:-16*$px;
+        top:-16*$px;
+        z-index: 10;
+    } 
+}
+   .box-h-zone-title{
+        font-size: 12px;
+        color: #666;
+        vertical-align: middle;    
+        cursor: pointer;
+    }

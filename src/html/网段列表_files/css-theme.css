@@ -1,0 +1,353 @@
+/*主题色 #b8cf84*/
+/*按钮*/
+.btn{  background:  #9bbb52;  color: #fff;}
+.btn:hover{ background:#87a73e; } 
+.btn:before { left: -3px; background-position:0 -155px }
+.btn:after { right: -3px; background-position:-3px -155px; }
+.btn:hover:before { left: -3px; background-position: 0 -187px; }
+.btn:hover:after { right: -3px; background-position: -3px -187px; } 
+.btn40:before { left: -3px; background-position:  0 -219px; }
+.btn40:after { right: -3px; background-position:  -3px -219px;}
+.btn40:hover:before { left: -3px; background-position:  0 -261px; }
+.btn40:hover:after { right: -3px; background-position:  -3px -261px; }
+.btn.t{
+    border:1px solid #6b9500;
+    color:#6b9500; 
+} 
+.btn.t:after,.btn.t:before{
+    content: none; 
+}
+.btn.t:hover{background:#87a73e;color:#fff}
+.btn-text:hover,.btn-text.t{  color: #6b9500;}
+.tab-h-r li:hover a,.tab-h-r .sel{color:#6b9500;}
+.btn-filter:hover
+{
+    color: #6b9500;
+}
+.btn-filter:hover .i-hide
+{
+    border-color: transparent transparent #6b9500 transparent;
+}
+.btn-filter:hover .i-show
+{
+    border-color: #6b9500 transparent transparent transparent;
+}
+.label-btn:hover{background-color:#6b9500; }
+.i-choose-current
+{
+    background-position: -69px -630px;
+}
+.i-shrink
+{
+    background-position: -126px -630px;
+}
+.i-open
+{
+    background-position: -145px -630px;
+}
+/*按钮 end*/
+.xywjspage .vline
+{
+    background: #6b9500;
+}
+.m-title
+{
+  color: #6b9500;
+}
+.md-li{  background: url(../images/md-bg-green.png);}
+.i-md{   background-position: -413px -495px;}
+.zngkpage .page-header
+{
+    border-top-color: #9bbb52;
+}
+.zngk-link > li.sel
+{
+    background-color:#9bbb52;
+}
+.zngk-link > li:hover .l-color
+{
+    color: #9bbb52;
+}
+.pulldown-link li:hover
+{
+    background: #9bbb52;
+}
+.ip-list li
+{
+    border-left: 6px solid #9bbb52;
+}
+.ip-list li:hover
+{
+    border-top-color: #9bbb52;
+    border-right-color: #9bbb52;
+    border-bottom-color: #9bbb52;
+}
+.lc-search-tag a
+{
+    color: #6b9500;
+}
+/*选项卡*/
+.tab-t .sel,.tab-t a:hover{
+  color:  #6b9500;
+}
+.lc-inf a:hover,.lc-inf a.sel
+{
+    color: #6b9500;
+}
+.tab-block{ border-bottom: 2px solid #9bbb52;}
+.tab-block li.sel,.tab-block li.sel:hover
+{
+    background: #9bbb52;
+}
+/*表格*/
+.t-l th{  border-width: 0; color:  #fff;  background: #a9cc5a; border-color:#a9cc5a }
+.t-l tbody tr:hover td:first-child:before,.t-l-1 tbody tr:hover td:first-child:before,.sel td:first-child:before { background:  #A2CB42; }
+.t-l tbody tr:hover td,.t-l-1 tbody tr:hover td,.sel td{ background: #F9FFF4; }
+.t-l-1 th { font-size: 14px; color: #6b9500; border-bottom-color:#6b9500; }
+.t-con .t-l-1 tbody tr:hover td{ background: #f3f3f3;} 
+.t-b th 
+{ 
+  border : none;
+}
+.t-b tr:first-child{
+  border-color:#bad37b; 
+}
+td.th-col{
+    border-color:  #bad37b;
+    color:#6b9500;
+}
+.tr-tline td 
+{
+    border-bottom-color:#bad37b;
+}
+td.td-br{
+    border-right-color:#bad37b;
+}
+.ic-ec-e,.ic-ec-c{
+     background-position:  0px -474px; 
+}.ic-ec-c{
+    background-position:  -18px -474px; 
+}
+/*icon*/
+.isearch{background-position:-318px -1px}
+.i-add:hover{ background-position: -58px -98px; }
+.i-del:hover{ background-position:  -58px -124px;  }
+.i-update:hover{  background-position:  -58px -72px; }
+.i-restart:hover{  background-position:  -58px -150px; }
+.i-add-s:hover{ background-position: -43px -36px; }
+.i-del-s:hover{ background-position:  -43px -54px;  }
+.i-more-s:hover{  background-position:  -43px  -18px; }
+.i-edit-s:hover{  background-position:  -43px -0px; }
+.i-extension:hover{ background-position: -43px -264px;}
+.i-extension-s:hover{ background-position: -43px -264px;}
+.i-stop:hover{background-position: -44px -316px;}  
+.i-start:hover{background-position: -44px -332px;}   
+.i-adjust:hover{background-position:-44px  -300px;} 
+.i-laba{background-position:-44px -348px} 
+.i-menu{ background-position :-61px -434px;}
+.i-extension-s:hover,.btn-text:hover > .i-extension-s{background-position:-43px -264px;}
+.i-del.t,.i-del:hover,.icon-hover:hover .i-del,.btn-text:hover > .i-del{background-position:-43px -1px;}
+.i-edit.t,.i-edit:hover,.icon-hover:hover .i-edit,.btn-text:hover > .i-edit{background-position:-43px -22px;}
+.i-add.t,.i-add:hover,.icon-hover:hover .i-add,.btn-text:hover > .i-add{background-position:-43px -43px;}
+.i-refresh.t,.i-refresh:hover,.icon-hover:hover .i-refresh,.btn-text:hover > .i-refresh {background-position:-43px -64px;}
+.i-offline.t,.i-offline:hover,.icon-hover:hover .i-offline,.btn-text:hover > .i-offline{background-position:-43px -85px;}
+.i-upline.t,.i-upline:hover,.icon-hover:hover .i-upline,.btn-text:hover > .i-upline{background-position:-43px -106px;}
+.i-error.t,.i-error:hover,.icon-hover:hover .i-error,.btn-text:hover > .i-error{background-position:-43px -127px;}
+.i-right.t,.i-right:hover,.icon-hover:hover .i-right,.btn-text:hover > .i-right{background-position:-43px -148px;} 
+.i-block.t,.i-block:hover,.icon-hover:hover .i-block,.btn-text:hover > .i-block{background-position:-43px -169px;}
+.i-voice.t,.i-voice:hover,.icon-hover:hover .i-voice,.btn-text:hover > .i-voice{background-position:-43px -190px;}
+.i-no-sound.t,.i-no-sound:hover,.icon-hover:hover .i-no-sound,.btn-text:hover > .i-no-sound{background-position:-43px -211px;}
+.i-stop.t,.i-stop:hover,.icon-hover:hover .i-stop,.btn-text:hover > .i-stop{background-position:-43px -232px;}
+.i-play.t,.i-play:hover,.icon-hover:hover .i-play,.btn-text:hover > .i-play{background-position:-43px -253px;}
+.i-start.t,.i-start:hover,.icon-hover:hover .i-start,.btn-text:hover > .i-start{background-position:-43px -253px;}.i-adjust.t,.i-adjust:hover,.icon-hover:hover .i-adjust,.btn-text:hover > .i-adjust{background-position:-43px -274px;}
+.i-more.t,.i-more:hover,.icon-hover:hover .i-more,.btn-text:hover > .i-more{background-position:-43px -295px;}
+.i-search.t,.i-search:hover,.icon-hover:hover .i-search,.btn-text:hover > .i-search{background-position:-43px -316px;}
+.i-copy.t,.i-copy:hover,.icon-hover:hover .i-copy,.btn-text:hover > .i-copy{background-position:-43px -337px;}
+.i-list.t,.i-list:hover,.icon-hover:hover .i-list,.btn-text:hover > .i-list{background-position:-43px -358px;}
+.i-first.t,.i-first:hover,.icon-hover:hover .i-first,.btn-text:hover > .i-first{background-position:-43px -379px;}
+.i-pre.t,.i-pre:hover,.icon-hover:hover .i-pre,.btn-text:hover > .i-pre{background-position:-43px -400px;}
+.i-next.t,.i-next:hover,.icon-hover:hover .i-next,.btn-text:hover > .i-next{background-position:-43px -421px;}
+.i-last.t,.i-last:hover,.icon-hover:hover .i-last,.btn-text:hover > .i-last{background-position:-43px -442px;}
+.i-message.t,.i-message:hover,.icon-hover:hover .i-message,.btn-text:hover > .i-message{background-position:-43px -463px;}
+.i-no-message.t,.i-no-message:hover,.icon-hover:hover .i-no-message,.btn-text:hover > .i-no-message{background-position:-43px -484px;}
+.i-bc.t,.i-bc:hover,.icon-hover:hover .i-bc,.btn-text:hover > .i-bc{background-position:-43px -505px;}
+.i-send.t,.i-send:hover,.icon-hover:hover .i-send,.btn-text:hover > .i-send{background-position:-43px -526px;}
+.i-recover.t,.i-recover:hover,.icon-hover:hover .i-recover,.btn-text:hover > .i-recover{background-position:-43px -547px;}
+.i-expansion.t,.i-expansion:hover, .icon-hover:hover .i-expansion, .btn-text:hover > .i-expansion{background-position:-43px -568px;}
+.i-contraction.t,.i-contraction:hover, .icon-hover:hover .i-contraction, .btn-text:hover > .i-contraction{background-position:-43px -589px;} 
+.i-fx.t,.i-fx:hover, .icon-hover:hover .i-fx, .btn-text:hover > .i-fx{background-position:-43px -631px;} 
+.i-port.t,.i-port:hover, .icon-hover:hover .i-port, .btn-text:hover > .i-port{background-position:-43px -652px;} 
+.i-close-l.t,.i-close-l:hover, .icon-hover:hover .i-close-l, .btn-text:hover > .i-close-l{background-position:-43px -610px;} 
+.i-daleft.t,.i-daleft:hover, .icon-hover:hover .i-daleft, .btn-text:hover > .i-daleft{background-position:-43px -673px;} 
+.i-daright.t,.i-daright:hover, .icon-hover:hover .i-daright, .btn-text:hover > .i-daright{background-position:-43px -694px;} 
+.i-peopleadd.t,.i-peopleadd:hover, .icon-hover:hover .i-peopleadd, .btn-text:hover > .i-peopleadd{background-position:-43px -715px;} 
+.i-setting.t,.i-setting:hover, .icon-hover:hover .i-setting, .btn-text:hover > .i-setting{background-position:-43px -736px;} 
+.i-inf.t,.i-inf:hover, .icon-hover:hover .i-inf, .btn-text:hover > .i-inf{background-position:-43px -757px;} 
+.i-restart.t,.i-restart:hover, .icon-hover:hover .i-restart, .btn-text:hover > .i-restart{background-position:-43px -778px;} 
+.i-return.t,.i-return:hover, .icon-hover:hover .i-return, .btn-text:hover > .i-return{background-position:-43px -799px;} 
+.i-response.t,.i-response:hover, .icon-hover:hover .i-response, .btn-text:hover > .i-response{background-position:-43px -820px;} 
+.i-link.t,.i-link:hover, .icon-hover:hover .i-link, .btn-text:hover > .i-link{background-position:-43px -841px;} 
+.i-unlink.t,.i-unlink:hover, .icon-hover:hover .i-unlink, .btn-text:hover > .i-unlink{background-position:-43px -862px;} 
+.i-clean.t,.i-clean:hover, .icon-hover:hover .i-clean, .btn-text:hover > .i-clean{background-position:-43px -883px;} 
+.i-handle.t,.i-handle:hover, .icon-hover:hover .i-handle, .btn-text:hover > .i-handle{background-position:-43px -904px;} 
+.i-iseq.t,.i-iseq:hover, .icon-hover:hover .i-iseq, .btn-text:hover > .i-iseq{background-position:-43px -925px;} 
+.i-lview.t,.i-lview:hover, .icon-hover:hover .i-lview, .btn-text:hover > .i-lview{background-position:-43px -946px;}
+.i-rank.t,.i-rank:hover,.icon-hover:hover .i-rank,.btn-text:hover > .i-rank{background-position:-43px -967px;}
+.i-time.t,.i-time:hover,.icon-hover:hover .i-time,.btn-text:hover > .i-time{background-position:-43px -988px;}
+.i-people.t,.i-people:hover,.icon-hover:hover .i-people,.btn-text:hover > .i-people{background-position:-43px -1009px;}
+.i-data.t,.i-data:hover,.icon-hover:hover .i-data,.btn-text:hover > .i-data{background-position:-43px -1030px;} 
+.i-function.t,.i-function:hover,.icon-hover:hover .i-function,.btn-text:hover > .i-function{background-position:-43px -1051px;}
+.i-data-before.t,.i-data-before:hover,.icon-hover:hover .i-data-before,.btn-text:hover > .i-data-before{background-position:-43px -1072px;}
+.i-data-current.t,.i-data-current:hover,.icon-hover:hover .i-data-current,.btn-text:hover > .i-data-current{background-position:-43px -1093px;}
+.i-abnormal.t,.i-abnormal:hover,.icon-hover:hover .i-abnormal,.btn-text:hover > .i-abnormal{background-position:-43px -1114px;}
+.i-proportion.t,.i-proportion:hover,.icon-hover:hover .i-proportion,.btn-text:hover > .i-proportion{background-position:-43px -1135px;}
+.i-template.t,.i-template:hover,.icon-hover:hover .i-template,.btn-text:hover > .i-template{background-position:-43px -1156px;}
+.i-noreport.t,.i-noreport:hover,.icon-hover:hover .i-noreport,.btn-text:hover > .i-noreport{background-position:-43px -1177px;}
+.i-up.t,.i-up:hover,.icon-hover:hover .i-up,.btn-text:hover > .i-up{background-position:-43px -1198px;}  
+.i-down.t,.i-down:hover,.icon-hover:hover .i-down,.btn-text:hover > .i-down{background-position:-43px -1219px;}
+.i-business.t,.i-business:hover,.icon-hover:hover .i-business,.btn-text:hover > .i-business{background-position:-43px -1240px;}
+.i-channel.t,.i-channel:hover,.icon-hover:hover .i-channel,.btn-text:hover > .i-channel{background-position:-43px -1261px;}
+.i-city.t,.i-city:hover,.icon-hover:hover .i-city,.btn-text:hover > .i-city{background-position:-43px -1282px;}
+.i-dig.t,.i-dig:hover,.icon-hover:hover .i-dig,.btn-text:hover > .i-dig{background-position:-43px -1303px;}
+.i-update.t,.i-update:hover,.icon-hover:hover .i-update,.btn-text:hover > .i-update{background-position:-43px -1324px;}
+.i-launch.t,.i-launch:hover,.icon-hover:hover .i-launch,.btn-text:hover > .i-launch{background-position:-43px -1345px;}
+.i-install.t,.i-install:hover,.icon-hover:hover .i-install,.btn-text:hover > .i-install{background-position:-43px -1366px;}
+.i-pause.t,.i-pause:hover,.icon-hover:hover .i-pause,.btn-text:hover > .i-pause{background-position:-43px -1387px;}
+.i-upload.t,.i-upload:hover,.icon-hover:hover .i-upload,.btn-text:hover > .i-upload{background-position:-43px -1408px;}
+.i-log.t,.i-log:hover,.icon-hover:hover .i-log,.btn-text:hover > .i-log{background-position:-43px -1429px;}
+.i-record.t,.i-record:hover,.icon-hover:hover .i-record,.btn-text:hover > .i-record{background-position:-43px -1450px;}
+.i-register.t,.i-register:hover,.icon-hover:hover .i-register,.btn-text:hover > .i-register{background-position:-43px -1471px;}
+.i-topology.t,.i-topology:hover,.icon-hover:hover .i-topology,.btn-text:hover > .i-topology{background-position:-43px -1492px;} 
+.i-review.t,.i-review:hover,.icon-hover:hover .i-review,.btn-text:hover > .i-review{background-position:-43px -1513px; }
+.i-remove.t,.i-remove:hover,.icon-hover:hover .i-remove,.btn-text:hover > .i-remove{background-position:-43px -1534px; }
+.i-mess.t,.i-mess:hover,.icon-hover:hover .i-mess,.btn-text:hover > .i-mess{background-position:-43px -1555px; }
+.i-finish.t,.i-finish:hover,.icon-hover:hover .i-finish,.btn-text:hover > .i-finish{background-position:-43px -1576px; }
+.i-accneed.t,.i-accneed:hover,.icon-hover:hover .i-accneed,.btn-text:hover > .i-accneed{background-position:-43px -1597px; }
+.i-schedule.t,.i-schedule:hover,.icon-hover:hover .i-schedule,.btn-text:hover > .i-schedule{background-position:-43px -1618px; }
+.i-task.t,.i-task:hover,.icon-hover:hover .i-task,.btn-text:hover > .i-task{background-position:-43px -1639px; }
+/*icon end*/
+/*tab*/
+.tab-btn  .sel, .tab-btn  .sel:hover { color: #6b9500; background: #DDEABF; }
+.tab-bline .sel, .tab-bline .sel:hover { color: #6b9500; border-bottom: 2px solid #6b9500; }
+.tab-toggle .sel{
+  background: #9bbb52;
+  border-color:  #9bbb52;
+}
+.ibx-h{
+   /* background: #b8cf84;*/
+    background: #9bbb52;
+    border:none; 
+    color: #fff; 
+}
+.tab-h .sel,.tab-h .sel:hover{border-top-color: #6b9500;}
+.filter-group-title {background: #6b9500;}
+.filter-select-item.sel,.filter-line-box .filter-select-item:hover{
+  border-color: #6b9500;
+  color: #6b9500;
+}
+.filter-re-item:hover{border-color:#6b9500;}
+.filter-tail a:hover{color:#6b9500;}
+.i-close-icon:hover,.filter-re-item:hover .i-close-icon{background-position:-43px -610px;}
+.more {color: #f6f6f6;}/*
+.pro-node{ background: #6b9500;}*/
+.pro-start,.pro-end{ border-color: #6b9500;}
+.pro-arr,.pro-arr-line,.pro-nav:before{ background: #6b9500;  }
+.pro-arr:after{border-left-color: #6b9500; }
+.tab-sel{background:  #9BBB52;  }
+.pro-setting .pro-current .pro-node, .pro-setting  .pro-current .pro-arr{background: #6b9500;}
+.pro-setting .pro-current .pro-arr:after{border-left-color:  #6b9500;}
+.i-add:hover,.filter-line-box .sel  .i-add,.filter-select-item:hover .i-add{background-position: -43px -43px;}
+.filter-line-box .filter-select-item:hover .i-close-l,.filter-line-box .sel .i-close-l{background-position:-43px -610px; }
+.label-btn{border-color:#6b9500;color:#6b9500;}
+.pro-node{  background:  #9bbb52;  color: #fff;}
+.pro-node:before { left: -3px; background-position:  0 -219px; }
+.pro-node:after { right: -3px; background-position:  -3px -219px;}
+.pro-sq-sucess{ background: #9bbb52; }
+.i-filter{background-position: -353px -438px;}
+/*进度条*/
+.b-left{
+  border-color:#B3D860;
+}
+.is-success .step-node-state,.is-success .step-node-titile
+{
+    background: #B3D860;
+}
+.is-success .step-node-n
+{
+    color: #B3D860; 
+    background-position:  -215px -56px;
+}
+.is-success .step-node-inf
+{
+   color: #B3D860;  
+   background-position:  -117px -109px;
+} 
+.is-success +.step-arrow .i-step-arrow{
+ background-position: -343px -139px;
+}
+/*进度条
+/*排序*/
+.i-t-sort{
+   background-position: -481px -2px;
+}
+.i-t-sort.down{
+    background-position: -501px -2px;
+}.i-t-sort.up{
+    background-position: -521px -2px;
+} 
+/*排序*/
+/*数据稽核*/
+/*.filter-box-h  span:before, .filter-c-l span.sel:before{
+  background-position: -428px -685px;
+}
+.filter-box-h span:after, .filter-c-l span.sel:after {
+    background-position: -435px -685px; 
+}
+.filter-c-l span.sel, .filter-box-h  span,.filter-box-h span .i-close, .filter-c-l span.sel  .i-close{
+  background: #a9cc5a  ;
+}*/
+.f-g-name{
+  background: #a9cc5a  ;
+}
+.f-g-name:before{
+ background-position: -63px 0; 
+}
+.filter-select-item.sel.last:after{ 
+ background-position: -75px 0; 
+}
+.h-tab li.sel{
+  background: #a9cc5a  ;
+}
+/*工作量评估*/
+.left-menu-title.sel,.left-menu-title:hover{
+    border-left: 3px solid #9bbb52;
+    background: #f5f5f5;
+}
+.left-menu-title.sel a,.left-menu-title a:hover{
+    color:#9bbb52;
+}
+/*流程*/
+.selpeo-item:hover {
+    border: 1px solid #69b531;
+    color: #69b531;
+}
+.selpeo-item .i-close,.filter-select-item .i-close{
+  background-position:-94px -473px ;
+}
+.i-cpre:hover{
+     background-position: -100px -715px ;
+}
+ .i-cnext:hover{
+    background-position: -125px -715px ;
+}
+.selbox-title{
+  background:#9bbb52;
+} 
+
+
+ .btn-switch .checked +.switch-inner{   
+  background: #87a73e;  
+}
+.btn-switch input[type="checkbox"]:checked +.switch-inner{   
+  background: #87a73e;  
+}

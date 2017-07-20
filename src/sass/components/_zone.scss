@@ -1,0 +1,17 @@
+.zone-item{
+	line-height:24*$px;
+	&.add{
+		color: #999;
+	}
+	&.sel{
+		 color:$theme;
+		 .bracket{ 
+		 	font-size: 18*$px; 
+    		vertical-align: top;    
+		 	text-shadow: 1px 1px 1px #eaeaea;
+		 }
+	}
+		.bracket{    
+			 vertical-align: -1px;
+		}
+}

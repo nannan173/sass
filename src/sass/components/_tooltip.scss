@@ -1,0 +1,140 @@
+.checktip-page, .maskpage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    border-radius: 5*$px;
+    display: none;
+}
+
+$checktip-width:260*$px;
+$checktip-title-font-size:14*$px;
+$checktip-title-color:$theme;
+$checktip-border-color:$theme;
+.checktip-box {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    margin: 0 0 0 0-$checktip-width/2;
+    width: $checktip-width;
+    background: #fff;
+    text-align: center;
+    border: 1px solid $checktip-border-color;
+    box-shadow: 2.5px 4.33px 5px 0 rgba(0, 0, 0, .11);
+    .btn-block {
+        margin: 10*$px 0 10*$px;
+    }
+    .btn, .btn-gray {
+        min-width: 50*$px;
+        font-size: 12px;
+        line-height: 30px;
+    }
+}
+
+.checktip-h {
+    background: $theme;
+    color: #fff;
+    font-size: 14*$px;
+    line-height: 35px;
+    padding-left: 15*$px;
+    text-align: left;
+}
+
+.checktip-inner {
+    // @include inline-block; 
+    padding: 15*$px 20*$px 10*$px;
+}
+
+.checktip-title {
+    font-size: $checktip-title-font-size;
+    color: $checktip-title-color;
+    padding: 5*$px 0 10*$px;
+    cursor: default;
+}
+
+.tooltip {
+    position: absolute;
+    min-width: 50*$px;
+    max-width: 300*$px;
+    z-index:99;
+    .tooltip-arrow {
+        position: absolute;
+        border-style: solid;
+    }
+    &.left {
+        margin-right: 10*$px;
+        .tooltip-arrow {
+            border-width: 4*$px 0 4*$px 6*$px;
+            border-color: transparent transparent transparent #333;
+            right: -6*$px;
+        }
+    }
+    &.right {
+        margin-left: 10*$px;
+        .tooltip-arrow {
+            border-width: 4*$px 6*$px 4*$px 0;
+            border-color: transparent #333 transparent transparent;
+            left: -6*$px;
+        }
+    }
+ 
+    &.bottom {
+        margin-top: 8*$px;
+        .tooltip-arrow {
+            border-width: 0 4*$px 6*$px 4*$px;
+            border-color: transparent transparent #333 transparent;
+            top: -6*$px;
+        }
+    }
+    &.top {
+        margin-bottom: 8*$px;
+        .tooltip-arrow {
+            border-width: 6*$px 4*$px 0 4*$px;
+            border-color: #333 transparent transparent transparent;
+            bottom: -6*$px;
+        }
+    }
+    .tooltip-con {
+        @include keep-normal();
+        background: #333;
+        padding: 2*$px 10*$px;
+        line-height: 20*$px;
+        color: #fff;
+    }
+    &.multi {
+        .tooltip-con {
+            padding: 10*$px 10*$px;
+            line-height: 24*$px;
+            border-radius: 3*$px;
+        }
+        &.left {
+            .tooltip-arrow {
+                border-width: 6*$px 0 6*$px 6*$px;
+            }
+        }
+        &.right {
+            .tooltip-arrow {
+                border-width: 6*$px 6*$px 6*$px 0;
+            }
+        }
+        &.bottom {
+            .tooltip-arrow {
+                border-width: 0 6*$px 6*$px 6*$px;
+            }
+        }
+        &.top {
+            .tooltip-arrow {
+                border-width: 6*$px 6*$px 0 6*$px;
+            }
+        }
+    }
+
+}
+
+.popuppage{
+    background:#fff;
+}

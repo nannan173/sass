@@ -1,0 +1,39 @@
+@mixin inline-block(){
+	display: inline-block;
+    *display: inline;
+    zoom: 1;
+}
+@mixin keep-all(){
+ 
+    word-break: keep-all;
+    white-space: nowrap;
+}
+@mixin keep-normal(){ 
+    word-break: break-all;
+    white-space: normal;
+}
+@mixin clearfix() {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+@mixin nowrap($textoverflow:ellipsis) {
+ @include keep-all(); 
+  overflow: hidden;
+  text-overflow: $textoverflow;
+
+}
+
+@mixin clearspace(){
+  word-spacing: -4*$px;
+}
+@mixin  normalspace(){
+  word-spacing: 0*$px;
+}
+@mixin iecsshack($key,$value){
+   #{$key}: #{$value};
+  *#{$key}: #{$value};
+   #{$key}: #{$value}\0;
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>shixutu</title> 
+	<link rel="stylesheet" href="../../css/bomc.css">
+</head>
+<body style="overflow-x:auto;">
+	<div>
+		<h2 class="yingyue">营业管理</h2>
+		<div class="bs_main" id="sequence">
+		 
+		</div>
+	</div>
+	<script src="../../js/jquery/jquery-1.11.0.min.js"></script> 
+ 
+	<script src="../../js/sequence/svg.js"></script> 
+	<script src="../../js/sequence/sequence.js"></script> 
+	<script type="text/javascript">
+	var data = {
+    nodes: [{
+        id: "n-1",
+        title: "未配置api主机",
+        detail: {"主机iP":"未配置","应用ID":"adfd-24183c0fbad4cd"},
+        // style: {
+        //     background: "",
+        //     radius: "",
+        //     fontfamily: "",
+        //     fontStyle: "",
+        //     color: "",
+        //     fontSize: "",
+        //     lifeStyle: {
+        //         width: "22px"
+        //     }
+        // }
+    }, {
+        id: "n-2", 
+        title: "未配置api主机",
+        detail: {"主机iP":"未配置","应用ID":"adfd-24183c0fbad4cd"},
+         
+    } , {
+        id: "n-3", 
+        title: "未配置api主机",
+        detail: {"主机iP":"未配置","应用ID":"adfd-24183c0fbad4cd"},
+         
+    }  ],
+    messages: [{
+            id: "m-1",
+            title: "3（3段站）",
+            index: "1",
+            nodeAId: "n-1",
+            nodeBId: "n-2",
+            type: "0", //0 请求 1 回复
+            state: "0",
+            remark: "9s", //
+            detail: {'请求类型':'1 （BSSP的Process_Code()发起请求）','请求代码':'BM_NGInterBOSSNotify','请求描述':'', '外部请求处理时长':'583ms',"消息标识":"1"},
+           
+            
+        },
+        {
+            id: "m-2",
+            title: "BSSP/UIG规定的Service_ID发起请求省BOSS发起方业务通知提醒(发起方)",
+            index: "2",
+            nodeAId: "n-1",
+            nodeBId: "n-2",
+            type: "0", //0 请求 1 回复
+            state: "1", 
+            detail: { "a": "123123", "b": "ss" }, 
+            remark: "0s", //
+            wait: {
+                time: "0s",
+                title:"请求等待"
+            }
+        },  {
+            id: "m-3",
+            title: "xx请求发送",
+            index: "1",
+            nodeAId: "n-2",
+            nodeBId: "n-3",
+            type: "0", //0 请求 1 回复
+            state: "2",
+            remark: "8s", //
+            detail: { "a": "123123", "b": "ss" },
+            
+            wait: {
+                time: "8s",
+                title:"请求等待"
+            }
+        } ,   {
+            id: "m-3",
+            title: "xxx请求发送",
+            index: "1",
+            nodeAId: "n-3",
+            nodeBId: "n-2",
+            type: "1", //0 请求 1 回复
+            state: "1",
+            remark: "17s", // 
+             
+        } ,   {
+            id: "m-3",
+            title: "xxxasdas请求发送",
+            index: "1",
+            nodeAId: "n-2",
+            nodeBId: "n-1",
+            type: "1", //0 请求 1 回复
+            state: "1",
+            remark: "17s", // 
+             
+        } 
+
+    ]
+};
+         $("#sequence").mysequence({data:data}).render(); 
+	</script>
+</body>
+</html>

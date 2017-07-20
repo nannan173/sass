@@ -1,0 +1,129 @@
+ 
+.process-wap {
+    padding: 20*$px 0;
+    background: #fff;
+   border-top: 1px dashed #eee;
+    .process-innear {
+        width: 900*$px;
+        margin: 0 auto
+    }
+    .process-row {
+        .node {
+            font-size: 14*$px;
+            color: #fff;
+            background: $theme;
+            text-align: center;
+            width: 100*$px;
+            line-height: 40*$px;
+            display: inline-block;
+            vertical-align: middle;
+            border-radius: 5*$px;
+            cursor: default;
+        }
+        .line {
+            position: relative;
+            width: 160*$px;
+            background: $theme;
+            height: 1*$px;
+            margin: 30*$px 40*$px;
+            display: inline-block;
+            vertical-align: middle;
+            p {
+                position: absolute;
+                left: 0;
+                right: 0;
+                text-align: center;
+                top: -24*$px;
+            }
+            p+p {
+                text-align: center;
+                top: 5*$px;
+            }
+        }
+    }
+    .line {
+        &.line-left:after, &.line-right:after {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: -3*$px;
+            border-style: solid;
+            border-width: 4*$px 0 4*$px 4*$px;
+            border-color: transparent transparent transparent $theme;
+        }
+        &.line-right:after {
+            left: 0;
+            right: auto;
+            border-width: 4*$px 4*$px 4*$px 0;
+            border-color: transparent $theme transparent transparent;
+        }
+        &.line-top:after, &.line-bottom:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -4*$px;
+            border-style: solid;
+            border-width: 0 4*$px 4*$px 4*$px;
+            border-color: transparent transparent $theme transparent;
+        }
+        &.line-bottom:after {
+            top: auto;
+            bottom: 0;
+            border-width: 4*$px 4*$px 0 4*$px;
+            border-color: $theme transparent transparent transparent;
+        }
+    }
+}
+
+.linerow {
+    position: relative;
+    height: 120*$px;
+    .line {
+        position: absolute;
+        left: 0;
+        background: $theme;
+        height: 100%;
+        width: 1px;
+        margin: 0 50*$px;
+        display: inline-block;
+        vertical-align: middle;
+        p {
+            position: absolute;
+            white-space: nowrap;
+            right: 6*$px;
+            line-height: 120*$px;
+            &+p {
+                right: auto;
+                left: 5*$px;
+            }
+        }
+    }
+    .line+.line {
+        position: absolute;
+        left: auto;
+        right:  100*$px;
+    }
+}
+.processbar{ 
+    position: relative;
+    width: 100%;
+    background:#eee;
+    height: 18*$px;
+    line-height: 18*$px;
+    text-align: left;
+    .process-num{
+        position: absolute;
+        right: 10*$px; 
+        width: auto;
+        font-size: 12*$px;  
+        vertical-align: top;
+
+    }
+    .process-innear{
+        @include inline-block;
+        width:0;
+        background:$theme;
+        height: 100%;
+        vertical-align: top;
+    }
+}

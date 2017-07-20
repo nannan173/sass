@@ -1,0 +1,279 @@
+.filter-wap {
+     background: #fff;
+     border: $filter-boder;
+     font-size: $filter-font-size;
+     min-height: $filter-wap-min-height;
+     &.box-c {
+         border-left: none;
+         border-right: none;
+         border-bottom: none;
+     }
+ }
+ 
+ .filter-row {
+     position: relative;
+     padding: 15*$px 0;
+     @include clearfix();
+     &+.filter-row {
+         padding-top: 0;
+     }
+ }
+ 
+ .filter-title {
+     float: left;
+     color: $filter-title-color;
+     line-height: $filter-line-height;
+     padding-right: 20*$px;
+     padding-left: 15*$px;
+     width: $filter-title-width;
+ }
+ 
+ .filter-c {
+     position: relative;
+     margin: $filter-c-margin;
+     margin-left:115*$px;
+     padding-right: 40*$px;
+     transition: all .3s ease-in-out;
+ }
+ 
+ .filter-seach {
+     min-height: 120*$px;
+ }
+ 
+ .filter-item {
+     @include inline-block;
+     padding: 0 10*$px;
+     margin: $filter-item-margin;
+     color: #333;
+     line-height: $filter-line-height;
+     cursor: pointer;
+     &.dropdown-wap:hover .dropdown-toggle, &.sel, &:hover {
+         background: $filter-item-sel-bg;
+         color: #fff;
+     }
+     &.dropdown-menu {
+         @include keep-all;
+         background: #fff;
+         right: auto;
+         .dropdown-menu {
+             @include keep-all;
+             background: #fff;
+             right: auto;
+         }
+     }
+ }
+ 
+ .filter-items-contain {
+     max-height: $filter-contain-max-height;
+     overflow: auto;
+     // margin-right: 15*$px;
+ }
+ 
+ .tag-inf-item {
+     @include inline-block;
+     font-size: 13*$px;
+     background: #f4f4f5;
+     padding: 0 10*$px;
+     line-height: 35*$px;
+     margin: 0 15*$px 10*$px 0;
+ }
+ 
+ .tag-inf-more {
+     color: #bbb;
+     font-size: 15*$px;
+     cursor: pointer;
+     &:hover {
+         color: $link-hover-color;
+     }
+ }
+ 
+ .zb-tag-inf {
+     max-height: 144*$px;
+     overflow: auto;
+     line-height: 1;
+     @include clearfix();
+     .tag-inf-item {
+         float: left;
+         width: 250*$px;
+         line-height: 26px;
+         vertical-align: top;
+         @include nowrap();
+     }
+ }
+ 
+ .filter-seach-box {
+     margin-bottom: 10*$px;
+     cursor: pointer;
+     .icon {
+         font-size: 13px;
+         color: $theme;
+         vertical-align: middle;
+         margin-left: 10*$px;
+     }
+     .cb-box{
+        @include inline-block;
+        line-height: 30*$px;
+         margin-left:30*$px;
+     }
+ }
+ 
+ .form-value.zb-tag-inf {
+     padding-top: 5*$px;
+ }
+ 
+ .filter-items-contain-left {
+     position: absolute;
+     left: -95*$px;
+     line-height: 30*$px;
+ }
+ 
+ .filter-items {
+     &.hide {
+         display: none;
+     }
+ }
+ 
+ .filter-items-more {
+     display: none;
+     &.show {
+         display: block;
+     }
+ }
+ 
+ .filter-items-tail {
+     position: absolute;
+     right: 10*$px;
+     top: 0;
+     line-height: $filter-line-height;
+     .filter-more {
+         color: #999;
+         &:hover {
+             color: #666;
+         }
+     }
+ }
+ 
+ .filter-result-inner {
+     @include clearspace;
+     margin: 0 -5*$px -10*$px 0;
+ }
+ 
+ .filter-result-item {
+     position: relative;
+     @include inline-block;
+     @include normalspace;
+     padding: 0 10*$px;
+     background: #eee;
+     border-radius: 12*$px;
+     font-size: 13*$px;
+     vertical-align: top;
+     cursor: default;
+     margin: 0 10*$px 10*$px 0;
+     line-height: 24*$px;
+     color: #666;
+     span {
+         color: #333;
+     }
+     .icon {
+         display: none;
+         position: absolute;
+         right: 0;
+         font-size: 12*$px;
+         top: 0;
+         background: #eee;
+         width: 24px;
+         line-height: 24px;
+         text-align: center;
+         border-radius: 12*$px;
+         color: #777;
+         cursor: pointer;
+         &:hover {
+             color: $theme;
+         }
+     }
+     &:hover {
+         .icon {
+             display: inline;
+         }
+     }
+     &.red {
+         background: #f58484;
+         color: #fff;
+         span, .icon, .icon:hover {
+             color: #fff;
+         }
+         .icon {
+             background: #f58484;
+         }
+     }
+ }
+ 
+ .filter-result-toggle {
+     position: relative;
+     float: left;
+     width: 16*$px;
+     height: 16*$px;
+     margin-top: 3*$px;
+     color: $icon-hover-color;
+     cursor: pointer;
+     font-size: 16*$px;
+     &.close .icon-triangle {
+         @extend %extendicon;
+         &:after {
+             content: $icon-circleright;
+         }
+     }
+     &.open .icon-triangle {
+         &:after {
+             content: $icon-circleup;
+         }
+     }
+     .icon-triangle {
+         position: absolute;
+         width: 100%;
+         line-height: 16*$px;
+         text-align: center;
+         top: 0;
+         left: 0;
+         color: #fff;
+     }
+     &+.filter-result-inner, &~.filter-inner-wap {
+         margin-left: 30*$px;
+     }
+ }
+ 
+ .filter-inner-wap {
+     background: #fafafa;
+     max-height: 0;
+     visibility: hidden;
+     height: 0;
+     visibility: hidden;
+     transition: all .5s ease;
+     &.open {
+         max-height: 999999px;
+         visibility: visible;
+         margin-top: 15*$px;
+         height: auto;
+         padding: 10*$px 0;
+         .filter-row {
+             display: block;
+         }
+     }
+     .filter-title {
+         text-align: right;
+         width: $filter-title-width - 24*$px;
+         &+.filter-items-tail {
+             position: relative;
+             float: left;
+             right: auto;
+         }
+     }
+     .filter-row {
+         padding: 10*$px 0;
+         display: none;
+         &+.filter-row {
+             padding-top: 0;
+         }
+     }
+ }
+ 

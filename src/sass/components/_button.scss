@@ -1,0 +1,125 @@
+
+%bg-btn{ 
+	line-height:$btn-line-height;
+	padding:$btn-default-padding;
+	min-width:$btn-default-width ;
+	text-align: center;
+	@include inline-block;
+	font-size:$btn-font-size; 
+	border-radius:$btn-border-radius;
+	cursor: pointer; 
+	 &.form-control-full{
+	 	padding:0;
+	 }
+}
+ 
+.btn{
+	 @extend %bg-btn;
+	background:$theme;
+	color:$btn-color;
+	&:hover {
+		background:$btn-hover-bg;
+	}
+	
+}
+
+.file-btn:hover .btn{
+		background:$btn-hover-bg;
+}
+.btn-gray{
+	 @extend %bg-btn;
+	 background:$btn-gray-bg;
+	color:$btn-gray-color;
+	&:hover {
+		background:$btn-gray-hover-bg;
+		color:$btn-color;
+	}
+}
+.file-btn:hover .btn-gray {
+	background:$btn-gray-hover-bg;
+		color:$btn-color;
+	 
+}
+*[class^="btn"]+ *[class^="btn"]{
+ 	margin:$btn-default-margin;
+ }
+.btn-line-t{
+	 @extend %bg-btn;
+	border:1px solid $theme;
+	color: $theme;
+}
+.btn-text,.table .btn-text { 
+	color:#999; 
+	cursor: pointer; 
+	.icon{
+		margin-right: 5*$px;
+	} 
+	&:hover{
+		color: $btn-hover-bg;
+	}
+	&.t{
+	 	color:$theme ;
+	 	&:hover{
+	 		color:$btn-hover-bg;
+	 	}
+	 }
+	 &+&{
+	 	margin:0 5*$px;
+	 }
+	 &.icon{
+	 	min-width: 20*$px;
+	 	text-align: center;
+	 	font-size: 18*$px;
+	 }
+	.icon{
+	 	font-size: 20*$px; 
+	}
+}
+.icon-group{
+	margin-left:10*$px;
+	@include inline-block;
+}
+.link-t{
+	color:$theme;
+	cursor: pointer;
+	&:hover{
+		text-decoration: underline;
+	}
+}
+.btn-drak{
+	@extend %bg-btn;
+	background:#9b9b9b; 
+	color:#fff;
+	&:hover {
+		background:darken(#9b9b9b,10%);
+	}
+}
+.btn-white{ 
+	@extend %bg-btn;
+	background:#fff;
+	color:#333;
+	border:1px solid #e6e6e6;
+	&.t{
+			color: $theme;
+	}
+	&:hover{
+		color:#fff; 
+		background:$btn-hover-bg;
+	 
+	}
+	
+}
+.file-btn:hover .btn{
+	background:darken(#9b9b9b,10%);
+
+}   
+.btn-ssm{
+		line-height: 22*$px;
+		min-width:40*$px; 
+		&+&{
+			margin-left: 10*$px;
+		}
+	}
+.btn-sm{
+	min-width:auto;
+}

@@ -1,0 +1,53 @@
+.show{
+	display:block;
+}
+.hide{
+	display:none ;
+}
+.f-yellow{
+	color:#ffc000;
+}
+.f-pink{
+	color:#ff98ea;
+}
+.f-cyan{
+	color:#36d9d7;
+}
+.f-red{
+	color:#fc3333;
+}
+.contain-width{
+	width:1200*$px;
+	margin:0 auto;
+ }
+.tr{
+	text-align: right;
+}
+.js-fixed.fixed{
+	position: fixed; 
+	&.gbg{
+		background:#f5f5f5;
+	} &.wbg{
+		background:#fff;
+	} 
+}
+.clearfix{
+	@include clearfix();
+}
+.septalline{
+	@include inline-block;
+	height:12*$px;
+	width:1px;
+	background: #666; 
+	margin:0 10px;
+	vertical-align: -1px;
+}
+.keepall{
+	@include keep-all();
+}
+.cup{
+	cursor: pointer;
+}
+.fl{
+	float: left;
+}

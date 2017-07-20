@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>对象列表</title>
+    <link rel="stylesheet" type="text/css" href="../../css/bomc.css">
+</head>
+
+<body class="wpage">
+    <div class="pointer box">
+       <div class="box-h box-h-theme">
+                <span class="box-h-title">进程稽核</span>
+       </div>
+  <div class="box-c " id="search">
+            <div class="row ">
+                <div class="form-group col-xs-0">
+                    <label class="from-label">进程信息:</label>
+                    <div class="form-value">
+                        <input type="text">
+                    </div>
+                </div>
+               
+                <div class="btn-block  col-xs-0">
+                    <a class="btn">查询</a>
+                    <a class="btn-gray">重置</a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class="table-box table-dark">
+        <div class="thead" for="#table"> 
+                <table class="table  nowrap  ">
+                    <tr>
+                        <th width="80px">序号
+                        </th>
+                        <th width="240px">主机变动数</th>
+                        <th>进程信息差异数</th>
+                        <th>端口变动数</th>
+                        <th>稽核时间</th>
+                        <th width="210px">稽核耗时(秒)</th>
+                        <th width="100"><a href="" class="link"><i class="icon icon-tool"></i>操作</a></th>
+                    </tr>
+                </table> 
+        </div>
+        <div class="tbody" >
+            <table class="table   nowrap  " id="table">
+                <tr>
+                    <th width="80px">
+                        序号
+                    </th>
+                    <th width="240px">主机变动数</th>
+                    <th>进程信息差异数</th>
+                    <th>端口变动数</th>
+                    <th>稽核时间</th>
+                    <th>稽核耗时(秒)</th>
+                    <th width="80px"><a href="" class="link">操作</a></th>
+                </tr> 
+                <tr>
+                    <td >
+                        5
+                    </td>
+                    
+                    <td>15</td>
+                    <td>32</td>
+                    <td>
+                       7
+                    </td>
+                    <td>
+                        2017-06-21 
+                    </td>
+                    <td>
+                    360
+                    </td>
+                    
+                    <td>
+                     <a onclick="updateData(196);" href="javascript:void(0);">
+                            <i class="icon icon-view"></i>
+                        </a>
+                        <a onclick="showDetail(196);" href="javascript:void(0);">
+                            <i class="icon icon-import"></i>
+                        </a>
+                    </td>
+                </tr>
+            <tr>
+                    <td >
+                        4
+                    </td>
+                    
+                    <td>12</td>
+                    <td>29</td>
+                    <td>
+                        6
+                    </td>
+                    <td>
+                        2017-06-20 
+                    </td>
+                    <td>
+                    350
+                    </td>
+                   
+                    <td>
+                     <a onclick="updateData(196);" href="javascript:void(0);">
+                            <i class="icon icon-view"></i>
+                        </a>
+                        <a onclick="showDetail(196);" href="javascript:void(0);">
+                            <i class="icon icon-import"></i>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td >
+                        3
+                    </td>
+                    
+                    <td>12</td>
+                    <td>24</td>
+                    <td>
+                        5
+                    </td>
+                    <td>
+                        2017-06-19 
+                    </td>
+                    <td>
+                    433
+                    </td>
+                  
+                    <td>
+                     <a onclick="updateData(196);" href="javascript:void(0);">
+                            <i class="icon icon-view"></i>
+                        </a>
+                        <a onclick="showDetail(196);" href="javascript:void(0);">
+                            <i class="icon icon-import"></i>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td >
+                        2
+                    </td>
+                    
+                    <td>10</td>
+                    <td>21</td>
+                    <td>
+                        4
+                    </td>
+                    <td>
+                        2017-06-18
+                    </td>
+                    <td>
+                    410
+                    </td>
+                  
+                    <td>
+                     <a onclick="updateData(196);" href="javascript:void(0);">
+                            <i class="icon icon-view"></i>
+                        </a>
+                        <a onclick="showDetail(196);" href="javascript:void(0);">
+                            <i class="icon icon-import"></i>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td >
+                        1
+                    </td>
+                    
+                    <td>5</td>
+                    <td>12</td>
+                    <td>
+                        3
+                    </td>
+                    <td>
+                        2017-06-17
+                    </td>
+                    <td>
+                  210
+                    </td>
+                   
+                    <td>
+                     <a onclick="updateData(196);" href="javascript:void(0);">
+                            <i class="icon icon-view"></i>
+                        </a>
+                        <a onclick="showDetail(196);" href="javascript:void(0);">
+                            <i class="icon icon-import"></i>
+                        </a>
+                    </td>
+                </tr>
+      
+            </table>
+        </div>
+    <div class="btn-block">
+        <a href="javascript:void(0)" class="btn ">保存</a>
+        <a href="javascript:void(0)" class="btn btn-gray">取消</a>
+    </div> 
+    <script type="text/javascript" src="../../js/jquery/jquery-1.11.0.min.js"></script>
+    <script src="../../js/bomc.js"></script>
+    <script>
+    $(function() {  
+        $(".btn").on("click", function() { 
+           showMess.confirm("请确认是否删除删除已配置的对象",function(){ 
+            console.log("confirm");
+           }) ; 
+            // showMess.confirm("请确认是否删除删除已配置的对象","asdasd",function(arg){ 
+            // console.log("confirm");
+            //})  ;
+       }) ; 
+        $(".btn-gray").on("click", function() {
+             showMess.alert("请确认是否删除删除已配置的对象")   });
+    });
+    </script>
+</body>
+
+</html>

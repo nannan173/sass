@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>任务管理首页</title>
+    <link rel="stylesheet" type="text/css" href="../../css/bomc.css">
+    <link rel="stylesheet" type="text/css" href="../../js/scroll/jquery.mCustomScrollbar.css"></link>
+</head>
+
+<body class="conpage">
+   <div class="js-fixed">
+      <div class="box-toggle    ">
+         <div class="filter-wap  box-toggle-con">
+             <div class=" ">
+                 <div class="filter-row">
+                     <label class="filter-title tr">所属系统:</label>
+                     <div class="filter-c">
+                         <div class="filter-items">
+                             <span class="filter-item sel">PMP </span>
+                             <span class="filter-item">电子渠道</span>
+                             <span class="filter-item">全网监控系统</span>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="filter-row">
+                     <label class="filter-title tr">监控类型:</label>
+                     <div class="filter-c">
+                         <div class="filter-items">
+                             <span class="filter-item sel">接口监控 </span>
+                             <span class="filter-item">jboss监控</span>
+                             <span class="filter-item">Linux监控</span>
+                             <span class="filter-item">Oracle监控</span>
+                             <span class="filter-item">Windows监控</span>
+                             <span class="filter-item">Mysql监控</span>
+                             <span class="filter-item">进程监控</span>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+         <a href="javascript:;" class="icon-toggle-wap"><i class=" icon-toggle"></i></a>
+     </div>
+      <div class="box-nb-h  " >
+            <div class="h-right">
+                <div class="iconinput  ">
+                    <input type="text">
+                    <a class="btn-text  t icon icon-search"></a>
+                </div>
+            </div>
+            <span class="box-h-title">监控统计:</span>
+            <div class="status-bar">
+                <a class="status-item s-unusual sel">
+                    <span class="status-title">异常</span>
+                    <span class="status-num">12</span>
+                </a>
+                <a class="status-item s-normal">
+                    <span class="status-title">正常</span>
+                    <span class="status-num">12</span>
+                </a>
+                <a class="status-item s-null">
+                    <span class="status-title">空跑</span>
+                    <span class="status-num">12</span>
+                </a>
+                <a class="status-item s-nondeployed">
+                    <span class="status-title">未部署</span><span class="status-num">12</span>
+                </a>
+            </div>
+        </div>
+   </div>
+    <div class="box-nb">
+       
+        <div class="box-nb-c card-list-wap task-manage-list  ">
+           <div class="card-list ">
+                <div class="card-item s-unusual">
+                   <div class="card-item-inner">
+                       <div class="card-h">
+                           <span>192.168.100.11-hostyyyrrr</span>
+                       </div>
+                       <div class="card-c">
+                           <p class="inf-row-inline">
+                               <i class="icon icon-template f-yellow"></i>
+                               <span class="label ">所属系统:</span>
+                               <span class="value">全网监控系统 </span>
+                           </p>
+                           <p class="inf-row-inline">
+                               <i class="icon icon-tasklist  f-pink"></i>
+                               <span class="label">监控对象:</span>
+                               <span class="value">100 </span>
+                           </p>
+                           <p class="inf-row-inline">
+                               <i class="icon  icon-warning  f-red"></i>
+                               <span class="label ">异常对象:</span>
+                               <span class="value">超级管理员 </span>
+                           </p>
+                           <p class="inf-row-inline">
+                               <i class="icon icon-view f-cyan"></i>
+                               <span class="label ">IP地址:</span>
+                               <span class="value"> 192.168.100.11 </span>
+                           </p>
+                       </div>
+                   </div>
+               </div>
+               <div class="card-item s-normal">
+                   <div class="card-item-inner">
+                       <div class="card-h">
+                           <span>192.168.100.11-hostyyyrrr</span>
+                       </div>
+                       <div class="card-c">
+                           <p class="inf-row-inline">
+                               <i class="icon icon-template f-yellow"></i>
+                               <span class="label ">所属系统:</span>
+                               <span class="value">全网监控系统 </span>
+                           </p>
+                           <p class="inf-row-inline">
+                               <i class="icon icon-tasklist  f-pink"></i>
+                               <span class="label">监控对象:</span>
+                               <span class="value">100 </span>
+                           </p>
+                           <p class="inf-row-inline">
+                               <i class="icon  icon-warning  f-red"></i>
+                               <span class="label ">异常对象:</span>
+                               <span class="value">超级管理员 </span>
+                           </p>
+                           <p class="inf-row-inline">
+                               <i class="icon icon-view f-cyan"></i>
+                               <span class="label ">IP地址:</span>
+                               <span class="value"> 192.168.100.11 </span>
+                           </p>
+                       </div>
+                   </div>
+               </div>
+               <div class="card-item s-null">
+                   <div class="card-item-inner">
+                       <div class="card-h">
+                           <span>192.168.100.11-hostyyyrrr</span>
+                       </div>
+                       <div class="card-c">
+                           <p class="inf-row-inline">
+                               <i class="icon icon-template f-yellow"></i>
+                               <span class="label ">所属系统:</span>
+                               <span class="value">全网监控系统 </span>
+                           </p>
+                           <p class="inf-row-inline">
+                               <i class="icon icon-tasklist  f-pink"></i>
+                               <span class="label">监控对象:</span>
+                               <span class="value">100 </span>
+                           </p>
+                           <p class="inf-row-inline">
+                               <i class="icon  icon-warning  f-red"></i>
+                               <span class="label ">异常对象:</span>
+                               <span class="value">超级管理员 </span>
+                           </p>
+                           <p class="inf-row-inline">
+                               <i class="icon icon-view f-cyan"></i>
+                               <span class="label ">IP地址:</span>
+                               <span class="value"> 192.168.100.11 </span>
+                           </p>
+                       </div>
+                   </div>
+               </div>
+               <div class="card-item s-nondeployed">
+                   <div class="card-item-inner">
+                       <div class="card-h">
+                           <span>192.168.100.11-hostyyyrrr</span>
+                       </div>
+                       <div class="card-c">
+                           <p class="inf-row-inline">
+                               <i class="icon icon-template f-yellow"></i>
+                               <span class="label ">所属系统:</span>
+                               <span class="value">全网监控系统 </span>
+                           </p>
+                           <p class="inf-row-inline">
+                               <i class="icon icon-tasklist  f-pink"></i>
+                               <span class="label">监控对象:</span>
+                               <span class="value">100 </span>
+                           </p>
+                           <p class="inf-row-inline">
+                               <i class="icon  icon-warning  f-red"></i>
+                               <span class="label ">异常对象:</span>
+                               <span class="value">超级管理员 </span>
+                           </p>
+                           <p class="inf-row-inline">
+                               <i class="icon icon-view f-cyan"></i>
+                               <span class="label ">IP地址:</span>
+                               <span class="value"> 192.168.100.11 </span>
+                           </p>
+                       </div>
+                   </div>
+               </div>
+               <div class="card-item s-unusual">
+                   <div class="card-item-inner">
+                       <div class="card-h">
+                           <span>192.168.100.11-hostyyyrrr</span>
+                       </div>
+                       <div class="card-c">
+                           <p class="inf-row-inline">
+                               <i class="icon icon-template f-yellow"></i>
+                               <span class="label ">所属系统:</span>
+                               <span class="value">全网监控系统 </span>
+                           </p>
+                           <p class="inf-row-inline">
+                               <i class="icon icon-tasklist  f-pink"></i>
+                               <span class="label">监控对象:</span>
+                               <span class="value">100 </span>
+                           </p>
+                           <p class="inf-row-inline">
+                               <i class="icon  icon-warning  f-red"></i>
+                               <span class="label ">异常对象:</span>
+                               <span class="value">超级管理员 </span>
+                           </p>
+                           <p class="inf-row-inline">
+                               <i class="icon icon-view f-cyan"></i>
+                               <span class="label ">IP地址:</span>
+                               <span class="value"> 192.168.100.11 </span>
+                           </p>
+                       </div>
+                   </div>
+               </div>
+               <div class="card-item s-normal">
+                   <div class="card-item-inner">
+                       <div class="card-h">
+                           <span>192.168.100.11-hostyyyrrr</span>
+                       </div>
+                       <div class="card-c">
+                           <p class="inf-row-inline">
+                               <i class="icon icon-template f-yellow"></i>
+                               <span class="label ">所属系统:</span>
+                               <span class="value">全网监控系统 </span>
+                           </p>
+                           <p class="inf-row-inline">
+                               <i class="icon icon-tasklist  f-pink"></i>
+                               <span class="label">监控对象:</span>
+                               <span class="value">100 </span>
+                           </p>
+                           <p class="inf-row-inline">
+                               <i class="icon  icon-warning  f-red"></i>
+                               <span class="label ">异常对象:</span>
+                               <span class="value">超级管理员 </span>
+                           </p>
+                           <p class="inf-row-inline">
+                               <i class="icon icon-view f-cyan"></i>
+                               <span class="label ">IP地址:</span>
+                               <span class="value"> 192.168.100.11 </span>
+                           </p>
+                       </div>
+                   </div>
+               </div>
+               <div class="card-item s-null">
+                   <div class="card-item-inner">
+                       <div class="card-h">
+                           <span>192.168.100.11-hostyyyrrr</span>
+                       </div>
+                       <div class="card-c">
+                           <p class="inf-row-inline">
+                               <i class="icon icon-template f-yellow"></i>
+                               <span class="label ">所属系统:</span>
+                               <span class="value">全网监控系统 </span>
+                           </p>
+                           <p class="inf-row-inline">
+                               <i class="icon icon-tasklist  f-pink"></i>
+                               <span class="label">监控对象:</span>
+                               <span class="value">100 </span>
+                           </p>
+                           <p class="inf-row-inline">
+                               <i class="icon  icon-warning  f-red"></i>
+                               <span class="label ">异常对象:</span>
+                               <span class="value">超级管理员 </span>
+                           </p>
+                           <p class="inf-row-inline">
+                               <i class="icon icon-view f-cyan"></i>
+                               <span class="label ">IP地址:</span>
+                               <span class="value"> 192.168.100.11 </span>
+                           </p>
+                       </div>
+                   </div>
+               </div>
+               <div class="card-item s-nondeployed">
+                   <div class="card-item-inner">
+                       <div class="card-h">
+                           <span>192.168.100.11-hostyyyrrr</span>
+                       </div>
+                       <div class="card-c">
+                           <p class="inf-row-inline">
+                               <i class="icon icon-template f-yellow"></i>
+                               <span class="label ">所属系统:</span>
+                               <span class="value">全网监控系统 </span>
+                           </p>
+                           <p class="inf-row-inline">
+                               <i class="icon icon-tasklist  f-pink"></i>
+                               <span class="label">监控对象:</span>
+                               <span class="value">100 </span>
+                           </p>
+                           <p class="inf-row-inline">
+                               <i class="icon  icon-warning  f-red"></i>
+                               <span class="label ">异常对象:</span>
+                               <span class="value">超级管理员 </span>
+                           </p>
+                           <p class="inf-row-inline">
+                               <i class="icon icon-view f-cyan"></i>
+                               <span class="label ">IP地址:</span>
+                               <span class="value"> 192.168.100.11 </span>
+                           </p>
+                       </div>
+                   </div>
+               </div>
+           </div>
+        </div>
+    </div>
+    <div class="rightpop  ">
+        <div class="pop-h"> XXXX任务 </div>
+        <div class="pop-c scrollcontain">
+            <div class="sub-box">
+                <div class="sub-box-h"><i class="icon icon-template"></i><span>基本信息</span></div>
+                <div class="sub-box-c">
+                    <p class="inf-row-inline"><span class="label">IP地址:</span><span class="value">192.168.100.11</span></p>
+                    <p class="inf-row-inline"><span class="label">所属系统:</span><span class="value">PMP</span></p>
+                    <p class="inf-row-inline"><span class="label">代理状态:</span><span class="value"><span class="tag s-normal">正常</span></span>
+                    </p>
+                    <p class="inf-row-inline"><span class="label">监控对象:</span><span class="value">100</span></p>
+                    <p class="inf-row-inline"><span class="label">异常对象:</span><span class="value">0</span></p>
+                    <p class="btn-block tl"><a class="btn-gray">查看详情</a></p>
+                </div>
+            </div>
+            <div class="sub-box">
+                <div class="sub-box-h"><i class="icon icon-template"></i><span>已配置对象</span></div>
+                <div class="sub-box-c  ">
+                    <ul class="monitor-tag-list ">
+                        <li>
+                            <a class="monitor-tag-item">
+                                <i class="icon icon-process"></i>
+                                <span class="title">进&nbsp;&nbsp;程</span>
+                                <span class="num">12</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="monitor-tag-item">
+                                <i class="icon icon-oracle"></i>
+                                <span class="title">Oracle</span>
+                                <span class="num">12</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="monitor-tag-item">
+                                <i class="icon icon-zport"></i>
+                                <span class="title">端&nbsp;&nbsp;口</span>
+                                <span class="num">12</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="monitor-tag-item">
+                                <i class="icon icon-linux"></i>
+                                <span class="title">Linux</span>
+                                <span class="num">12</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="monitor-tag-item">
+                                <i class="icon icon-jboss"></i>
+                                <span class="title">JBoss</span>
+                                <span class="num">12</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="monitor-tag-item">
+                                <i class="icon icon-mysql"></i>
+                                <span class="title">MySQL</span>
+                                <span class="num">12</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="monitor-tag-item">
+                                <i class="icon icon-windows"></i>
+                                <span class="title">windows</span>
+                                <span class="num">12</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="btn-block tl">
+                        <a class="btn  ">详情</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../../js/jquery/jquery-1.11.0.min.js"></script>
+    <script src="../../js/scroll/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src=" ../../js/bomc.js"></script>
+    <script type="text/javascript">
+    $(function(argument) {
+        // body...
+        fixed();
+        $(".icon-toggle-wap").on("click", function(argument) {
+            // body...
+            $(".box-toggle").toggleClass("hide");
+              updateFixed();
+        })
+        $(".card-item").not(".add,.sel").on("click", function() {
+            var $show = $(".rightpop");
+            if ($show.hasClass("show")) {
+                $show.removeClass("show");
+                setTimeout(function() {
+                    $show.addClass("show");
+                }, 500);
+            } else {
+                $show.addClass("show");
+            }
+            $(".pop-c.scrollcontain").mCustomScrollbar("update");
+            $(".card-item").removeClass("sel");
+            $(this).addClass("sel");
+            return false;
+        });
+        $(".rightpop").on("click", function() {
+            return false;
+        })
+        $(document).on("click", function() {
+            var $show = $(".rightpop").removeClass("show");
+            $(".card-item.sel").removeClass("sel");
+        });
+        var iw = $(".card-item").outerWidth(true);
+        var i = Math.floor($(".card-list-wap").width() / $(".card-item").outerWidth(true));
+        $(".card-list").css({
+            "width": iw * i + 1
+        });
+        $(window).resize(function() {
+            var iw = $(".card-item").outerWidth(true);
+            var i = Math.floor($(".card-list-wap").outerWidth() / $(".card-item").outerWidth(true));
+            $(".card-list").css({
+                "width": iw * i + 1
+            });
+        });
+        $(".pop-c.scrollcontain").height($(".rightpop ").height() - $(".pop-c.scrollcontain").offset().top).mCustomScrollbar({
+            axis: "y",
+            autoHideScrollbar: true,
+            advanced: {
+                updateOnContentResize: false,
+                updateOnImageLoad: false,
+                updateOnSelectorChange: false
+            },
+            scrollbarPosition: 'inside',
+            contentTouchScroll: false,
+            theme: "min-dark-tree",
+            setdraggerMaxheight: "50",
+            mouseWheelPixels: '66'
+        });
+    })
+    </script>
+</body>
+
+</html>

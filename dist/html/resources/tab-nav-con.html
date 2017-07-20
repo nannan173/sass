@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../../css/bomc.css">
+</head>
+
+<body class="tabpage">
+    <div class="table-box table-dark">
+        <div class="thead" for="#table"> 
+                <table class="table  nowrap  ">
+                    <tr>
+                        <th width="100">
+                            <div class="checkbox cb-all"  >
+                                <input type="checkbox" >
+                            </div>
+                        </th>
+                        <th>进程对象名称</th>
+                        <th>主机/IP</th>
+                        <th>实例数</th>
+                        <th>端口号</th>
+                        <th>操作用户</th>
+                        <th>PID</th>
+                        <th>状态</th>
+                        <th width="100"><a href="" class="link"><i class="icon icon-tool"></i>批量操作</a></th>
+                    </tr>
+                </table> 
+        </div>
+        <div class="tbody" >
+            <table class="table   nowrap  " id="table">
+                <tr>
+                    <th width="100">
+                        <div class="checkbox cb-all ">
+                            <input type="checkbox" >
+                        </div>
+                    </th>
+                    <th>进程对象名称</th>
+                    <th>主机/IP</th>
+                    <th>实例数</th>
+                    <th>端口号</th>
+                    <th>操作用户</th>
+                    <th>PID</th>
+                    <th>状态</th>
+                    <th width="100"><a href="" class="link">批量操作</a></th>
+                </tr> 
+                <tr>
+                    <td>
+                        <div class="checkbox cb-tr" >
+                            <input type="checkbox" disabled="">
+                        </div>
+                    </td>
+                    <td>java</td>
+                    <td>172.16.158.33</td>
+                    <td>1</td>
+                    <td>
+                        8080
+                    </td>
+                    <td>
+                        root
+                    </td>
+                    <td>
+                    1111
+                    </td>
+                    <td>新进程
+                    </td>
+                    <td><i class="icon icon-del"></i>
+                    </td>
+                </tr>
+                <tr class="sel">
+                     <td>
+                        <div class="checkbox cb-tr" >
+                            <input type="checkbox" disabled="">
+                        </div>
+                    </td>
+                    <td>java-2</td>
+                    <td>172.16.158.34</td>
+                    <td>1</td>
+                    <td>
+                        8080
+                    </td>
+                    <td>
+                        root
+                    </td>
+                    <td>
+                    1111
+                    </td>
+                    <td>用户变动
+                    </td>
+                    <td><i class="icon icon-del"></i>
+                    </td>
+                </tr>
+                <tr>
+                     <td>
+                        <div class="checkbox cb-tr" >
+                            <input type="checkbox" disabled="">
+                        </div>
+                    </td>
+                    <td>java-3</td>
+                    <td>172.16.158.35</td>
+                    <td>1</td>
+                    <td>
+                        8080
+                    </td>
+                    <td>
+                        root
+                    </td>
+                    <td>
+                    1111
+                    </td>
+                    <td>重启
+                    </td>
+                    <td><i class="icon icon-del"></i>
+                    </td>
+                </tr>
+                <tr class="sel">
+                     <td>
+                        <div class="checkbox cb-tr" >
+                            <input type="checkbox" disabled="">
+                        </div>
+                    </td>
+                    <td>java-4</td>
+                    <td>172.16.158.36</td>
+                    <td>1</td>
+                    <td>
+                        8080
+                    </td>
+                    <td>
+                        root
+                    </td>
+                    <td>
+                    1111
+                    </td>
+                    <td>端口变动
+                    </td>
+                    <td><i class="icon icon-del"></i>
+                    </td>
+                </tr>
+      
+            </table>
+        </div>
+        <div class="tfooter">
+            <div class="pagination">
+                <a href="" class="btn">首页</a>
+                <a href="" class="btn">上一页</a>
+                <input class="num" type="text">
+                <span>/ 10</span>
+                <a href="" class="btn">下一页</a>
+                <a href="" class="btn">尾页</a>
+                <span>每一页
+                       <div class="select">
+            
+                           <select>
+                               <option>10</option>
+                           </select>
+                       </div>
+                       条</span>
+                <span>共 100 条</span>
+                <a href="" class="btn">跳转</a>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../../js/jquery/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../js/bomc.js"></script>
+</body>
+
+</html>

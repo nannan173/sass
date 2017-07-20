@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../../css/bomc.css"> 
+</head>
+
+<body class="mainpage">
+    <div class=" box table-box">
+        <div class="box-h ">
+            <i class="icon icon-list"></i><span class="box-h-title">虚拟机</span>
+            <div class="h-right">
+                <div class="iconinput"> 
+                    <input type="text"> <a class="btn-text  t icon icon-search"></a>
+                </div>
+               <div class="icon-group">
+                    <a   href="javascript:void(0);" class="btn-text t icon icon-add"> </a>
+                   <a onclick="deleteData();" href="javascript:void(0);" class="btn-text t icon icon-del"> </i>
+                   </a>
+                   <a onclick="importData();" href="javascript:void(0);" class="btn-text t icon icon-template"> </a>
+               </div>
+            </div>
+        </div>
+        <table class="table nowrap  table-blue t-head-fixed" id="resourceTable">
+            <tbody>
+                <tr>
+                    <th width="3%">
+                        <div class="checkbox cb-all ">
+                            <input type="checkbox">
+                        </div>
+                    </th>
+                    <th width="12%">搜索代码</th>
+                    <th width="15%">资源名称</th>
+                    <th width="6%">资源状态</th>
+                    <th width="10%">资产编号</th>
+                    <th width="10%">设备型号</th>
+                    <th width="10%">序列号</th>
+                    <th width="8%">管理IP</th>
+                    <th width="8%">一级系统</th>
+                    <th width="8%">二级系统</th>
+                    <th width="8%">操作</th>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="checkbox cb-tr">
+                            <input type="checkbox">
+                        </p>
+                    </td>
+                    <td title="CP-CVM-ZZZ-024085">CP-CVM-ZZZ-024085</td>
+                    <td title="x86-mss-fjsep">x86-mss-fjsep</td>
+                    <td title="备用">备用</td>
+                    <td title=""></td>
+                    <td title=""></td>
+                    <td title=""></td>
+                    <td title=""></td>
+                    <td title="其他系统">其他系统</td>
+                    <td title="综合采集">综合采集</td>
+                    <td>
+                        <a onclick="updateData(186);" href="javascript:void(0);" class=" btn-text icon icon-edit t">
+                        </a>
+                        <a onclick="showDetail(186);" href="javascript:void(0);" class="btn-text icon icon-tasklist t">
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="checkbox cb-tr">
+                            <input name="ck" type="checkbox" value="185">
+                        </p>
+                    </td>
+                    <td title="CP-CVM-ZZZ-030909">CP-CVM-ZZZ-030909</td>
+                    <td title="hw_1(138)">hw_1(138)</td>
+                    <td title="使用中">使用中</td>
+                    <td title=""></td>
+                    <td title=""></td>
+                    <td title=""></td>
+                    <td title=""></td>
+                    <td title="CRM系统">CRM系统</td>
+                    <td title="服务开通">服务开通</td>
+                    <td>
+                        <a onclick="updateData(185);" href="javascript:void(0);">
+                            <i class="icon icon-edit"></i>
+                        </a>
+                        <a onclick="showDetail(185);" href="javascript:void(0);">
+                            <i class="icon icon-tasklist"></i>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="checkbox cb-tr">
+                            <input name="ck" type="checkbox" value="187">
+                        </p>
+                    </td>
+                    <td title="CP-CVM-ZZZ-024086">CP-CVM-ZZZ-024086</td>
+                    <td title="testlds119">testlds119</td>
+                    <td title="测试中">测试中</td>
+                    <td title=""></td>
+                    <td title=""></td>
+                    <td title=""></td>
+                    <td title=""></td>
+                    <td title="其他系统">其他系统</td>
+                    <td title="产品管理">产品管理</td>
+                    <td>
+                        <a onclick="updateData(187);" href="javascript:void(0);">
+                            <i class="icon icon-edit"></i>
+                        </a>
+                        <a onclick="showDetail(187);" href="javascript:void(0);">
+                            <i class="icon icon-tasklist"></i>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="checkbox cb-tr">
+                            <input name="ck" type="checkbox" value="188">
+                        </p>
+                    </td>
+                    <td title="CP-CVM-ZZZ-024087">CP-CVM-ZZZ-024087</td>
+                    <td title="testlds120">testlds120</td>
+                    <td title="测试中">测试中</td>
+                    <td title=""></td>
+                    <td title=""></td>
+                    <td title=""></td>
+                    <td title=""></td>
+                    <td title="其他系统">其他系统</td>
+                    <td title="服务开通">服务开通</td>
+                    <td>
+                        <a onclick="updateData(188);" href="javascript:void(0);">
+                            <i class="icon icon-edit"></i>
+                        </a>
+                        <a onclick="showDetail(188);" href="javascript:void(0);">
+                            <i class="icon icon-tasklist"></i>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="checkbox cb-tr">
+                            <input name="ck" type="checkbox" value="189">
+                        </p>
+                    </td>
+                    <td title="CP-CVM-ZZZ-024088">CP-CVM-ZZZ-024088</td>
+                    <td title="x86-mss-fjsep">x86-mss-fjsep</td>
+                    <td title="备用">备用</td>
+                    <td title=""></td>
+                    <td title=""></td>
+                    <td title=""></td>
+                    <td title=""></td>
+                    <td title="其他系统">其他系统</td>
+                    <td title="其他">其他</td>
+                    <td>
+                        <a onclick="updateData(189);" href="javascript:void(0);">
+                            <i class="icon icon-edit"></i>
+                        </a>
+                        <a onclick="showDetail(189);" href="javascript:void(0);">
+                            <i class="icon icon-tasklist"></i>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="checkbox cb-tr">
+                            <input name="ck" type="checkbox" value="96">
+                        </p>
+                    </td>
+                    <td title="CP-CVM-ZZZ-024034">CP-CVM-ZZZ-024034</td>
+                    <td title="sujufangwenpingtai-2(44)">sujufangwenpingtai-2(44)</td>
+                    <td title="测试中">测试中</td>
+                    <td title=""></td>
+                    <td title=""></td>
+                    <td title=""></td>
+                    <td title=""></td>
+                    <td title="BASS系统">BASS系统</td>
+                    <td title="服务开通">服务开通</td>
+                    <td>
+                        <a onclick="updateData(96);" href="javascript:void(0);">
+                            <i class="icon icon-edit"></i>
+                        </a>
+                        <a onclick="showDetail(96);" href="javascript:void(0);">
+                            <i class="icon icon-tasklist"></i>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="checkbox cb-tr">
+                            <input name="ck" type="checkbox" value="190">
+                        </p>
+                    </td>
+                    <td title="CP-CVM-ZZZ-024089">CP-CVM-ZZZ-024089</td>
+                    <td title="x86-mss-fjsep">x86-mss-fjsep</td>
+                    <td title="备用">备用</td>
+                    <td title=""></td>
+                    <td title=""></td>
+                    <td title=""></td>
+                    <td title=""></td>
+                    <td title="其他系统">其他系统</td>
+                    <td title="其他">其他</td>
+                    <td>
+                        <a onclick="updateData(190);" href="javascript:void(0);">
+                            <i class="icon icon-edit"></i>
+                        </a>
+                        <a onclick="showDetail(190);" href="javascript:void(0);">
+                            <i class="icon icon-tasklist"></i>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="checkbox cb-tr">
+                            <input name="ck" type="checkbox" value="192">
+                        </p>
+                    </td>
+                    <td title="CP-CVM-ZZZ-024093">CP-CVM-ZZZ-024093</td>
+                    <td title="test1010">test1010</td>
+                    <td title="测试中">测试中</td>
+                    <td title=""></td>
+                    <td title=""></td>
+                    <td title=""></td>
+                    <td title=""></td>
+                    <td title="BOSS系统">BOSS系统</td>
+                    <td title="产品管理">产品管理</td>
+                    <td>
+                        <a onclick="updateData(192);" href="javascript:void(0);">
+                            <i class="icon icon-edit"></i>
+                        </a>
+                        <a onclick="showDetail(192);" href="javascript:void(0);">
+                            <i class="icon icon-tasklist"></i>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="checkbox cb-tr">
+                            <input name="ck" type="checkbox" value="193">
+                        </p>
+                    </td>
+                    <td title="CP-CVM-ZZZ-024101">CP-CVM-ZZZ-024101</td>
+                    <td title="x86-mss-fjsep">x86-mss-fjsep</td>
+                    <td title="备用">备用</td>
+                    <td title=""></td>
+                    <td title=""></td>
+                    <td title=""></td>
+                    <td title=""></td>
+                    <td title="其他系统">其他系统</td>
+                    <td title="其他">其他</td>
+                    <td>
+                        <a onclick="updateData(193);" href="javascript:void(0);">
+                            <i class="icon icon-edit"></i>
+                        </a>
+                        <a onclick="showDetail(193);" href="javascript:void(0);">
+                            <i class="icon icon-tasklist"></i>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="checkbox cb-tr">
+                            <input name="ck" type="checkbox" value="196">
+                        </p>
+                    </td>
+                    <td title="CP-CVM-ZZZ-024119">CP-CVM-ZZZ-024119</td>
+                    <td title="x86-mss-fjsep">x86-mss-fjsep</td>
+                    <td title="备用">备用</td>
+                    <td title=""></td>
+                    <td title=""></td>
+                    <td title=""></td>
+                    <td title=""></td>
+                    <td title="其他系统">其他系统</td>
+                    <td title="其他">其他</td>
+                    <td>
+                        <a onclick="updateData(196);" href="javascript:void(0);">
+                            <i class="icon icon-edit"></i>
+                        </a>
+                        <a onclick="showDetail(196);" href="javascript:void(0);">
+                            <i class="icon icon-tasklist"></i>
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="pagelist"><span title="首页" class="i-first disable"></span>&nbsp;<span title="上一页" class="i-pre disable"></span>&nbsp;
+        <input name="pn" id="pn" onkeyup="this.value=this.value.replace(/\D/g,'')" type="text" size="3" value="1" onafterpaste="this.value=this.value.replace(/\D/g,'')"><span class=" mr10">/</span><span class=" mr10">3</span>
+        <a title="下一页" class="i-next" onclick="page_next()" href="void(0)"></a>&nbsp;
+        <a title="末页" class="i-last" onclick="page_last()" href="javascript:void(0)"></a> <span class=" mr10 ml10">每页</span>
+        <select name="pageSize" class=" select mr10" id="pageSize" onchange="submitForPageNum(this.form);" value="10">
+            <option value="5">5</option>
+            <option value="10" selected="">10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+        </select><span class=" mr10 ">条</span> <span class=" mr10 ">共</span><span class=" mr10 ">30</span> <span class=" mr10 ">条</span><a name="jump" class="page-jump  btn-text" href="javascript:page_go(document.getElementById('queryForm'))"><i class="i-refresh"></i>跳转</a></div>
+    <div class="rightpop   rightpop-lg" >
+        <div class="pop-h"> XXXX任务 </div>
+        <div class="pop-c scrollcontain">
+            <div class=" box">
+                <div class="box-h"><i class="icon icon-template"></i><span class="box-h-title">基本信息</span></div>
+                <div class=" box-c pop-form-sm">
+                    <!--  <p class="inf-row-inline"><span class="label">更新人:</span><span class="value">超级管理员</span></p>
+                    <p class="inf-row-inline"><span class="label">状   态:</span><span class="value">启用</span></p>
+                    <p class="inf-row-inline"><span class="label">类   型:</span><span class="value">启用</span></p>
+                    <p class="inf-row-inline"><span class="label">运行周期:</span><span class="value">每10周</span></p>
+                    <p class="inf-row-inline"><span class="label">采集方式:</span><span class="value">外部接入</span></p>
+                    <p class="btn-block tl"><a class="btn-gray">查看详情</a></p> -->
+                    <div class="row">
+                        <div class="form-group col-xs-6">
+                            <label class="form-label">搜索代码 </label>
+                            <div class="form-value">
+                                <input type="text" class="">
+                            </div>
+                        </div>
+                        <div class="form-group  col-xs-6">
+                            <label class="form-label">资源名称:</label>
+                            <div class="form-value">
+                                <input type="text" class="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group  col-xs-6">
+                            <label class="form-label">资源状态:</label>
+                            <div class="form-value">
+                                <div class="select">
+                                    <select>
+                                        <option>1</option>
+                                        <option>2</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group  col-xs-6">
+                            <label class="form-label">最后更新时间:</label>
+                            <div class="form-value">
+                                <input type="text" class="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group  col-xs-6">
+                            <label class="form-label">资产编号:</label>
+                            <div class="form-value">
+                                <input type="text" class="">
+                            </div>
+                        </div>
+                        <div class="form-group  col-xs-6">
+                            <label class="form-label">设备型号:</label>
+                            <div class="form-value">
+                                <input type="text" class="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group  col-xs-6">
+                            <label class="form-label">序列号:</label>
+                            <div class="form-value">
+                                <input type="text" class="">
+                            </div>
+                        </div>
+                        <div class="form-group  col-xs-6">
+                            <label class="form-label">管理IP:</label>
+                            <div class="form-value">
+                                <input type="text" class="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group  col-xs-6">
+                            <label class="form-label">一级系统:</label>
+                            <div class="form-value">
+                                <div class="select">
+                                    <select>
+                                        <option>1</option>
+                                        <option>2</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group  col-xs-6">
+                            <label class="form-label">二级系统:</label>
+                            <div class="form-value">
+                                <div class="select">
+                                    <select>
+                                        <option>1</option>
+                                        <option>2</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="row">
+                        <div class="form-group  col-xs-6">
+                            <label class="form-label">用途:</label>
+                            <div class="form-value">
+                                <input type="text" class="">
+                            </div>
+                        </div>
+                        <div class="form-group  col-xs-6">
+                            <label class="form-label">所属大楼:</label>
+                            <div class="form-value">
+                                <input type="text" class="">
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="row">
+                        <div class="form-group  col-xs-6">
+                            <label class="form-label">所属机房:</label>
+                            <div class="form-value">
+                                 <input type="text" class="">
+                            </div>
+                        </div>
+                        <div class="form-group  col-xs-6">
+                            <label class="form-label">所属机柜:</label>
+                            <div class="form-value">
+                                <input type="text" class="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group  col-xs-6">
+                            <label class="form-label">所占U数:</label>
+                            <div class="form-value">
+                                 <input type="text" class="">
+                            </div>
+                        </div>
+                        <div class="form-group  col-xs-6">
+                            <label class="form-label">设备厂商:</label>
+                            <div class="form-value">
+                                <div class="select">
+                                    <select>
+                                        <option>1</option>
+                                        <option>2</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group  col-xs-6">
+                            <label class="form-label">协维厂商:</label>
+                            <div class="form-value">
+                                <input type="text" class="">
+                            </div>
+                        </div>
+                        <div class="form-group  col-xs-6">
+                            <label class="form-label">维保类型:</label>
+                            <div class="form-value">
+                                <input type="text" class="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group  col-xs-6">
+                            <label class="form-label">协维厂商:</label>
+                            <div class="form-value">
+                               <input type="text" class="">
+                            </div>
+                        </div>
+                        <div class="form-group  col-xs-6">
+                            <label class="form-label">维保类型:</label>
+                            <div class="form-value">
+                                <input type="text" class="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group  col-xs-6">
+                            <label class="form-label">维保服务级别:</label>
+                            <div class="form-value">
+                                <input type="text" class="">
+                            </div>
+                        </div>
+                        <div class="form-group  col-xs-6">
+                            <label class="form-label">维保开始日期:</label>
+                            <div class="form-value">
+                                <input type="text" class="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group  col-xs-6">
+                            <label class="form-label">维保日期到期:</label>
+                            <div class="form-value">
+                                <input type="text" class="">
+                            </div>
+                        </div>
+                        <div class="form-group  col-xs-6">
+                            <label class="form-label">局方系统负责人:</label>
+                            <div class="form-value">
+                                <input type="text" class="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group  col-xs-6">
+                            <label class="form-label">局方应用负责人:</label>
+                            <div class="form-value">
+                                <input type="text" class="">
+                            </div>
+                        </div>
+                        <div class="form-group  col-xs-6">
+                            <label class="form-label">局方集成负责人:</label>
+                            <div class="form-value">
+                                <input type="text" class="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group  col-xs-6">
+                            <label class="form-label">配置管理员:</label>
+                            <div class="form-value">
+                                <input type="text" class="">
+                            </div>
+                        </div>
+                        <div class="form-group  col-xs-6">
+                            <label class="form-label">所属工程项目:</label>
+                            <div class="form-value">
+                                <input type="text" class="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group  col-xs-6">
+                            <label class="form-label">入网日期:</label>
+                            <div class="form-value">
+                                <input type="text" class="">
+                            </div>
+                        </div>
+                        <div class="form-group  col-xs-6">
+                            <label class="form-label">使用部门:</label>
+                            <div class="form-value">
+                                <input type="text" class="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group  col-xs-6">
+                            <label class="form-label">集成商:</label>
+                            <div class="form-value">
+                                <input type="text" class="">
+                            </div>
+                        </div>
+                        <div class="form-group  col-xs-6">
+                            <label class="form-label">集成商负责人:</label>
+                            <div class="form-value">
+                                <input type="text" class="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group  col-xs-6">
+                            <label class="form-label">CPU型号:</label>
+                            <div class="form-value">
+                                <input type="text" class="">
+                            </div>
+                        </div>
+                        <div class="form-group  col-xs-6">
+                            <label class="form-label">CPU核数:</label>
+                            <div class="form-value">
+                                <input type="text" class="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group  col-xs-6">
+                            <label class="form-label">内存大小（GB）:</label>
+                            <div class="form-value">
+                                <input type="text" class="">
+                            </div>
+                        </div>
+                        <div class="form-group  col-xs-6">
+                            <label class="form-label">RAID级别:</label>
+                            <div class="form-value">
+                                <input type="text" class="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group  col-xs-6">
+                            <label class="form-label">裸硬盘总大小:</label>
+                            <div class="form-value">
+                                <input type="text" class="">
+                            </div>
+                        </div>
+                        <div class="form-group  col-xs-6">
+                            <label class="form-label">实际硬盘可用空间:</label>
+                            <div class="form-value">
+                                <input type="text" class="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group  col-xs-6">
+                            <label class="form-label">硬盘信息:</label>
+                            <div class="form-value">
+                                <input type="text" class="">
+                            </div>
+                        </div>
+                        <div class="form-group  col-xs-6">
+                            <label class="form-label">硬盘数量:</label>
+                            <div class="form-value">
+                                <input type="text" class="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group  col-xs-6">
+                            <label class="form-label">物理IP:</label>
+                            <div class="form-value">
+                                <input type="text" class="">
+                            </div>
+                        </div>
+                        <div class="form-group  col-xs-6">
+                            <label class="form-label">物理IP的MAC地址:</label>
+                            <div class="form-value">
+                                <input type="text" class="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group  col-xs-6">
+                            <label class="form-label">网关地址:</label>
+                            <div class="form-value">
+                                <input type="text" class="">
+                            </div>
+                        </div>
+                        <div class="form-group  col-xs-6">
+                            <label class="form-label">主机操作系统版本:</label>
+                            <div class="form-value">
+                                <input type="text" class="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group  col-xs-6">
+                            <label class="form-label">操作系统类型:</label>
+                            <div class="form-value">
+                                <input type="text" class="">
+                            </div>
+                        </div>
+                        <div class="form-group  col-xs-6">
+                            <label class="form-label">文件系统的总空间:</label>
+                            <div class="form-value">
+                                <input type="text" class="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group  col-xs-6">
+                            <label class="form-label">网卡数量:</label>
+                            <div class="form-value">
+                                <input type="text" class="">
+                            </div>
+                        </div>
+                        <div class="form-group  col-xs-6">
+                            <label class="form-label">网卡速率:</label>
+                            <div class="form-value">
+                                <input type="text" class="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group  col-xs-6">
+                            <label class="form-label">TPCC值:</label>
+                            <div class="form-value">
+                                <input type="text" class="">
+                            </div>
+                        </div>
+                        <div class="form-group  col-xs-6">
+                            <label class="form-label">光纤通道卡WWN号:</label>
+                            <div class="form-value">
+                                <input type="text" class="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group  col-xs-6">
+                            <label class="form-label">分区标志:</label>
+                            <div class="form-value">
+                                <input type="text" class="">
+                            </div>
+                        </div>
+                        <div class="form-group  col-xs-6">
+                            <label class="form-label">所属集群标识:</label>
+                            <div class="form-value">
+                                <input type="text" class="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             
+        </div>
+    </div>
+    <script type="text/javascript" src="../../js/jquery/jquery-1.11.0.min.js"></script>
+    <script src="../../js/scroll/jquery.mCustomScrollbar.concat.min.js"></script>
+     <script type="text/javascript" src=" ../../js/bomc.js"></script>
+    <script type="text/javascript">
+    $(".icon-add").on("click", function() {
+        var $show = $(".rightpop");
+        if ($show.hasClass("show")) {
+            $show.removeClass("show");
+            setTimeout(function() {
+                $show.addClass("show");
+            }, 500);
+        } else {
+            $show.addClass("show");
+        }
+        return false;
+    })
+    $(".rightpop").on("click", function() {
+        return false;
+    })
+    $(document).on("click", function() {
+        var $show = $(".rightpop").removeClass("show");
+        $(".card-item.sel").removeClass("sel");
+    });
+     $(".pop-c.scrollcontain").height($(".rightpop ").height() - $(".pop-c.scrollcontain").offset().top).mCustomScrollbar({
+            axis: "y",
+            autoHideScrollbar: true,
+            advanced: {
+                updateOnContentResize: false,
+                updateOnImageLoad: false,
+                updateOnSelectorChange: false
+            },
+            scrollbarPosition: 'inside',
+            contentTouchScroll: false,
+            theme: "min-dark-tree",
+            setdraggerMaxheight: "50",
+            mouseWheelPixels: '66'
+        });
+    </script>
+</body>
+
+</html>

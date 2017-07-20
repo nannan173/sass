@@ -1,0 +1,43 @@
+
+.conpage{
+	background:#f5f5f5; 
+	.js-fixed{
+		background:#f5f5f5;
+	}
+}
+.mainpage{
+	padding:  10*$px;
+	background:#f5f5f5; 
+	box-sizing:border-box;
+}
+.tabpage{
+	background:#fff;
+	border-top:none;
+	box-sizing:border-box;
+	 
+}
+.echartContain{
+	padding: 15*$px;
+	position: relative;
+	z-index:9;
+}
+.wpage{
+	background:#fff;
+	.js-fixed{
+		background:#fff;
+	}
+}
+.header{
+	text-align: center;
+	padding-bottom:10*$px;
+ 	.ctitle{
+		font-size:18*$px;
+		line-height:30*$px;
+		text-align: center; 
+	}
+}
+
+.widthpage{
+	min-width:1200*$px;
+	overflow: auto;
+}

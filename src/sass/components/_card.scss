@@ -1,0 +1,1056 @@
+
+
+.card-list {
+    margin-bottom: 45*$px; 
+    @include clearspace();
+    .add {
+        background: #eaeaea;
+        border: 1px solid #eaeaea;
+        color: #7a7a7a;
+        font-size: 15*$px;
+        text-align: center;
+        cursor: pointer;
+        .icon {
+            font-size: 16*$px;
+            color: $icon-defalute-color;
+            margin-right: 15*$px;
+        }
+        &:hover {
+            background: #fff;
+            border: 1px solid $card-sel-color;
+            color: $card-sel-color;
+            .icon {
+                color: inherit;
+            }
+        }
+        &:before {
+            content: "";
+            width: 1px;
+            height: 100%;
+            @include inline-block;
+            vertical-align: middle;
+        }
+        p {
+            @include inline-block;
+            vertical-align: middle;
+        }
+    }
+}
+
+.task-list {
+    .card-item {
+        width: $card-item-width;
+        height: $card-item-height;
+    }
+    .card-item.sel .card-item-inner, .card-item-inner:hover {
+        height: $card-item-height + 10*$px;
+        .card-c {
+            padding: 10*$px 15*$px;
+            .inf-row-inline {
+                padding-top: 6*$px;
+            }
+        }
+    }
+}
+.card-list-wap .card-list {
+    margin:0 auto 45*$px;
+    @include clearspace();
+    .card-item{
+    @include normalspace();
+        margin:15*$px  6*$px 0;
+    }
+}
+.inspect-list {
+    .card-item {
+        height: 286*$px;
+    }
+    .card-item.sel .card-item-inner, .card-item-inner:hover {
+        height: 286*$px + 35*$px;
+        margin: -10px 0;
+    }
+}
+
+.card-item {
+    @include normalspace();
+    width: $card-item-width;
+    margin: $card-item-margin;
+    @include inline-block;
+    vertical-align: top;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-item-inner {
+    position: relative;
+    height: 100%;
+    border: 1px solid #ddd;
+    background: #fff;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    @at-root .card-item.sel .card-item-inner, &:hover {
+        z-index: 9;
+        margin: -5px 0;
+        border: 1px solid $card-sel-color;
+        box-shadow: $card-hove-shadow;
+        .card-h {
+            background: $card-sel-color;
+            color: #fff;
+            .sub {
+                color: #f0f0f0;
+            }
+        }
+        .card-f {
+            margin-top: -40*$px;
+        }
+    }
+}
+
+.card-h {
+    position: relative;
+    color: $card-sel-color;
+    padding: 5*$px 20*$px 8*$px;
+    line-height: 45*$px;
+    height: 45*$px;
+    @include keep-all;
+    &:before {
+        content: "";
+        @include inline-block;
+        vertical-align: middle;
+        height: 100%;
+        width: 1px;
+    }
+    &:after {
+        position: absolute;
+        content: "";
+        bottom: -1px;
+        border-top: 1px solid #f2f2f2;
+        left: 10*$px;
+        right: 10*$px;
+    }
+    .icon {
+        position: absolute;
+        font-size: $card-h-icon-size;
+        vertical-align: middle;
+        top: 50%;
+        margin-top: -$card-h-icon-size/2;
+        &+span, &+.card-h-title-wap {
+            padding-left: 30*$px;
+        }
+    }
+    span, .card-h-title-wap {
+        @include inline-block;
+        font-size: $card-h-font-size;
+        max-height: 45*$px;
+        line-height: 22*$px;
+        overflow: hidden;
+        @include keep-normal;
+        vertical-align: middle;
+        .sub {
+            line-height: 1;
+            font-size: 12*$px;
+            color: #828282;
+        }
+        .card-h-title {
+            @include nowrap;
+            line-height: 1;
+        }
+    }
+}
+
+.card-c {
+    padding: 5*$px 15*$px;
+    font-size: $inf-row-inline-icon-size;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    .inf-row-inline {
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        line-height: 35*$px;
+        .icon {
+            font-size: $inf-row-inline-icon-size;
+            margin-right: 10*$px;
+            vertical-align: -1px;
+        }
+        .label {
+            color: #828282;
+            width: $inf-row-inline-label-width;
+            display: inline-block;
+        }
+        .value {
+            color: #333;
+        }
+    }
+    .inf-row {
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        line-height: 24*$px;
+        margin: 5*$px 0;
+        .icon {
+            font-size: $inf-row-inline-icon-size;
+            margin-right: 10*$px;
+            vertical-align: -1px;
+            line-height: 24*$px;
+            float: left;
+            color: $icon-defalute-color;
+        }
+        .label {
+            color: #828282;
+            display: block;
+            padding-left: 26*$px;
+        }
+        .value {
+            display: block;
+            color: #333;
+            padding-left: 26*$px;
+            @include nowrap;
+        }
+    }
+}
+
+.card-f {
+    position: absolute;
+    padding: 0 20*$px;
+    border-top: 1px solid #f2f2f2;
+    background: #fff;
+    text-align: center;
+    color: $card-sel-color;
+    font-size: $card-f-font-size;
+    line-height: 40*$px;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin-top: 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    .icon {
+        margin-right: 15*$px;
+    }
+    .btn-text:hover {
+        color: darken($card-sel-color, 10%);
+    }
+}
+
+.card-p-list-wap {
+    .card-p-list {
+        margin: 0 auto;
+    }
+    margin: 0 -15*$px -15*$px 0;
+    @include clearspace();
+}
+
+.card-p-item {
+    padding: 10*$px 15*$px;
+    background: #fff;
+    width: 300*$px;
+    border: 1px solid #e6e6e6;
+    @include inline-block;
+    @include normalspace();
+    vertical-align: top;
+    margin: 0 15*$px 15*$px 0;
+    cursor: default;
+    .card-p-h {
+        position:relative;
+        padding-right:24px;
+        .h-icon {
+            float: left;
+            font-size: 20*$px;
+            vertical-align: top;
+            color: $theme;
+            margin-right: 8*$px;
+            margin-top: 3*$px;
+            .icon {
+                color: #fff;
+                font-size: 12*$px;
+                line-height: 20*$px;
+                left: 0;
+                right: 0;
+                top: 0;
+                text-align: center;
+            }
+        }
+        .h-icon-right{
+            position:absolute;
+            top:0px;
+            right:0px;
+            margin-right:0px;
+            line-height: 24*$px;
+
+        }
+        .h-title {
+            display: block;
+            color: #333;
+            @include nowrap();
+            font-size: 15*$px;
+            line-height: 24*$px;
+            margin-left: 28*$px;
+        }
+    }
+    .sub-title {
+        margin-left: 28*$px;
+        color: #999;
+        padding-bottom: 5*$px;
+    }
+    .card-p-c {
+        margin: 0 10*$px 0 28*$px;
+    }
+    .c-abstract {
+        height: 81*$px;
+        font-size: 13*$px;
+        color: #666;
+        line-height: 20*$px;
+        overflow: hidden;
+    }
+    &.add {
+        color: $theme;
+        font-size: 50*$px;
+        text-align: center;
+        &:hover {
+            background: #eee;
+        }
+    }
+    &.notice-card-add {
+        line-height: 128*$px;
+    }
+}
+
+@media screen and (min-width:1700px) {
+    .card-p-item {
+        width: 320*$px;
+    }
+}
+
+
+$box-padding:0 15*$px;
+$box-border-color:#e6e6e6;
+$box-h-icon-color:$theme;
+$box-h-icon-size:16*$px;
+$box-grey-icon-color:#c3c3c3;
+$box-grey-icon-margin-right:12*$px;
+$box-grey-icon-margin-left:12*$px;
+
+// $box-h-icon-color-test:#9bbb52;
+// .box-h {
+//     position: relative;
+//     padding: $box-padding;
+//     &>.icon.test {
+//         font-size: $box-h-icon-size;
+//         color: $box-h-icon-color-test;
+//         margin-right: $box-h-icon-margin-right;
+//         vertical-align: middle;
+//     }
+// }
+
+.box {
+    background: #fff;
+    border: 1px solid $box-border-color;
+    margin-bottom: 10*$px;
+    .inner-box {
+        border: none;
+        .box-c {
+            padding: 5*$px 10$px;
+        }
+        &+.inner-box .box-h {
+            border-top: 1px solid $box-border-color;
+        }
+    }
+}
+
+.inner-box-nb {
+    border-top: 1px dashed #e6e6e6;
+    margin: 0 10*$px;
+    
+    .box-h-title-center {
+        color: #999;
+        display: block;
+        text-align: center;
+        font-size: 15*$px;
+        line-height: $box-h-line-height;
+    }
+    .box-c {
+        border: none;
+        margin: 0 -10*$px;
+    }
+    .form-detail {
+        padding-top: 0;
+    }
+}
+
+ 
+.box-h {
+    position: relative;
+    padding: $box-padding;
+    &>.icon {
+        font-size: $box-h-icon-size;
+        color: $box-h-icon-color;
+        margin-right: $box-h-icon-margin-right;
+        vertical-align: middle;
+    }
+    .box-h-title {
+        font-size: $box-h-font-size;
+        line-height: $box-h-line-height;
+        vertical-align: middle;
+        cursor: default;
+        &.t {
+            color: $theme;
+        }
+    }
+    .sub {
+        color: #666;
+        margin-left: 20*$px;
+        line-height: $box-h-line-height;
+        vertical-align: middle;
+        .tag-sm {
+            margin: 0 3*$px 0 5*$px;
+        }
+    }
+    .h-right {
+        line-height: $box-h-line-height;
+        font-size: 14*$px;
+        .btn-line-t {
+            // margin-top: ($box-h-line-height - 25*$px)/2;
+            line-height: 25*$px;
+            font-size: 12*$px;
+            &.hide {
+                display: none;
+            }
+        }
+        &.rotate {
+            transform: rotatey(180deg);
+            transition: transform .3s ease-in-out;
+        }
+        &>.icongroup {
+            margin: 5*$px 0;
+        }
+    }
+    &.box-h-gray {
+        background: #eee;
+    }
+    &.box-h-lgray {
+        background: #efefef;
+    }
+    &.box-h-lgray, &.box-h-gray {
+        &>.icon {
+            color: $icon-defalute-color;
+        }
+        .icon.t{
+            color: $theme;
+        }
+        .btn-text.t .icon {
+            color: inherit;
+        }
+
+    }
+    &.box-h-theme {
+        background: $theme;
+        color: #fff;
+         &>.icon {
+            color: #fff;
+        }
+        .h-right {
+            &>.icon {
+                color: inherit;
+            }
+            .btn-line-t, {
+                color: #fff;
+            }
+            .btn-text {
+                color: #fff;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    
+}
+
+.box-c {
+    border-top: 1px solid $box-border-color;
+    padding: $box-padding;
+}
+
+.filter-lineheight {
+    &.filter-item {
+        line-height: 25px;
+    }
+}
+
+.box-h-line {
+    @include inline-block;
+    width: 4*$px;
+    height: 14*$px;
+    background: $box-h-icon-color;
+    vertical-align: -3*$px;
+    margin-right: $box-h-icon-margin-right;
+}
+
+.box-grey-line {
+    @include inline-block;
+    width: 1*$px;
+    height: 14*$px;
+    background: $box-grey-icon-color;
+    vertical-align: -3*$px;
+    margin-right: $box-grey-icon-margin-right;
+    margin-left: $box-grey-icon-margin-left;
+}
+
+ 
+
+.sub-box {
+    .sub-box-h {
+        padding: 0 10*$px;
+        color: $sub-box-theme;
+        font-size: $box-h-font-size;
+        line-height: $box-h-line-height;
+        .icon {
+            vertical-align: -1px;
+            margin-right: $box-h-icon-margin-right;
+        }
+    }
+    .sub-box-c {
+        padding: 0 15*$px 0 35*$px;
+        font-size: 13px;
+        .row .form-group:first-child {
+            padding-left: 0;
+        }
+    }
+    .inf-row-inline {
+        line-height: 24*$px;
+        padding-bottom: 8*$px;
+        .label {
+            margin-right: 10*$px;
+            color: #1e1e1e;
+        }
+        .value {
+            .sub {
+                color: #999;
+                font-size: 12*$px;
+                margin-left: 10*$px;
+                max-width: 120*$px;
+                @include nowrap();
+                cursor: default;
+                @include inline-block;
+                vertical-align: top;
+            }
+        }
+    }
+}
+
+$table-h-padding:0 15*$px;
+$table-h-bg:$theme;
+.table-box {
+    border: none;
+    .box-h {
+        border: 1px solid $box-border-color;
+        border-bottom: 0;
+    }
+    .box-c{
+        padding:0;
+    }
+}
+
+.table-h {
+    font-size: 14*$px;
+    background: $table-h-bg;
+    line-height: 40*$px;
+    color: #fff;
+    padding: $table-h-padding;
+    &>.icon {
+        font-size: $box-h-icon-size;
+        color: #fff;
+        margin-right: $box-h-icon-margin-right;
+        vertical-align: middle;
+    }
+}
+
+.inf-list {
+    line-height: 24*$px;
+    li {
+        margin-bottom: 5px;
+    }
+    .num {
+        @include inline-block;
+        width: 16*$px;
+        line-height: 14*$px;
+        height: 16*$px;
+        background: #969696;
+        font-size: 10*$px;
+        color: #fff;
+        text-align: center;
+        margin-right: 8*$px;
+    }
+}
+
+.innerlinebox {
+    margin-top: -11*$px;
+}
+
+.list-item {
+    padding: 10*$px;
+    &+.list-item {
+        border-top: 1px solid #e6e6e6;
+    }
+    &.open {
+        .list-toggle:after {
+            top: 5*$px;
+            left: 5*$px;
+            border-width: 3*$px 3*$px 0;
+            border-color: #333 transparent transparent transparent;
+        }
+        .list-item-detail {
+            visibility: visible;
+            max-height: 1000px;
+            transition: all 0.5s ease-in-out;
+            opacity: 1;
+            overflow:hidden;
+        }
+    }
+    &.close {
+        overflow: hidden;
+        .list-toggle:after {
+            top: 4*$px;
+            left: 7*$px;
+            border-width: 3*$px 0 3*$px 3*$px;
+            border-color: transparent transparent transparent #333;
+        }
+    }
+    em {
+        background: #f39c12;
+        font-style: normal;
+        padding: 0 2px;
+    }
+}
+
+.list-item-h {
+    position: relative;
+    padding: 0 10*$px 0 25*$px;
+    margin-bottom: 5*$px;
+    line-height: 1.5;
+    .list-toggle {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        cursor: pointer;
+        margin-top: -8*$px;
+        width: 16*$px;
+        height: 16*$px;
+        &:after {
+            content: "";
+            position: absolute;
+            border-style: solid;
+        }
+    }
+    .log-time {
+        float: left;
+        margin-right: 20*$px;
+    }
+    .log-inf {
+        @include nowrap;
+        color: #333;
+    }
+}
+
+.log-inf {
+    span {
+        @include inline-block;
+        background: #ecf0f1;
+        font-weight: bold;
+        color: #666;
+        font-family: monospace;
+        padding: 0 5*$px;
+        margin: 0 5*$px 0 10*$px;
+        line-height: 18*$px;
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+}
+
+.log-inf-block {
+    .log-inf-h {
+        float: left;
+        margin-top: 3*$px;
+    }
+    .log-inf-c {
+        display: table-cell;
+    }
+}
+
+.log-c {
+    overflow: hidden;
+    padding: 0 10*$px 0*$px 25*$px;
+    .log-inf {
+        line-height: 24*$px;
+        max-height: 72*$px;
+        position: relative;
+        overflow: hidden;
+        &:after {
+            content: " ";
+            width: 100%;
+            height: 15px;
+            position: absolute;
+            left: 0;
+            top: 55px;
+            background: linear-gradient(to bottom, hsla(0, 0%, 100%, 0) 0, hsla(0, 0%, 100%, .01) 1%, hsla(0, 0%, 100%, .99) 99%, #fff 100%);
+        }
+    }
+}
+
+.list-item-detail {
+    transition: all 0.5s cubic-bezier(0, 1, 0, 1);
+    border-top: 1px solid #e6e6e6;
+    margin-top: 10*$px;
+    visibility: hidden;
+    padding: 0 10*$px;
+    opacity: 0;
+    max-height: 0;
+    ul {
+        display: table;
+    }
+    li {
+        line-height: 30*$px;
+        color: #555;
+        width: 100%;
+        display: table-row;
+        &+li {
+            border-top: 1px dashed #e6e6e6;
+            .list-detail-icon, .list-detail-title, .list-detail-action, .list-detail-c {
+                border-top: 1px dashed #e6e6e6;
+            }
+        }
+        .list-detail-icon {
+            font-size: 12*$px;
+            color: #999;
+            font-weight: bold;
+            font-style: italic;
+            padding: 0 15*$px;
+            display: table-cell;
+        }
+        .list-detail-title {
+            padding-right: 20*$px;
+            display: table-cell;
+            // min-width: 110*$px;
+            @include keep-all;
+        }
+        .list-detail-action {
+            padding-right: 15*$px;
+            font-style: normal;
+            display: table-cell;
+            @include keep-all;
+            .icon {
+                margin-right: 10*$px;
+                &.disabled {
+                    color: #999;
+                }
+            }
+        }
+        .list-detail-c {
+            display: table-cell;
+            width: 100%;
+        }
+    }
+}
+
+.box-line {
+    border-bottom: none;
+    border-left: none;
+}
+
+.d-list {
+    line-height: 35*$px;
+    font-size: 13*$px;
+    li+li {
+        border-top: 1px dashed #e6e6e6;
+    }
+}
+
+.logpop {
+    margin: 0 auto;
+    .pop-close {
+        @include inline-block;
+        margin-right: -15px;
+        width: 40*$px;
+        text-align: center;
+        line-height: 40*$px;
+        cursor: pointer;
+        &:hover .icon {
+            color: #fff;
+            font-size: 18*$px;
+        }
+        .icon {
+            margin: 0;
+        }
+    }
+    .h-theme-tab {
+        @include inline-block;
+    }
+}
+
+.h-right {
+    float: right;
+    .icon {
+        line-height: inherit;
+        @include inline-block;
+        vertical-align: top;
+        cursor: pointer;
+    }
+    .sub {
+        color: #666;
+        vertical-align: middle;
+    }
+}
+
+.doshed-list {
+    li+li {
+        border-top: 1px dashed #e6e6e6;
+        padding: 5*$px 10*$px;
+        ;
+    }
+}
+
+.list-bck-item {
+    position: relative;
+    background: #fff;
+    border: 1px solid #e6e6e6;
+    margin-bottom: 0*$px;
+    padding: 10*$px 15*$px;
+     height:91*$px;
+       &.show{
+        height:151*$px;
+         .solute-c {
+            display: block;
+            max-height:60*$px;
+            .solute-toggle {
+                border-width: 3*$px 4*$px 0;
+                border-color: #333 transparent transparent transparent;
+                vertical-align: 3*$px;
+            }
+        }
+    }
+    .list-bck-h {
+        position:relative;
+        padding-right:89px;
+        .h-icon {
+            font-size: 20*$px;
+            vertical-align: top;
+            color: $theme;
+            margin-right: 8*$px;
+            position:absolute;
+            top:1px;
+            .icon {
+                color: #fff;
+                font-size: 12*$px;
+                line-height: 20*$px;
+                left: 0;
+                right: 0;
+                top: 0;
+                text-align: center;
+            }
+        }
+    }
+    .h-title {
+        font-size: 13*$px;
+        line-height: 20*$px;
+        vertical-align: top;
+        overflow: hidden;
+        word-break: keep-all;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width:100%;
+        display: inline-block;
+        margin-left:26px;
+        margin-right:20px;
+    }
+   
+    .list-bck-c {
+        padding-top:3*$px;
+        padding-left: 25*$px;
+        padding-right:50*$px;
+        font-size: 13*$px;
+        color: #333;
+        line-height: 20*$px;
+        padding-bottom: 5*$px;
+        p{
+            max-height:40*$px;
+            overflow:hidden;
+        }
+    }
+    .solute-list {
+        color: #666;
+        font-size: 12*$px;
+        position:relative;
+        @include clearfix();
+        margin-top:6*$px;
+        &.show {
+            .solute-c {
+                display: block;
+                .solute-toggle {
+                    border-width: 3*$px 4*$px 0;
+                    border-color: #333 transparent transparent transparent;
+                    vertical-align: 3*$px;
+                }
+            }
+        }
+    }
+    .solute-c {
+        // margin-left: 80*$px;
+        display: none;
+        text-align:left;
+    }
+     .solute-line{
+            width:100%;
+            height:1px;
+            background:#eee;
+            display:inline-block;
+            position:absolute;
+            top:10px;
+            left:0px;
+        }
+    .solute-l {
+        // float: left;
+        cursor: pointer;
+        background:#fff;
+        position:relative;
+        z-index:2;
+        padding:0px 10px;
+        .solute-toggle {
+            @include inline-block;
+            margin-left: 8*$px;
+            border-width: 3*$px 4*$px 0*$px 4*$px;
+            border-style: solid;
+            border-color: #333 transparent transparent transparent;
+            vertical-align: 2*$px;
+        }
+    }
+    .list-bck-act {
+        position: absolute;
+        right: 5*$px;
+        top: 0*$px;
+        .icon {
+            font-size: 16*$px;
+        }
+    }
+}
+ 
+.btn-bar {
+    margin: 8*$px 0;
+}
+
+ .box-nb-h {
+        line-height: 30*$px;
+        padding: 0 10*$px;
+        &>.icon {
+            color: #999;
+            font-size: 16*$px;
+            margin-right: 5*$px;
+            vertical-align: -1px;
+        }
+        &.box-h-gray {
+            background: #eee;
+            &+ .box-nb-c .form-detail {
+                padding: 5*$px 0;
+            }
+        }
+        &.fixed {
+            background:#f5f5f5; 
+        }
+         .box-h-title {
+        color: #333;
+        font-size: 15*$px;
+        &.t {
+            color: $theme;
+        }
+    }
+    }
+   
+.box-nb {
+   
+    .box-nb-c {
+        padding: 0 10*$px;
+        .form-detail {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    }
+    
+}
+.js-fixed .box-nb-h{
+        padding-bottom:12*$px;
+
+}
+.block-item {
+    background: #fff;
+    margin:  0  0 10*$px;
+    padding-bottom: 10*$px;
+}
+
+.box-toggle {
+    position: relative;
+    margin-bottom: 15*$px;
+    .filter-wap {}
+    &.hide {
+        display: block;
+        //overflow: hidden;
+        .box-toggle-con {
+            height: 0;
+            min-height: 0;
+            padding-bottom: 10*$px;
+            overflow: hidden;
+            &.box-c{  
+                border-top: none;
+            }
+        }
+        .icon-toggle {
+            &:before {
+                content: $icon-down;
+            }
+        }
+    }
+    &.box {
+        margin: 0 0 15*$px;
+        .icon-toggle-wap {
+            bottom: -10*$px;
+        }
+    }
+}
+
+.icon-toggle-wap {
+    position: absolute;
+    left: 50%;
+    bottom: -9*$px;
+    display: inline-block;
+    width: 28*$px;
+    height: 0;
+    margin-left: -18*$px;
+    background: transparent;
+    border-width: 10*$px 4*$px 0 4*$px;
+    border-style: solid;
+    text-align: center;
+    border-color: #e6e6e6 transparent transparent transparent;
+    &:before {
+        content: "";
+        position: absolute;
+        left: -2*$px;
+        bottom: 1*$px;
+        width: 26*$px;
+        height: 0;
+        background: transparent;
+        border-width: 9*$px 3*$px 0 3*$px;
+        border-style: solid;
+        border-color: #fff transparent transparent transparent;
+    }
+    .icon-toggle {
+        position: absolute;
+        @extend %extendicon;
+        font-size: 16*$px;
+        color: $theme;
+        top: -14*$px;
+        left: 50%;
+        margin-left: -8px;
+        &:before {
+            content: $icon-up;
+        }
+    }
+}
+
+.box-h-nav {
+    @include inline-block;
+    margin-left: 10*$px;
+    vertical-align: middle;
+}
